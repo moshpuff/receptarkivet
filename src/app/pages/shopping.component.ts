@@ -1,3 +1,4 @@
+import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RECIPES } from '../core/recipe-data';
@@ -7,7 +8,7 @@ import { ingredientAmount, ingredientNote, recipeMatches, yieldText } from '../c
 import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 
 @Component({
-  selector: 'app-shopping', standalone: true, imports: [RouterLink],
+  selector: 'app-shopping', standalone: true, imports: [RouterLink, UiIconComponent],
   templateUrl: './shopping.component.html'
 })
 export class ShoppingComponent {

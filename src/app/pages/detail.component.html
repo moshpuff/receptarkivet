@@ -1,7 +1,7 @@
 @if (recipe(); as r) {
   <article class="wrap">
     <div class="detail-head">
-      <a class="back" routerLink="/">← Till alla recept</a>
+      <a class="back" routerLink="/"><app-ui-icon name="left" [size]="16" /> Till alla recept</a>
       <div class="detail-header">
         <div>
           <div class="eyebrow">{{ r.category }} / {{ r.badge }}</div>
@@ -16,23 +16,23 @@
         <div [class]="'detail-visual ' + r.tone" aria-hidden="true"><span>{{ r.emoji }}</span></div>
       </div>
       <div class="detail-meta">
-        <span class="meta">◷ {{ r.time }}</span>
-        <span class="meta">♧ {{ yield(r, currentScale()) }}</span>
-        <span class="meta">◉ {{ r.difficulty }}</span>
-        @if (r.temp) { <span class="meta">♨ {{ r.temp }}</span> }
+        <span class="meta"><app-ui-icon name="clock" [size]="16" /> {{ r.time }}</span>
+        <span class="meta"><app-ui-icon name="users" [size]="16" /> {{ yield(r, currentScale()) }}</span>
+        <span class="meta"><app-ui-icon name="chef" [size]="16" /> {{ r.difficulty }}</span>
+        @if (r.temp) { <span class="meta"><app-ui-icon name="cook" [size]="16" /> {{ r.temp }}</span> }
       </div>
       <div class="detail-actions">
-        <a class="btn" [routerLink]="['/laga', r.id]">{{ store.cookStep(r.id) > 0 && store.cookStep(r.id) < r.steps.length ? 'Fortsätt laga · steg för steg →' : 'Laga steg för steg →' }}</a>
+        <a class="btn" [routerLink]="['/laga', r.id]"><app-ui-icon name="chef" [size]="17" /> {{ store.cookStep(r.id) > 0 && store.cookStep(r.id) < r.steps.length ? 'Fortsätt laga · steg för steg →' : 'Laga steg för steg →' }}</a>
         <button class="btn secondary" [class.selected]="store.inShoppingList(r.id)" (click)="toggleBag(r.id)">
-          {{ store.inShoppingList(r.id) ? '✓ Tillagd i inköpslistan' : '+ Lägg till i inköpslistan' }}
+          <app-ui-icon [name]="store.inShoppingList(r.id) ? 'check' : 'basket'" [size]="17" /> {{ store.inShoppingList(r.id) ? 'Tillagd i inköpslistan' : 'Lägg till i inköpslistan' }}
         </button>
         <button class="btn secondary" (click)="store.toggleFavorite(r.id)">
-          {{ store.isFavorite(r.id) ? '♥ Sparat' : '♡ Spara recept' }}
+          <app-ui-icon name="heart" [size]="17" /> {{ store.isFavorite(r.id) ? 'Sparat' : 'Spara recept' }}
         </button>
-        <button class="btn secondary" (click)="print()">⎙ Skriv ut</button>
+        <button class="btn secondary" (click)="print()"><app-ui-icon name="printer" [size]="17" /> Skriv ut</button>
       </div>
       @if (store.cookedOn(r.id)) {
-        <div class="cooked-inline">✓ Senast lagat {{ cookedDate(r.id) }}
+        <div class="cooked-inline"><app-ui-icon name="done" [size]="16" /> Senast lagat {{ cookedDate(r.id) }}
           @if (store.note(r.id)) { <span>· Du har en sparad anteckning</span> }
           <a [routerLink]="['/laga',r.id]">Öppna köksläget →</a>
         </div>
@@ -73,7 +73,7 @@
         </div>
         @if (r.shoppingTips.length) {
           <details class="shopping-details">
-            <summary><span>🛒 Smarta inköp</span><span aria-hidden="true">⌄</span></summary>
+            <summary><span><app-ui-icon name="basket" [size]="16" /> Smarta inköp</span><span aria-hidden="true"><app-ui-icon name="down" [size]="16" /></span></summary>
             <div class="shopping-inner">
               @for (tip of r.shoppingTips; track $index) { <p>{{ tip }}</p> }
               @if (currentScale() !== 1) { <small>Inköpsråden avser 1 sats. Anpassa antalet förpackningar till den valda satsstorleken.</small> }
@@ -92,7 +92,7 @@
           <section class="tips">
             <h2>Tips som gör skillnad</h2>
             @for (tip of r.tips; track $index) {
-              <div class="tip"><span class="tip-icon">✓</span><div><strong>{{ tip.title }}</strong><p>{{ tip.body }}</p></div></div>
+              <div class="tip"><span class="tip-icon"><app-ui-icon name="check" [size]="17" /></span><div><strong>{{ tip.title }}</strong><p>{{ tip.body }}</p></div></div>
             }
           </section>
         }
@@ -100,7 +100,7 @@
           <details class="nutrition-details">
             <summary>
               <span><strong>Ungefärligt näringsvärde</strong><small>Per {{ nutrition.per }} · beräknad uppskattning</small></span>
-              <span class="nutrition-arrow" aria-hidden="true">⌄</span>
+              <span class="nutrition-arrow" aria-hidden="true"><app-ui-icon name="down" [size]="16" /></span>
             </summary>
             <div class="nutrition-content">
               <div class="nutrition-grid">

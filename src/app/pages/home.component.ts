@@ -1,3 +1,4 @@
+import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RecipeCardComponent } from '../components/recipe-card.component';
@@ -11,7 +12,7 @@ import { DinnerEffort, DinnerTime, findDinnerSuggestions } from '../core/dinner-
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RecipeCardComponent, CountryFlagComponent, RouterLink],
+  imports: [RecipeCardComponent, CountryFlagComponent, UiIconComponent, RouterLink],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {

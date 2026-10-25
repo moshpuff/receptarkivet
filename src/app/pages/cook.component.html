@@ -1,7 +1,7 @@
 @if (recipe(); as r) {
   <section class="wrap cook-page" aria-labelledby="cook-title">
     <div class="cook-topline">
-      <a class="back" [routerLink]="['/recept', r.id]">← Tillbaka till receptet</a>
+      <a class="back" [routerLink]="['/recept', r.id]"><app-ui-icon name="left" [size]="16" /> Tillbaka till receptet</a>
       <span class="eyebrow">Laga steg för steg</span>
     </div>
     <div class="cook-heading">
@@ -24,11 +24,11 @@
             <p>{{ r.steps[stepIndex()].body }}</p>
           </div>
           <div class="cook-controls">
-            <button class="btn secondary" type="button" (click)="go(r, stepIndex() - 1)" [disabled]="stepIndex() === 0">← Föregående</button>
+            <button class="btn secondary" type="button" (click)="go(r, stepIndex() - 1)" [disabled]="stepIndex() === 0"><app-ui-icon name="left" [size]="17" /> Föregående</button>
             @if (stepIndex() === r.steps.length - 1) {
-              <button class="btn" type="button" (click)="finish(r)">✓ Klart – jag har lagat rätten</button>
+              <button class="btn" type="button" (click)="finish(r)"><app-ui-icon name="check" [size]="18" /> Klart – jag har lagat rätten</button>
             } @else {
-              <button class="btn" type="button" (click)="go(r, stepIndex() + 1)">Nästa steg →</button>
+              <button class="btn" type="button" (click)="go(r, stepIndex() + 1)">Nästa steg <app-ui-icon name="right" [size]="17" /></button>
             }
           </div>
           <div class="cook-jump">
@@ -41,7 +41,7 @@
           </div>
         } @else {
           <div class="cook-finished" aria-live="polite">
-            <span class="cook-finished-icon" aria-hidden="true">✓</span>
+            <span class="cook-finished-icon" aria-hidden="true"><app-ui-icon name="done" [size]="40" /></span>
             <h2>Klart! Smaklig måltid.</h2>
             <p>Du har gått igenom alla steg. Spara gärna vad du vill komma ihåg nästa gång.</p>
             @if (store.cookedOn(r.id)) { <p class="cooked-date">Senast lagat: {{ cookedDate(r) }}</p> }

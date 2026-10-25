@@ -1,3 +1,4 @@
+import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -9,7 +10,7 @@ import { ingredientAmount, ingredientNote, yieldText } from '../core/recipe-form
 import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 
 @Component({
-  selector: 'app-detail', standalone: true, imports: [RouterLink, CountryFlagComponent],
+  selector: 'app-detail', standalone: true, imports: [RouterLink, CountryFlagComponent, UiIconComponent],
   templateUrl: './detail.component.html'
 })
 export class DetailComponent {

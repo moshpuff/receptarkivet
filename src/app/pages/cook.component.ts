@@ -1,3 +1,4 @@
+import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -8,7 +9,7 @@ import { ingredientAmount, ingredientNote, yieldText } from '../core/recipe-form
 import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 
 @Component({
-  selector: 'app-cook', standalone: true, imports: [RouterLink],
+  selector: 'app-cook', standalone: true, imports: [RouterLink, UiIconComponent],
   templateUrl: './cook.component.html'
 })
 export class CookComponent {

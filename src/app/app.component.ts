@@ -1,3 +1,4 @@
+import { UiIconComponent } from './components/ui-icon.component';
 import { Component, inject, afterNextRender } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
@@ -8,16 +9,16 @@ import { RECIPES } from './core/recipe-data';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, UiIconComponent],
   template: `
     <button class="skip-link" type="button" (click)="skipToContent()">Hoppa till innehållet</button>
     <header>
       <nav class="wrap nav" aria-label="Huvudmeny">
-        <a class="brand" routerLink="/"><span class="brand-mark" aria-hidden="true">✳</span> Receptarkivet</a>
+        <a class="brand" routerLink="/"><span class="brand-mark" aria-hidden="true"><app-ui-icon name="chef" [size]="23" /></span> Receptarkivet</a>
         <div class="navlinks">
-          <a class="navlink" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Hitta recept</a>
+          <a class="navlink" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><app-ui-icon name="search" [size]="17" /> Hitta recept</a>
           <a class="navlink" routerLink="/inkopslista" routerLinkActive="active">
-            Planera & handla @if (store.shoppingCount()) { <span class="tiny">{{ store.shoppingCount() }}</span> }
+            <app-ui-icon name="basket" [size]="17" /> Planera & handla @if (store.shoppingCount()) { <span class="tiny">{{ store.shoppingCount() }}</span> }
           </a>
         </div>
       </nav>

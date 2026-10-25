@@ -31,8 +31,8 @@
       <div class="bag-summary-bar">
         <div><h2 id="selected-heading">Din inköpslista</h2><p>{{ selected().length }} {{ selected().length === 1 ? 'recept' : 'recept' }} · {{ remainingCount() }} varor kvar</p></div>
         <div class="bag-list-actions">
-          <button type="button" class="btn secondary" (click)="print()" [disabled]="!selected().length">Skriv ut</button>
-          <button type="button" class="btn" (click)="copy()" [disabled]="!selected().length">Kopiera lista</button>
+          <button type="button" class="btn secondary" (click)="print()" [disabled]="!selected().length"><app-ui-icon name="printer" [size]="17" /> Skriv ut</button>
+          <button type="button" class="btn" (click)="copy()" [disabled]="!selected().length"><app-ui-icon name="copy" [size]="17" /> Kopiera lista</button>
         </div>
       </div>
       @if (hasBought()) {
@@ -72,7 +72,7 @@
           <a class="bag-cook-link" [routerLink]="['/laga',r.id]">Laga {{ r.name }} steg för steg →</a>
         </section>
       } @empty {
-        <div class="empty bag-empty"><div class="big" aria-hidden="true">🧺</div>
+        <div class="empty bag-empty"><div class="big" aria-hidden="true"><app-ui-icon name="basket" [size]="42" /></div>
           <h3>Vad vill du laga?</h3>
           <p>Välj ett eller flera recept i listan så samlar vi ingredienserna här. Du kan även lägga till recept från receptsidorna.</p>
           <button type="button" (click)="focusPicker()" class="btn secondary">Välj recept nedan ↓</button>

@@ -165,3 +165,15 @@ Landsflaggorna använder 15 lokala SVG-filer från [flag-icons](https://github.c
 under [MIT-licens](public/flags/LICENSE). Därmed visas flaggorna även på Windows där
 flagg-emoji annars kan bli tvåbokstavskoder. Ingen extern begäran eller extra npm-dependency
 behövs. Service workern kan cacha flaggorna för offlineanvändning.
+
+
+## Ikoner och typografi
+
+Receptarkivets UI använder ett litet, samlat urval av **Lucide SVG-ikoner**
+via `@lucide/angular` och **DM Sans Variable** för löptext samt **Fraunces Variable**
+för rubriker. Fontfilerna levereras av Fontsource-paketen och hostas av den byggda
+appen: inga förfrågningar skickas till Google Fonts under användning.
+
+Utöka ikonkartan i `src/app/components/ui-icon.component.ts` i stället för
+att skapa nya Unicode-symboler. Maträtts-emojierna och landsflaggorna är separata
+från UI-ikonerna. Alla 116 receptdata är oförändrade.
