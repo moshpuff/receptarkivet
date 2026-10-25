@@ -22,7 +22,9 @@
       "resources": {
         "files": [
           "/icons/**",
-          "/flags/**"
+          "/flags/**",
+          "/media/*.woff2",
+          "/media/*.woff"
         ]
       }
     }
