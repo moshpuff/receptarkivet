@@ -196,3 +196,21 @@ app-ui-icon{flex-shrink:0}
 .searchbox .glass{display:flex;align-items:center;justify-content:center}
 .tip-icon{display:inline-flex;align-items:center;justify-content:center}
 @media print{app-ui-icon{print-color-adjust:exact}}
+
+/* Bildpilot: samma 4:3-kortformat, större 3:2-bild på detaljsidan.
+   Bara godkända och publicerade bildpar används; annars finns emoji kvar. */
+.card-art.has-photo::before,.card-art.has-photo::after,
+.detail-visual.has-photo::before{display:none}
+.card-art.has-photo{background:#26231f}
+.recipe-card-photo,.recipe-hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.recipe-card-photo{transition:transform .25s ease;z-index:1}
+.recipe-card:hover .recipe-card-photo{transform:scale(1.035)}
+.card-art.has-photo .card-badge{position:relative;z-index:3}
+.ai-photo-label{position:absolute;z-index:3;bottom:10px;right:12px;background:rgba(30,28,25,.74);color:#fff;border-radius:6px;padding:3px 7px;font-size:10px;font-weight:700;letter-spacing:.02em;line-height:1.3}
+.detail-header:has(.detail-visual.has-photo){grid-template-columns:minmax(0,1.1fr) minmax(290px,.9fr);gap:26px}
+.detail-visual.has-photo{height:auto;min-height:235px;aspect-ratio:3/2;background:#24211d}
+.detail-visual.has-photo .ai-photo-label{font-size:11px}
+@media(max-width:850px){.detail-header:has(.detail-visual.has-photo){grid-template-columns:1fr}}
+@media(max-width:690px){.detail-visual.has-photo{order:-1;min-height:0;aspect-ratio:3/2;border-radius:18px}.card-art.has-photo{height:185px}}
+@media(prefers-reduced-motion:reduce){.recipe-card-photo{transition:none}.recipe-card:hover .recipe-card-photo{transform:none}}
+@media print{.detail-visual.has-photo{display:none}}

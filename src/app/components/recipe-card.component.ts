@@ -1,3 +1,4 @@
+import { hasRecipeImage, recipeImageSrc } from '../core/recipe-images';
 import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, Input, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -18,9 +19,16 @@ import { CountryFlagComponent } from './country-flag.component';
         <app-ui-icon name="heart" [size]="20" />
       </button>
       <a class="card-link" [routerLink]="['/recept', recipe.id]">
-        <div [class]="'card-art ' + recipe.tone">
+        <div [class]="'card-art ' + recipe.tone" [class.has-photo]="hasRecipeImage(recipe.id) && !photoFailed">
           <span class="card-badge">{{ recipe.badge }}</span>
-          <span class="card-emoji" aria-hidden="true">{{ recipe.emoji }}</span>
+          @if (hasRecipeImage(recipe.id) && !photoFailed) {
+            <img class="recipe-card-photo" [src]="recipeImageSrc(recipe.id,'card')"
+              [alt]="'AI-genererad receptillustration: ' + recipe.name"
+              loading="lazy" decoding="async" width="640" height="480" (error)="photoFailed = true">
+            <span class="ai-photo-label">AI-illustration</span>
+          } @else {
+            <span class="card-emoji" aria-hidden="true">{{ recipe.emoji }}</span>
+          }
         </div>
         <div class="card-body">
           <div class="card-category">{{ recipe.category }}</div>
@@ -42,4 +50,7 @@ import { CountryFlagComponent } from './country-flag.component';
 export class RecipeCardComponent {
   @Input({required: true}) recipe!: Recipe;
   readonly store = inject(RecipeStore);
+  readonly hasRecipeImage = hasRecipeImage;
+  readonly recipeImageSrc = recipeImageSrc;
+  photoFailed = false;
 }

@@ -24,7 +24,8 @@
           "/icons/**",
           "/flags/**",
           "/media/*.woff2",
-          "/media/*.woff"
+          "/media/*.woff",
+          "/recipe-images/**"
         ]
       }
     }

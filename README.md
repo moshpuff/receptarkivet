@@ -177,3 +177,30 @@ appen: inga förfrågningar skickas till Google Fonts under användning.
 Utöka ikonkartan i `src/app/components/ui-icon.component.ts` i stället för
 att skapa nya Unicode-symboler. Maträtts-emojierna och landsflaggorna är separata
 från UI-ikonerna. Alla 116 receptdata är oförändrade.
+
+
+## AI-genererade receptbilder (pilot)
+
+Appen har nu stöd för särskilt utvalda receptbilder på receptkort och detaljsidor.
+Bilderna är märkta **AI-illustration** och har korrekt alt-text. De ursprungliga
+emojierna visas om bilden inte är godkänd, uppladdad eller kan läsas.
+
+Det här är ett **receptstyrt** system: endast fyra kandidater är preliminärt
+kvalitetsgodkända i denna omgång. Övriga sex piloter behöver ny granskning och
+korrigering av bland annat garnering och uppläggning.
+
+### Lägg till bildfiler
+
+Lägg godkända WebP-par i `public/recipe-images/` med exakt filnamn
+`<recipe-id>-card.webp` och `<recipe-id>-hero.webp`.
+`npm run prebuild` kontrollerar att filerna finns i giltigt WebP-format och
+genererar `src/app/core/recipe-images.generated.ts`. När båda finns visas
+bilden automatiskt i nästa bygge. Saknas filerna blir det ingen trasig bild
+eller onödig 404-begäran – emojin fortsätter användas.
+
+Bildvarianter: 640×480 för kort och 1200×800 för detalj. De lazy-laddas på
+receptkorten och service workern cachar bilderna vid behov. Bildfiler är
+**AI-genererade illustrationer**, inte fotografier av provlagade recept.
+
+Se `docs/RECEPTBILDER_STILGUIDE_OCH_PILOT_10.md` för exakt bildbrief och
+`docs/RECEPTBILDER_PILOT_KVALITET.md` för vilka bilder som godkänts.

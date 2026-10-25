@@ -1,3 +1,4 @@
+import { hasRecipeImage, recipeImageSrc } from '../core/recipe-images';
 import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -16,6 +17,9 @@ import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 export class DetailComponent {
   private readonly route = inject(ActivatedRoute);
   readonly store = inject(RecipeStore);
+  readonly hasRecipeImage = hasRecipeImage;
+  readonly recipeImageSrc = recipeImageSrc;
+  photoFailed = false;
   private readonly toast = inject(ToastService);
   private readonly routeParams = toSignal(this.route.paramMap);
   readonly recipe = computed(() => RECIPES.find(r => r.id === this.routeParams()?.get('id')));

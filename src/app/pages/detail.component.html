@@ -13,7 +13,17 @@
             @for (tag of r.tags; track tag) { <span class="detail-tag">{{ tag }}</span> }
           </div>
         </div>
-        <div [class]="'detail-visual ' + r.tone" aria-hidden="true"><span>{{ r.emoji }}</span></div>
+        <div [class]="'detail-visual ' + r.tone" [class.has-photo]="hasRecipeImage(r.id) && !photoFailed">
+          @if (hasRecipeImage(r.id) && !photoFailed) {
+            <img class="recipe-hero-photo" [src]="recipeImageSrc(r.id,'hero')"
+              [alt]="'AI-genererad receptillustration: ' + r.name"
+              loading="eager" fetchpriority="high" decoding="async" width="1200" height="800"
+              (error)="photoFailed = true">
+            <span class="ai-photo-label">AI-illustration</span>
+          } @else {
+            <span aria-hidden="true">{{ r.emoji }}</span>
+          }
+        </div>
       </div>
       <div class="detail-meta">
         <span class="meta"><app-ui-icon name="clock" [size]="16" /> {{ r.time }}</span>
