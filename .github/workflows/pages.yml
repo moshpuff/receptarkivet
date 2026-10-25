@@ -22,7 +22,7 @@ jobs:
       - name: Installera Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Installera beroenden
         run: npm install --no-audit --no-fund
