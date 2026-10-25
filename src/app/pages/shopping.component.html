@@ -1,0 +1,89 @@
+<div class="wrap">
+  <div class="bag-header">
+    <div class="eyebrow">Planera · Handla · Laga</div>
+    <h1>Planera & handla</h1>
+    <p>Välj vad du vill laga, anpassa antal portioner och bocka av varorna direkt i butiken. Listan sparas på den här enheten.</p>
+  </div>
+  <div class="bag-summary-strip" aria-live="polite">
+    <div><strong>{{ selected().length }}</strong><span>valda recept</span></div>
+    <div><strong>{{ remainingCount() }}</strong><span>varor kvar</span></div>
+    <div><strong>{{ boughtCount() }}</strong><span>avbockade</span></div>
+  </div>
+  <div class="bag-layout">
+    <aside class="bag-panel bag-picker" id="bag-picker">
+      <h2>Lägg till recept</h2>
+      <label class="bag-search-label" for="bag-search">Sök bland recepten</label>
+      <input id="bag-search" class="bag-search" type="search" autocomplete="off"
+        placeholder="Sök recept eller ingrediens…" [value]="pickerQuery()" (input)="onPickerSearch($event)" />
+      <p class="bag-search-count">Visar {{ visibleChoices().length }} av {{ recipes.length }} recept</p>
+      <div class="bag-choice-list" role="group" aria-label="Välj recept att planera">
+        @for (r of visibleChoices(); track r.id) {
+          <label class="bag-choice" [class.bag-choice-selected]="store.inShoppingList(r.id)">
+            <input type="checkbox" [checked]="store.inShoppingList(r.id)" (change)="toggle(r)">
+            <span>{{ r.emoji }} {{ r.name }}</span>
+          </label>
+        } @empty {
+          <p class="bag-search-empty">Inga recept matchar sökningen.</p>
+        }
+      </div>
+    </aside>
+    <section class="bag-panel bag-list" aria-labelledby="selected-heading">
+      <div class="bag-summary-bar">
+        <div><h2 id="selected-heading">Din inköpslista</h2><p>{{ selected().length }} {{ selected().length === 1 ? 'recept' : 'recept' }} · {{ remainingCount() }} varor kvar</p></div>
+        <div class="bag-list-actions">
+          <button type="button" class="btn secondary" (click)="print()" [disabled]="!selected().length">Skriv ut</button>
+          <button type="button" class="btn" (click)="copy()" [disabled]="!selected().length">Kopiera lista</button>
+        </div>
+      </div>
+      @if (hasBought()) {
+        <div class="bag-progress">
+          <div class="bag-progress-track" role="progressbar" aria-label="Avbockade varor" aria-valuemin="0" [attr.aria-valuenow]="boughtCount()" [attr.aria-valuemax]="totalIngredients()"><span [style.width.%]="100 * boughtCount() / totalIngredients()"></span></div>
+          <button type="button" class="text-button" (click)="clearBought()">Återställ avbockningar</button>
+        </div>
+      }
+      @for (r of selected(); track r.id) {
+        <section class="bag-recipe">
+          <div class="bag-recipe-heading">
+            <div><h3><a [routerLink]="['/recept',r.id]">{{ r.emoji }} {{ r.name }}</a></h3><small>{{ yield(r) }}</small></div>
+            <button type="button" class="text-button" (click)="toggle(r)" [attr.aria-label]="'Ta bort ' + r.name + ' från inköpslistan'">Ta bort</button>
+          </div>
+          <div class="servings bag-servings" role="group" [attr.aria-label]="'Satsstorlek för ' + r.name">
+            @for (scale of scales; track scale) {
+              <button type="button" [class.active]="store.scale(r.id) === scale" [attr.aria-pressed]="store.scale(r.id) === scale" (click)="store.setScale(r.id,scale)">{{ scale === 0.5 ? '½ sats' : scale === 1 ? '1 sats' : '2 satser' }}</button>
+            }
+          </div>
+          @for (group of r.groups; track $index; let gi = $index) {
+            <div class="bag-item-group"><h4>{{ group.title }}</h4>
+              @for (item of group.items; track $index; let ii = $index) {
+                <label class="bag-item" [class.bag-item-bought]="store.isBought(key(r,gi,ii))">
+                  <input type="checkbox" [checked]="store.isBought(key(r,gi,ii))" (change)="bought(key(r,gi,ii),$event)"/>
+                  <span class="bag-item-name">{{ item.name }} @if (note(item, store.scale(r.id))) {<small>{{ note(item,store.scale(r.id)) }}</small>}</span>
+                  <strong>{{ amount(item, store.scale(r.id)) }}</strong>
+                </label>
+              }
+            </div>
+          }
+          @if (r.shoppingTips.length) {
+            <details class="bag-advice"><summary>Smarta inköp</summary>
+              @for (tip of r.shoppingTips; track $index) { <p>{{ tip }}</p> }
+              @if (store.scale(r.id) !== 1) { <small>Råden avser 1 sats.</small> }
+            </details>
+          }
+          <a class="bag-cook-link" [routerLink]="['/laga',r.id]">Laga {{ r.name }} steg för steg →</a>
+        </section>
+      } @empty {
+        <div class="empty bag-empty"><div class="big" aria-hidden="true">🧺</div>
+          <h3>Vad vill du laga?</h3>
+          <p>Välj ett eller flera recept i listan så samlar vi ingredienserna här. Du kan även lägga till recept från receptsidorna.</p>
+          <button type="button" (click)="focusPicker()" class="btn secondary">Välj recept nedan ↓</button>
+        </div>
+      }
+      @if (fallbackText()) {
+        <div class="copy-fallback">
+          <label for="manual-list">Kopiera inköpslistan manuellt</label>
+          <textarea id="manual-list" readonly rows="9">{{ fallbackText() }}</textarea>
+        </div>
+      }
+    </section>
+  </div>
+</div>

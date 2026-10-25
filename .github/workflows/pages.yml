@@ -1,0 +1,66 @@
+name: Testa och publicera Receptarkivet
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hämta källkoden
+        uses: actions/checkout@v4
+
+      - name: Installera Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Installera beroenden
+        run: npm install --no-audit --no-fund
+
+      - name: Kontrollera receptdata
+        run: npm run test:data
+
+      - name: Kontrollera funktionernas logik
+        run: npm run test:logic
+
+      - name: Kontrollera konfiguration och PWA
+        run: npm run test:static
+
+      - name: Bygg Angular för GitHub Pages
+        shell: bash
+        run: |
+          REPOSITORY_NAME="${GITHUB_REPOSITORY#*/}"
+          npm run build -- --base-href "/${REPOSITORY_NAME}/"
+          touch dist/receptarkivet/browser/.nojekyll
+
+      - name: Förbered GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Ladda upp förhandsvisningen
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/receptarkivet/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicera GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {"noEmit": true, "types": []},
+  "include": ["../src/**/*.ts", "angular-full.stub.d.ts"],
+  "exclude": [".compiled"]
+}

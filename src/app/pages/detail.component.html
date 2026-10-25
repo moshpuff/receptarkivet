@@ -1,0 +1,132 @@
+@if (recipe(); as r) {
+  <article class="wrap">
+    <div class="detail-head">
+      <a class="back" routerLink="/">← Till alla recept</a>
+      <div class="detail-header">
+        <div>
+          <div class="eyebrow">{{ r.category }} / {{ r.badge }}</div>
+          <h1><span class="origin-flag detail-flag" role="img" [attr.aria-label]="r.countryNote" [title]="r.countryNote">{{ r.countryFlag }}</span>{{ r.name }}</h1>
+          <p>{{ r.intro }}</p>
+          <div class="origin-detail">
+            <span class="origin-caption" [title]="r.countryNote">{{ r.countryFlag }} {{ r.countryName }} · {{ r.countryNote }}</span>
+            @for (tag of r.tags; track tag) { <span class="detail-tag">{{ tag }}</span> }
+          </div>
+        </div>
+        <div [class]="'detail-visual ' + r.tone" aria-hidden="true"><span>{{ r.emoji }}</span></div>
+      </div>
+      <div class="detail-meta">
+        <span class="meta">◷ {{ r.time }}</span>
+        <span class="meta">♧ {{ yield(r, currentScale()) }}</span>
+        <span class="meta">◉ {{ r.difficulty }}</span>
+        @if (r.temp) { <span class="meta">♨ {{ r.temp }}</span> }
+      </div>
+      <div class="detail-actions">
+        <a class="btn" [routerLink]="['/laga', r.id]">{{ store.cookStep(r.id) > 0 && store.cookStep(r.id) < r.steps.length ? 'Fortsätt laga · steg för steg →' : 'Laga steg för steg →' }}</a>
+        <button class="btn secondary" [class.selected]="store.inShoppingList(r.id)" (click)="toggleBag(r.id)">
+          {{ store.inShoppingList(r.id) ? '✓ Tillagd i inköpslistan' : '+ Lägg till i inköpslistan' }}
+        </button>
+        <button class="btn secondary" (click)="store.toggleFavorite(r.id)">
+          {{ store.isFavorite(r.id) ? '♥ Sparat' : '♡ Spara recept' }}
+        </button>
+        <button class="btn secondary" (click)="print()">⎙ Skriv ut</button>
+      </div>
+      @if (store.cookedOn(r.id)) {
+        <div class="cooked-inline">✓ Senast lagat {{ cookedDate(r.id) }}
+          @if (store.note(r.id)) { <span>· Du har en sparad anteckning</span> }
+          <a [routerLink]="['/laga',r.id]">Öppna köksläget →</a>
+        </div>
+      }
+    </div>
+    <div class="recipe-layout">
+      <aside class="ingredients-panel">
+        <div class="panel-heading">
+          <h2>Ingredienser</h2><small>{{ yield(r, currentScale()) }}</small>
+          <div class="servings" role="group" aria-label="Ändra satsstorlek">
+            @for (scale of scales; track scale) {
+              <button [class.active]="currentScale() === scale" (click)="selectScale(r, scale)"
+                [attr.aria-pressed]="currentScale() === scale">
+                {{ scale === 0.5 ? '½ sats' : scale === 1 ? '1 sats' : '2 satser' }}
+              </button>
+            }
+          </div>
+        </div>
+        @for (group of r.groups; track $index; let gi = $index) {
+          <div class="ing-group">
+            <h3>{{ group.title }}</h3>
+            @for (item of group.items; track $index; let ii = $index) {
+              <label class="ingredient" [class.checked]="store.isChecked(ingredientKey(r,gi,ii))">
+                <input type="checkbox" [checked]="store.isChecked(ingredientKey(r,gi,ii))"
+                  (change)="checkIngredient(ingredientKey(r,gi,ii), $event)"/>
+                <span class="ing-name">{{ item.name }}</span>
+                <span class="ing-amount">
+                  {{ amount(item, currentScale()) }}
+                  @if (note(item, currentScale()); as comment) { <span class="ingredient-note">{{ comment }}</span> }
+                </span>
+              </label>
+            }
+          </div>
+        }
+        <div class="ingredient-foot">
+          Bocka av ingredienser medan du lagar.
+          @if (currentScale() !== 1) { Mängderna är proportionellt omräknade. Delade ägg kan behöva vispas upp och vägas. }
+        </div>
+        @if (r.shoppingTips.length) {
+          <details class="shopping-details">
+            <summary><span>🛒 Smarta inköp</span><span aria-hidden="true">⌄</span></summary>
+            <div class="shopping-inner">
+              @for (tip of r.shoppingTips; track $index) { <p>{{ tip }}</p> }
+              @if (currentScale() !== 1) { <small>Inköpsråden avser 1 sats. Anpassa antalet förpackningar till den valda satsstorleken.</small> }
+            </div>
+          </details>
+        }
+      </aside>
+      <div class="method">
+        <h2>Gör så här</h2>
+        <ol class="steps">
+          @for (step of r.steps; track $index; let n = $index) {
+            <li class="step"><div class="step-index">{{ n + 1 }}</div><div><h3>{{ step.title }}</h3><p>{{ step.body }}</p></div></li>
+          }
+        </ol>
+        @if (r.tips.length) {
+          <section class="tips">
+            <h2>Tips som gör skillnad</h2>
+            @for (tip of r.tips; track $index) {
+              <div class="tip"><span class="tip-icon">✓</span><div><strong>{{ tip.title }}</strong><p>{{ tip.body }}</p></div></div>
+            }
+          </section>
+        }
+        @if (r.nutrition; as nutrition) {
+          <details class="nutrition-details">
+            <summary>
+              <span><strong>Ungefärligt näringsvärde</strong><small>Per {{ nutrition.per }} · beräknad uppskattning</small></span>
+              <span class="nutrition-arrow" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="nutrition-content">
+              <div class="nutrition-grid">
+                <div class="nutrition-stat"><strong>{{ nutrition.kcal }}</strong><small>kcal</small><span>Energi</span></div>
+                <div class="nutrition-stat"><strong>{{ nutrition.protein }} g</strong><small>Protein</small></div>
+                <div class="nutrition-stat"><strong>{{ nutrition.carbs }} g</strong><small>Kolhydrater</small></div>
+                <div class="nutrition-stat"><strong>{{ nutrition.fat }} g</strong><small>Fett</small></div>
+              </div>
+              <p class="nutrition-disclaimer">Per {{ nutrition.per }}, beräknat på grundreceptet med cirka {{ nutrition.servings }} {{ nutrition.per }}. Vid ½ eller 2 satser ändras antalet portioner men normalt inte näringsvärdet per portion. Värdena är grova uppskattningar utifrån typiska livsmedel; varumärken, tillagning och valfria tillbehör kan ändra resultatet. Inte laboratorieverifierat.</p>
+            </div>
+          </details>
+        }
+        <section class="source-box">
+          <strong>Om receptet</strong><p>{{ r.origin }}</p>
+          <div class="source-links">
+            @for (source of r.sources; track $index) {
+              <a [href]="source[1]" target="_blank" rel="noopener noreferrer">{{ source[0] }} ↗</a>
+            }
+          </div>
+          <div class="note-chip">Originalkällorna används som referenser. Anpassade versioner är inte automatiskt smaktestade eller verifierade som bäst i ett blindtest.</div>
+        </section>
+      </div>
+    </div>
+  </article>
+} @else {
+  <div class="wrap empty" style="margin-top:40px">
+    <h1>Receptet hittades inte</h1><p>Det verkar som att länken inte längre finns.</p>
+    <a class="btn" routerLink="/">Visa alla recept</a>
+  </div>
+}

@@ -1,0 +1,109 @@
+<section class="wrap">
+  <div class="hero hero-with-dinner">
+    <div class="hero-intro">
+      <div class="eyebrow">Din personliga receptsamling · {{ recipes.length }} recept</div>
+      <h1>Goda recept.<br><em>På ett ställe.</em></h1>
+      <p>Hitta något gott, planera inköpen och laga med tydliga steg. Allt samlat, utan krångel.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn secondary" (click)="scrollToRecipes()">Utforska recepten ↓</button>
+        <a class="btn secondary" routerLink="/inkopslista">Planera & handla →</a>
+      </div>
+    </div>
+    <section class="dinner-helper" aria-labelledby="dinner-title">
+      <div class="dinner-eyebrow">När idéerna tryter</div>
+      <h2 id="dinner-title">Vad ska vi äta ikväll?</h2>
+      <p>Två snabba val. Sedan får du några förslag.</p>
+      <div class="dinner-choice" role="group" aria-label="Hur mycket tid har du totalt?">
+        <span class="dinner-label">Tid till maten är klar</span>
+        <div class="dinner-options">
+          <button type="button" [class.active]="dinnerTime() === 15" [attr.aria-pressed]="dinnerTime() === 15" (click)="chooseTime(15)">15 min</button>
+          <button type="button" [class.active]="dinnerTime() === 30" [attr.aria-pressed]="dinnerTime() === 30" (click)="chooseTime(30)">30 min</button>
+          <button type="button" [class.active]="dinnerTime() === 45" [attr.aria-pressed]="dinnerTime() === 45" (click)="chooseTime(45)">45 min</button>
+          <button type="button" [class.active]="dinnerTime() === 'more'" [attr.aria-pressed]="dinnerTime() === 'more'" (click)="chooseTime('more')">Mer</button>
+        </div>
+      </div>
+      <div class="dinner-choice" role="group" aria-label="Hur mycket vill du göra?">
+        <span class="dinner-label">Ork just nu</span>
+        <div class="dinner-options dinner-effort">
+          <button type="button" [class.active]="dinnerEffort() === 'low'" [attr.aria-pressed]="dinnerEffort() === 'low'" (click)="chooseEffort('low')">Så lite jobb som möjligt</button>
+          <button type="button" [class.active]="dinnerEffort() === 'normal'" [attr.aria-pressed]="dinnerEffort() === 'normal'" (click)="chooseEffort('normal')">Jag orkar lite mer</button>
+        </div>
+      </div>
+      <button type="button" class="btn dinner-go" (click)="findDinner()">Ge mig middagsförslag →</button>
+      @if (dinnerOpen()) {
+        <div id="dinner-results" class="dinner-results" aria-live="polite" aria-atomic="false">
+          <div class="dinner-results-head">
+            <h3>{{ dinnerPool().length === 0 ? 'Inga förslag hittades' : 'Det här kan passa' }}</h3>
+            <span>{{ dinnerPool().length }} alternativ</span>
+          </div>
+          @for (suggestion of dinnerVisible(); track suggestion.recipe.id) {
+            <article class="dinner-result">
+              <span class="dinner-result-emoji" aria-hidden="true">{{ suggestion.recipe.emoji }}</span>
+              <div class="dinner-result-body">
+                <a class="dinner-result-name" [routerLink]="['/recept',suggestion.recipe.id]">{{ suggestion.recipe.name }}</a>
+                <span class="dinner-result-meta">{{ suggestion.recipe.time }} · {{ suggestion.reason }}</span>
+              </div>
+              <a class="dinner-start" [routerLink]="['/laga',suggestion.recipe.id]" [attr.aria-label]="'Börja laga ' + suggestion.recipe.name">Laga →</a>
+            </article>
+          }
+          @if (dinnerPool().length < 3 && dinnerTime() === 15) {
+            <p class="dinner-explain">Bara {{ dinnerPool().length }} recept matchar 15 minuter. <button type="button" (click)="expandDinnerTime()">Visa upp till 30 minuter</button></p>
+          }
+          @if (dinnerHasMore()) {
+            <button type="button" class="dinner-again" (click)="nextDinners()">↻ Visa andra förslag</button>
+          }
+        </div>
+      }
+    </section>
+  </div>
+  <div class="rule"></div>
+  <div class="toolbar">
+    <label class="searchbox">
+      <span class="glass" aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Sök bland recept och ingredienser..." [value]="filters.query()" (input)="onSearch($event)" aria-label="Sök recept">
+    </label>
+    <div class="filters" role="group" aria-label="Filtrera på kategori">
+      @for (cat of categories; track cat) {
+        <button class="pill" [class.active]="filters.category() === cat"
+          (click)="filters.category.set(cat)" [attr.aria-pressed]="filters.category() === cat">{{ cat }}</button>
+      }
+      <button class="pill" [class.active]="filters.favoritesOnly()" (click)="toggleFavorites()"
+        [attr.aria-pressed]="filters.favoritesOnly()">♥ Sparade</button>
+    </div>
+    <span class="mobile-filter-tip" aria-hidden="true">Svep för fler kategorier →</span>
+  </div>
+  <div class="extra-filters">
+    <label class="filter-field" for="tag-filter">
+      <span>Tagg</span>
+      <select id="tag-filter" aria-label="Filtrera efter tagg" [value]="filters.tag()" (change)="onTag($event)">
+        @for (tag of tags; track tag) { <option [value]="tag">{{ tag === 'Alla' ? 'Alla taggar' : tag }}</option> }
+      </select>
+    </label>
+    <label class="filter-field" for="country-filter">
+      <span>Ursprung</span>
+      <select id="country-filter" aria-label="Filtrera efter land" [value]="filters.country()" (change)="onCountry($event)">
+        <option value="Alla">Alla länder</option>
+        @for (place of countries; track place.code) {
+          <option [value]="place.code">{{ place.flag }} {{ place.name }}</option>
+        }
+      </select>
+    </label>
+    @if (hasFilters()) {
+      <button type="button" class="reset-filters" (click)="filters.reset()">Rensa filter ×</button>
+    }
+  </div>
+  <p class="filter-hint">Flaggan visar receptets främsta mattradition. Vissa rätter har flera ursprung eller är lokala tolkningar.</p>
+  <div class="section-title" id="receptlista">
+    <h2>{{ filters.favoritesOnly() ? 'Dina sparade recept' : filters.category() === 'Alla' ? 'Alla recept' : filters.category() }}</h2>
+    <span>{{ filtered().length }} av {{ recipes.length }} recept</span>
+  </div>
+  <div class="cards">
+    @for (r of filtered(); track r.id) { <app-recipe-card [recipe]="r" /> }
+    @empty {
+      <div class="empty" style="grid-column:1/-1"><div class="big">⌕</div><h3>Inga recept hittades</h3>
+        <p>Prova ett annat sökord eller välj en annan kategori, tagg eller ett annat land.</p>
+        <button class="btn secondary" (click)="filters.reset()">Visa alla recept</button>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,91 @@
+@if (recipe(); as r) {
+  <section class="wrap cook-page" aria-labelledby="cook-title">
+    <div class="cook-topline">
+      <a class="back" [routerLink]="['/recept', r.id]">← Tillbaka till receptet</a>
+      <span class="eyebrow">Laga steg för steg</span>
+    </div>
+    <div class="cook-heading">
+      <div>
+        <h1 id="cook-title" tabindex="-1">{{ r.name }}</h1>
+        <p>En sak i taget. Ingredienserna finns nära till hands hela vägen.</p>
+      </div>
+      <div class="cook-meta">{{ r.time }}<span aria-hidden="true"> · </span>{{ yield(r) }}</div>
+    </div>
+    <div class="cook-layout">
+      <section class="cook-primary" aria-label="Tillagningssteg">
+        @if (stepIndex() < r.steps.length) {
+          <div class="cook-progress"><span>Steg {{ stepIndex() + 1 }} av {{ r.steps.length }}</span><strong>{{ percent(r) }} % klart</strong></div>
+          <div class="cook-track" role="progressbar" [attr.aria-valuenow]="stepIndex()" [attr.aria-valuemax]="r.steps.length" aria-valuemin="0" aria-label="Tillagningsframsteg">
+            <div [style.width.%]="(stepIndex() / r.steps.length) * 100"></div>
+          </div>
+          <div class="cook-step" aria-live="polite" aria-atomic="true">
+            <span class="cook-step-number">{{ stepIndex() + 1 }}</span>
+            <h2>{{ r.steps[stepIndex()].title }}</h2>
+            <p>{{ r.steps[stepIndex()].body }}</p>
+          </div>
+          <div class="cook-controls">
+            <button class="btn secondary" type="button" (click)="go(r, stepIndex() - 1)" [disabled]="stepIndex() === 0">← Föregående</button>
+            @if (stepIndex() === r.steps.length - 1) {
+              <button class="btn" type="button" (click)="finish(r)">✓ Klart – jag har lagat rätten</button>
+            } @else {
+              <button class="btn" type="button" (click)="go(r, stepIndex() + 1)">Nästa steg →</button>
+            }
+          </div>
+          <div class="cook-jump">
+            <label for="step-jump">Hoppa till steg</label>
+            <select id="step-jump" [value]="stepIndex()" (change)="go(r, +$any($event.target).value)">
+              @for (step of r.steps; track $index; let i = $index) {
+                <option [value]="i">{{ i + 1 }}. {{ step.title }}</option>
+              }
+            </select>
+          </div>
+        } @else {
+          <div class="cook-finished" aria-live="polite">
+            <span class="cook-finished-icon" aria-hidden="true">✓</span>
+            <h2>Klart! Smaklig måltid.</h2>
+            <p>Du har gått igenom alla steg. Spara gärna vad du vill komma ihåg nästa gång.</p>
+            @if (store.cookedOn(r.id)) { <p class="cooked-date">Senast lagat: {{ cookedDate(r) }}</p> }
+          </div>
+          <section class="result-notes" aria-labelledby="result-heading">
+            <h3 id="result-heading">Mina anteckningar</h3>
+            <p>Vad blev extra gott? Vill du ändra något nästa gång? Bara du kan se anteckningarna på den här enheten.</p>
+            <label for="result-note">Egen anteckning om receptet</label>
+            <textarea id="result-note" rows="5" maxlength="2000" [value]="draft(r)" (input)="editNote($event)" placeholder="Till exempel: grädda 2 minuter kortare nästa gång…"></textarea>
+            <div class="cook-controls"><button type="button" class="btn" (click)="saveNote(r)">Spara anteckning</button><button type="button" class="btn secondary" (click)="restart(r)">Laga igen</button></div>
+            <a class="back" [routerLink]="['/recept',r.id]">Se hela receptet →</a>
+          </section>
+        }
+        @if (r.tips.length) {
+          <details class="cook-tips"><summary>Tips för ett bättre resultat</summary>
+            @for (tip of r.tips; track $index) { <p><strong>{{ tip.title }}:</strong> {{ tip.body }}</p> }
+          </details>
+        }
+      </section>
+      <aside class="cook-aside">
+        <button class="cook-ingredients-toggle" type="button" [attr.aria-expanded]="showIngredients()" (click)="showIngredients.update(v=>!v)">Ingredienser · {{ yield(r) }} <span aria-hidden="true">{{ showIngredients() ? '−' : '+' }}</span></button>
+        <div class="cook-ingredients" [class.cook-ingredients-open]="showIngredients()">
+          <div class="cook-aside-header"><h2>Ingredienser</h2><small>{{ yield(r) }}</small></div>
+          <div class="servings" role="group" aria-label="Ändra satsstorlek">
+            @for (scale of scales; track scale) {
+              <button type="button" [class.active]="store.scale(r.id) === scale" [attr.aria-pressed]="store.scale(r.id) === scale" (click)="store.setScale(r.id,scale)">{{ scale === .5 ? '½ sats' : scale === 1 ? '1 sats' : '2 satser' }}</button>
+            }
+          </div>
+          @for (g of r.groups; track $index; let gi = $index) {
+            <div class="ing-group"><h3>{{ g.title }}</h3>
+            @for (item of g.items; track $index; let ii = $index) {
+              <label class="ingredient" [class.checked]="store.isChecked(key(r,gi,ii))">
+                <input type="checkbox" [checked]="store.isChecked(key(r,gi,ii))" (change)="toggleIngredient(key(r,gi,ii),$event)" />
+                <span class="ing-name">{{ item.name }}</span>
+                <span class="ing-amount">{{ amount(item,store.scale(r.id)) }} @if (note(item, store.scale(r.id))) { <span class="ingredient-note">{{ note(item,store.scale(r.id)) }}</span> }</span>
+              </label>
+            }
+            </div>
+          }
+          <div class="cook-ingredient-bottom"><p class="cook-ingredient-hint">Bocka av det du förberett. Detta är skilt från inköpslistans avbockningar.</p><button class="text-button" type="button" (click)="store.resetPrepared(r.id)">Börja om med ingredienserna</button></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+} @else {
+  <div class="wrap empty"><h1>Receptet hittades inte</h1><a routerLink="/">Visa alla recept</a></div>
+}
