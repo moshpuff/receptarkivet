@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {
-  LucideIcon, LucideSearch, LucideHeart, LucideShoppingBasket,
+  LucideDynamicIcon, LucideSearch, LucideHeart, LucideShoppingBasket,
   LucideChefHat, LucideClock3, LucideUsers, LucidePrinter,
   LucideArrowLeft, LucideArrowRight, LucideCheck, LucidePlus,
   LucideRotateCcw, LucideCircleCheck, LucideChevronDown,
@@ -38,7 +38,7 @@ export type UiIconName = keyof typeof icons;
 @Component({
   selector: 'app-ui-icon',
   standalone: true,
-  imports: [LucideIcon],
+  imports: [LucideDynamicIcon],
   template: '<svg [lucideIcon]="icon" [size]="size" [strokeWidth]="1.8" aria-hidden="true"></svg>',
   styles: [':host{display:inline-flex;align-items:center;justify-content:center;flex:none;vertical-align:-.13em;line-height:0}']
 })
