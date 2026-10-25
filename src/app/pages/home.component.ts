@@ -1,6 +1,7 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RecipeCardComponent } from '../components/recipe-card.component';
+import { CountryFlagComponent } from '../components/country-flag.component';
 import { RECIPES, CATEGORIES, TAGS, COUNTRIES } from '../core/recipe-data';
 import { CatalogFilters } from '../core/catalog-filters.service';
 import { RecipeStore } from '../core/recipe-store.service';
@@ -10,7 +11,7 @@ import { DinnerEffort, DinnerTime, findDinnerSuggestions } from '../core/dinner-
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RecipeCardComponent, RouterLink],
+  imports: [RecipeCardComponent, CountryFlagComponent, RouterLink],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
@@ -20,6 +21,7 @@ export class HomeComponent {
   readonly categories = CATEGORIES;
   readonly tags = TAGS;
   readonly countries = COUNTRIES;
+  readonly selectedCountry = computed(() => COUNTRIES.find(place => place.code === this.filters.country()));
 
   // Lättviktigt, lokalt beslutsstöd; inga anrop, profiler eller nya beroenden.
   readonly dinnerTime = signal<DinnerTime>(30);

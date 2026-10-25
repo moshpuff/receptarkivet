@@ -5,10 +5,11 @@
       <div class="detail-header">
         <div>
           <div class="eyebrow">{{ r.category }} / {{ r.badge }}</div>
-          <h1><span class="origin-flag detail-flag" role="img" [attr.aria-label]="r.countryNote" [title]="r.countryNote">{{ r.countryFlag }}</span>{{ r.name }}</h1>
+          <h1><app-country-flag [code]="r.countryCode" [name]="r.countryName" [description]="r.countryNote" [large]="true" />{{ r.name }}</h1>
           <p>{{ r.intro }}</p>
           <div class="origin-detail">
-            <span class="origin-caption" [title]="r.countryNote">{{ r.countryFlag }} {{ r.countryName }} · {{ r.countryNote }}</span>
+            <span class="origin-caption" [title]="r.countryNote"><app-country-flag [code]="r.countryCode"
+              [name]="r.countryName" [description]="r.countryNote" /> {{ r.countryName }} · {{ r.countryNote }}</span>
             @for (tag of r.tags; track tag) { <span class="detail-tag">{{ tag }}</span> }
           </div>
         </div>

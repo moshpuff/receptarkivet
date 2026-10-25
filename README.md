@@ -158,3 +158,10 @@ git push -u origin main
 
 Behåll tidigare HTML-receptbok som säkerhetskopia tills det riktiga
 Angular-bygget och mobil-/datortesterna är godkända.
+
+## Flaggor på alla plattformar
+
+Landsflaggorna använder 15 lokala SVG-filer från [flag-icons](https://github.com/lipis/flag-icons)
+under [MIT-licens](public/flags/LICENSE). Därmed visas flaggorna även på Windows där
+flagg-emoji annars kan bli tvåbokstavskoder. Ingen extern begäran eller extra npm-dependency
+behövs. Service workern kan cacha flaggorna för offlineanvändning.

@@ -3,12 +3,13 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RECIPES } from '../core/recipe-data';
 import { RecipeStore } from '../core/recipe-store.service';
+import { CountryFlagComponent } from '../components/country-flag.component';
 import { ToastService } from '../core/toast.service';
 import { ingredientAmount, ingredientNote, yieldText } from '../core/recipe-format';
 import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 
 @Component({
-  selector: 'app-detail', standalone: true, imports: [RouterLink],
+  selector: 'app-detail', standalone: true, imports: [RouterLink, CountryFlagComponent],
   templateUrl: './detail.component.html'
 })
 export class DetailComponent {

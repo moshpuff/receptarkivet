@@ -10,8 +10,15 @@ footer{background:#ece8de;border-top:1px solid var(--border);padding:27px 0 35px
 @media print{header,footer,.detail-actions,.back,.servings,.ingredient input,.toast,.source-box,.btn{display:none!important}body{background:white;color:#000}.wrap{width:100%;max-width:none;padding-inline:0}.detail-head{padding-top:0}.detail-header{grid-template-columns:1fr}.detail-header h1{font-size:34px}.detail-visual{display:none}.detail-meta{margin:10px 0}.recipe-layout{display:block;padding:0}.ingredients-panel{position:static;border:0;break-inside:avoid}.panel-heading{padding:10px 0}.ing-group{padding:7px 0}.ingredient{padding:3px 0;font-size:12px}.ingredient-foot{display:none}.method{padding-top:15px}.step{padding:6px 0;break-inside:avoid}.step p{font-size:12px}.tips{padding-top:10px}.tip{padding:5px 0}.tip p{font-size:11px}.ingredient.checked .ing-name{text-decoration:none;color:inherit}@page{margin:12mm}}
 
 /* Recipe origins and a small, deliberately controlled tag vocabulary */
-.origin-flag{display:inline-block;vertical-align:-.08em;font-family:system-ui,"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:.58em;letter-spacing:0;margin-right:.34em;line-height:1;white-space:nowrap}
-.detail-flag{font-size:.55em;vertical-align:.05em;margin-right:.28em}
+/* Plattformssakra flaggor från lokala SVG-filer, utan beroende av emoji-font. */
+app-country-flag{display:inline-flex;align-items:center;vertical-align:middle;margin-right:.34em;line-height:1}
+app-country-flag .origin-flag{display:block;width:1.12em;height:.84em;min-width:0;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+app-country-flag .detail-flag{width:.76em;height:.57em}
+.origin-caption app-country-flag .origin-flag{width:18px;height:13.5px}
+.country-filter-choice{display:inline-flex;align-items:center;position:relative;max-width:100%}
+.country-filter-choice app-country-flag{position:absolute;left:12px;z-index:1;pointer-events:none;margin:0}
+.country-filter-choice:has(app-country-flag) select{padding-left:37px}
+.country-filter-choice .filter-flag{width:18px;height:13.5px}
 .card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;min-height:21px}
 .card-tags span,.detail-tag{display:inline-block;padding:4px 8px;border-radius:99px;background:#f1ece4;color:#756b5f;font-size:10px;font-weight:650;letter-spacing:.01em}
 .extra-filters{display:flex;gap:11px;align-items:end;flex-wrap:wrap;margin:0 0 4px}
@@ -170,3 +177,5 @@ button:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:690px){.hero-with-dinner{padding:21px 0 23px;gap:20px}.hero-with-dinner h1{font-size:clamp(37px,9.5vw,49px);letter-spacing:-1.8px}.hero-with-dinner .hero-intro>p{font-size:14px;line-height:1.6}.hero-with-dinner .hero-actions{margin-top:16px}.hero-with-dinner .hero-actions .btn{font-size:12px;padding:9px 10px;min-height:42px}.dinner-helper{padding:19px 16px;border-radius:15px}.dinner-helper h2{font-size:26px}.dinner-options button{font-size:12px}}
 @media(max-width:350px){.dinner-options{gap:3px}.dinner-options button{padding:7px 2px;font-size:11px}}
 @media print{.dinner-helper{display:none!important}}
+
+@media(max-width:650px){.country-filter-choice{display:flex;width:100%}.country-filter-choice select{width:100%;max-width:none}}

@@ -44,3 +44,12 @@ assert.equal(baseline.length, 100, 'Säkerhetskopian måste ha exakt 100 recept'
 assert.deepEqual(recipes.slice(0,100), baseline, 'Innehållet i något av de 100 recepten har ändrats');
 console.log(`✓ ${recipes.length} unika recept, kompletta ingredienser, steg, källor och näringsvärden`);
 console.log('✓ Ursprungliga 100 recept är oförändrade jämfört med HTML-säkerhetskopian');
+
+const countryCodes = new Set(recipes.map(r => r.countryCode));
+for (const code of countryCodes) {
+  assert.match(code, /^[A-Z]{2}$/, `Ogiltig landskod: ${code}`);
+  const flagFile = path.join(root, 'public/flags', `${code.toLowerCase()}.svg`);
+  assert.ok(fs.existsSync(flagFile), `Flaggfil saknas: ${flagFile}`);
+  assert.match(fs.readFileSync(flagFile, 'utf8'), /<svg[^>]*viewBox=/, `Ogiltig flagg-SVG: ${code}`);
+}
+console.log(`✓ ${countryCodes.size} SVG-flaggor finns lokalt för samtliga länder`);

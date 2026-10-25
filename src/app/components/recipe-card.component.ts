@@ -2,11 +2,12 @@ import { Component, Input, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Recipe } from '../core/recipe.model';
 import { RecipeStore } from '../core/recipe-store.service';
+import { CountryFlagComponent } from './country-flag.component';
 
 @Component({
   selector: 'app-recipe-card',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CountryFlagComponent],
   template: `
     <article class="recipe-card">
       <button class="fav" [class.on]="store.isFavorite(recipe.id)"
@@ -22,8 +23,8 @@ import { RecipeStore } from '../core/recipe-store.service';
         </div>
         <div class="card-body">
           <div class="card-category">{{ recipe.category }}</div>
-          <h3 class="card-title"><span class="origin-flag" role="img"
-            [attr.aria-label]="recipe.countryNote" [title]="recipe.countryNote">{{ recipe.countryFlag }}</span>{{ recipe.name }}</h3>
+          <h3 class="card-title"><app-country-flag [code]="recipe.countryCode" [name]="recipe.countryName"
+            [description]="recipe.countryNote" />{{ recipe.name }}</h3>
           <p class="card-desc">{{ recipe.subtitle }}</p>
           <div class="card-tags">
             @for (tag of recipe.tags.slice(0, 2); track tag) { <span>{{ tag }}</span> }

@@ -81,12 +81,17 @@
     </label>
     <label class="filter-field" for="country-filter">
       <span>Ursprung</span>
-      <select id="country-filter" aria-label="Filtrera efter land" [value]="filters.country()" (change)="onCountry($event)">
-        <option value="Alla">Alla länder</option>
-        @for (place of countries; track place.code) {
-          <option [value]="place.code">{{ place.flag }} {{ place.name }}</option>
+      <span class="country-filter-choice">
+        @if (selectedCountry(); as place) {
+          <app-country-flag [code]="place.code" [name]="place.name" [filter]="true" />
         }
-      </select>
+        <select id="country-filter" aria-label="Filtrera efter land" [value]="filters.country()" (change)="onCountry($event)">
+          <option value="Alla">Alla länder</option>
+          @for (place of countries; track place.code) {
+            <option [value]="place.code">{{ place.name }}</option>
+          }
+        </select>
+      </span>
     </label>
     @if (hasFilters()) {
       <button type="button" class="reset-filters" (click)="filters.reset()">Rensa filter ×</button>

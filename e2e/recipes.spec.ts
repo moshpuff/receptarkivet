@@ -251,3 +251,19 @@ test('middagsförslag: olika energi ger fler val och stör inte vanlig receptsö
   await expect(page.locator('app-recipe-card')).toHaveCount(1);
   await expect(helper.locator('.dinner-result')).toHaveCount(3);
 });
+
+test('visar riktiga SVG-flaggor på recept, filter och detaljsida', async ({page}) => {
+  await page.goto('/');
+  const cardFlag = page.locator('app-recipe-card .origin-flag').first();
+  await expect(cardFlag).toBeVisible();
+  await expect(cardFlag).toHaveAttribute('src', /flags\\/[a-z]{2}\\.svg$/);
+  await expect.poll(() => cardFlag.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.getByRole('combobox', {name:'Filtrera efter land'}).selectOption('US');
+  const filterFlag = page.locator('.country-filter-choice .origin-flag');
+  await expect(filterFlag).toHaveAttribute('src', /flags\\/us\\.svg$/);
+  await expect.poll(() => filterFlag.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.locator('app-recipe-card .card-link').first().click();
+  const detailFlag = page.locator('app-detail h1 .origin-flag');
+  await expect(detailFlag).toBeVisible();
+  await expect.poll(() => detailFlag.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+});
