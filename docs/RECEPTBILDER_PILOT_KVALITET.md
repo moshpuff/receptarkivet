@@ -16,8 +16,9 @@ En kandidat får inte publiceras om den avviker från de synliga ingredienserna 
 | Club Sandwich | Måste justeras | Ursprunglig bild hade pommes; beskärning utesluter detta men brödlagren måste verifieras |
 | Pavlova | Måste justeras | Myntablad ingår inte i receptet |
 
-Endast följande är vitlistade i `scripts/generate-recipe-image-index.mjs`:
-`flaskfilegryta-champinjoner`, `key-lime-pie`, `tiramisu`, `broccolisoppa-cheddar`.
+**Godkända recept-ID:n för visning** i `scripts/generate-recipe-image-index.mjs`:
+`flaskfilegryta-champinjoner`, `key-lime-pie`, `tiramisu`, `broccolisoppa-cheddar`, `carbonara`, `creme-brulee`, `fish-and-chips`, `philly-cheesesteak`.
 
-Inga bilder lagras i GitHub genom denna kodändring; bildfiler måste laddas upp separat. 
-Bildindexet genereras automatiskt vid `npm run build`.
+**Uppladdat 25 oktober 2026:** De fem kompletta bildparen för `carbonara`, `fish-and-chips`, `creme-brulee`, `philly-cheesesteak` och `tiramisu` finns i `public/recipe-images/`. Alla är tillfälliga piloter beskurna ur ett större AI-kollage med verklig källupplösning ungefär 368 × 240 px, sedan uppskalade. De bör ersättas av individuellt genererade högupplösta illustrationer före slutlig bildkvalitetsgodkänning. Se `docs/BILDPILOT_5.md`.
+
+Bildindexet genereras automatiskt vid `npm run build`. Recept utan kompletta och godkända par visar fortfarande emoji.

@@ -8,7 +8,11 @@ const approved = [
   "flaskfilegryta-champinjoner",
   "key-lime-pie",
   "tiramisu",
-  "broccolisoppa-cheddar"
+  "broccolisoppa-cheddar",
+  "carbonara",
+  "creme-brulee",
+  "fish-and-chips",
+  "philly-cheesesteak"
 ];
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const images = path.join(root, 'public', 'recipe-images');

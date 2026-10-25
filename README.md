@@ -185,9 +185,11 @@ Appen har nu stöd för särskilt utvalda receptbilder på receptkort och detalj
 Bilderna är märkta **AI-illustration** och har korrekt alt-text. De ursprungliga
 emojierna visas om bilden inte är godkänd, uppladdad eller kan läsas.
 
-Det här är ett **receptstyrt** system: endast fyra kandidater är preliminärt
-kvalitetsgodkända i denna omgång. Övriga sex piloter behöver ny granskning och
-korrigering av bland annat garnering och uppläggning.
+Det här är ett **receptstyrt** system med åtta recept-ID:n på bildvitlistan.
+Fem kompletta bildpar (carbonara, fish and chips, crème brûlée, Philly Cheesesteak och tiramisu)
+är uppladdade som **tillfälliga visuella piloter**. De är beskurna från ett kollage och
+uppskalade, inte högupplösta individuella original. Övriga kandidater behöver ny granskning
+eller saknar fortfarande kompletta bildpar.
 
 ### Lägg till bildfiler
 
@@ -203,4 +205,5 @@ receptkorten och service workern cachar bilderna vid behov. Bildfiler är
 **AI-genererade illustrationer**, inte fotografier av provlagade recept.
 
 Se `docs/RECEPTBILDER_STILGUIDE_OCH_PILOT_10.md` för exakt bildbrief och
-`docs/RECEPTBILDER_PILOT_KVALITET.md` för vilka bilder som godkänts.
+`docs/RECEPTBILDER_PILOT_KVALITET.md` för vilka bilder som godkänts och
+`docs/BILDPILOT_5.md` för de fem uppladdade förhandsbildernas begränsningar.
