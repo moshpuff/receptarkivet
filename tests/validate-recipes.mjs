@@ -39,7 +39,7 @@ for (const [index, recipe] of recipes.entries()) {
 // kladdkaka och fisk med äggsås. Övriga originalrecept ska fortfarande
 // vara semantiskt identiska med säkerhetskopian.
 const oldHtml = fs.readFileSync(path.join(root,'original-Receptarkivet-100.html'), 'utf8');
-const match = oldHtml.match(/<script type="application\\/json" id="recipes">([\\s\\S]*?)<\\/script>/);
+const match = oldHtml.match(/<script type="application\/json" id="recipes">([\s\S]*?)<\/script>/);
 assert.ok(match, 'Säkerhetskopians receptdata saknas');
 const baseline = JSON.parse(match[1]);
 assert.equal(baseline.length, 100, 'Säkerhetskopian måste ha exakt 100 recept');
