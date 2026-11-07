@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **116 recept** (de första 100 bevarade oförändrade). Innehållet har inte skrivits om: recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre fungerande HTML-versionen ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **123 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## Kom igång
 
@@ -34,7 +34,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 116 recept; originalets 100 oförändrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 123 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -127,6 +127,19 @@ kan köras lokalt. Fullständig Angular-kompilering och riktiga Playwright-test
 kräver `npm install` och tillgängliga webbläsarbinärer.
 
 
+## Tillägg 117–123 (november 2026)
+
+Sju nya recept har lagts till efter källjämförelse: Pasta all'Amatriciana,
+Crispy Chicken Burger, Chicken Katsu Curry, Thai Green Curry med kyckling,
+Bibimbap, Quesadillas med köttfärs och ost samt Chokladfondant.
+Varje recept innehåller ingrediensgrupper, portionsskalning, instruktioner,
+smarta inköp, uppskattade näringsvärden och originalkällor. De nya
+varianterna är redaktionellt sammanställda och ännu inte provlagade.
+
+Sydkoreas flagga har lagts till under `public/flags/kr.svg`.
+Datatestet tillåter de två avsiktliga äldre receptuppdateringarna,
+och logiktestet verifierar nu antalet recept dynamiskt.
+
 ## Visa appen via GitHub Pages
 
 Detta projekt har en förberedd GitHub Actions-workflow i `.github/workflows/pages.yml`.
@@ -176,7 +189,7 @@ appen: inga förfrågningar skickas till Google Fonts under användning.
 
 Utöka ikonkartan i `src/app/components/ui-icon.component.ts` i stället för
 att skapa nya Unicode-symboler. Maträtts-emojierna och landsflaggorna är separata
-från UI-ikonerna. Alla 116 receptdata är oförändrade.
+från UI-ikonerna. De nya recepten och de tidigare godkända receptförbättringarna bevaras i samma datakälla.
 
 
 ## AI-genererade receptbilder (pilot)
