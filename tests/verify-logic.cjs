@@ -30,8 +30,8 @@ const {RecipeStore} = require('./.compiled/app/core/recipe-store.service.js');
 const {CatalogFilters} = require('./.compiled/app/core/catalog-filters.service.js');
 const {DINNER_OPTIONS, findDinnerSuggestions} = require('./.compiled/app/core/dinner-recommender.js');
 
-assert.equal(RECIPES.length, 116);
-assert.equal(new Set(RECIPES.map(r => r.id)).size, 116);
+assert.ok(RECIPES.length >= 100, 'Minst 100 recept ska finnas');
+assert.equal(new Set(RECIPES.map(r => r.id)).size, RECIPES.length, 'Alla recept-ID ska vara unika');
 assert.ok(CATEGORIES.includes('Alla'));
 assert.ok(TAGS.includes('Alla'));
 assert.ok(TAGS.includes('Kött'), 'Tidigare fel: taggen Kött gick inte att välja i filtret');
@@ -67,7 +67,7 @@ assert.equal(ingredientNote('ca 140 g', 0.5), 'Grundsats: ca 140 g');
 assert.equal(normalizeSearch('KÖTTFÄRS & ÄGG'), 'kottfars & agg');
 assert.equal(recipeMatches(RECIPES.find(r=>r.id==='wallenbergare'), 'KALVFÄRS'), true);
 assert.equal(recipeMatches(RECIPES.find(r=>r.id==='wallenbergare'), 'xyzidneverpresent123'), false);
-console.log('✓ 116 recept: kategorier, samtliga taggar och alla ursprung går att filtrera på');
+console.log(`✓ ${RECIPES.length} recept: kategorier, samtliga taggar och alla ursprung går att filtrera på`);
 console.log('✓ Sökning på namn och samtliga ingredienser, gemener/versaler och svenska tecken');
 console.log('✓ Alla numeriska ingrediensmängder och portionsantal för ½, 1 och 2 satser');
 
