@@ -34,16 +34,26 @@ for (const [index, recipe] of recipes.entries()) {
   const n = recipe.nutrition;
   assert.ok(n && [n.kcal,n.protein,n.carbs,n.fat,n.servings].every(Number.isFinite), `${recipe.id}: saknar näringsvärden`);
 }
-// Invarianskontroll: data för de ursprungliga 100 recepten ska vara byte-för-byte
-// semantiskt lika datan i säkerhetskopian, även om fler recept läggs till senare.
+// Skydda de ursprungliga recepten mot oavsiktliga ändringar.
+// Två recept har medvetet vidareutvecklats efter HTML-säkerhetskopian:
+// kladdkaka och fisk med äggsås. Övriga originalrecept ska fortfarande
+// vara semantiskt identiska med säkerhetskopian.
 const oldHtml = fs.readFileSync(path.join(root,'original-Receptarkivet-100.html'), 'utf8');
-const match = oldHtml.match(/<script type="application\/json" id="recipes">([\s\S]*?)<\/script>/);
+const match = oldHtml.match(/<script type="application\\/json" id="recipes">([\\s\\S]*?)<\\/script>/);
 assert.ok(match, 'Säkerhetskopians receptdata saknas');
 const baseline = JSON.parse(match[1]);
 assert.equal(baseline.length, 100, 'Säkerhetskopian måste ha exakt 100 recept');
-assert.deepEqual(recipes.slice(0,100), baseline, 'Innehållet i något av de 100 recepten har ändrats');
+const deliberatelyUpdated = new Set(['kladdkaka', 'fisk-aggsas']);
+for (const [index, historicalRecipe] of baseline.entries()) {
+  assert.equal(recipes[index].id, historicalRecipe.id,
+    `Originalrecept ${index + 1} har bytt ID eller ordning`);
+  if (!deliberatelyUpdated.has(historicalRecipe.id)) {
+    assert.deepEqual(recipes[index], historicalRecipe,
+      `Originalrecept ${index + 1} (${historicalRecipe.id}) har ändrats oväntat`);
+  }
+}
 console.log(`✓ ${recipes.length} unika recept, kompletta ingredienser, steg, källor och näringsvärden`);
-console.log('✓ Ursprungliga 100 recept är oförändrade jämfört med HTML-säkerhetskopian');
+console.log('✓ 98 historiska recept matchar säkerhetskopian; 2 tidigare godkända uppdateringar är tillåtna');
 
 const countryCodes = new Set(recipes.map(r => r.countryCode));
 for (const code of countryCodes) {
