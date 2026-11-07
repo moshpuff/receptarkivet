@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **123 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **130 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## Kom igång
 
@@ -34,7 +34,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 123 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 130 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -139,6 +139,20 @@ varianterna är redaktionellt sammanställda och ännu inte provlagade.
 Sydkoreas flagga har lagts till under `public/flags/kr.svg`.
 Datatestet tillåter de två avsiktliga äldre receptuppdateringarna,
 och logiktestet verifierar nu antalet recept dynamiskt.
+
+## Tillägg 124–130 (november 2026)
+
+Sju nya recept enligt användarens korrigerade urval: Chicken Alfredo, Sweet & Sour Chicken,
+Panerad rödspätta med remouladsås, Birria Tacos, Hemmagjorda hamburgerbröd,
+Palak Paneer och Blåbärspaj med havresmul och vaniljsås.
+Recepten har svenska ingrediensalternativ och smarta inköp, portionsskalning,
+tydliga tillagningssteg, källor, tips samt uppskattat näringsinnehåll.
+De är framtagna genom jämförelse av etablerade källor, men är ännu inte
+separat provlagade. Birria-versionen använder svensk matbutiksanpassad
+chilibas, och en mer traditionell chilivariant förklaras i tipsen.
+
+Kinas flaggfil `public/flags/cn.svg` är tillagd för Sweet & Sour Chicken.
+Samtliga tidigare 123 recept är bevarade.
 
 ## Visa appen via GitHub Pages
 
