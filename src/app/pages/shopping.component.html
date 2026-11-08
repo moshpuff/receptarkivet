@@ -41,6 +41,28 @@
           <button type="button" class="text-button" (click)="clearBought()">Återställ avbockningar</button>
         </div>
       }
+      @if (selected().length) {
+        <section class="bag-combined" aria-labelledby="combined-title">
+          <div class="bag-combined-heading">
+            <div>
+              <h3 id="combined-title">Gemensam inköpslista</h3>
+              <p>Varor med samma namn och måttenhet räknas ihop. Markeringarna synkas med recepten nedan.</p>
+            </div>
+            <span class="bag-combined-count">{{ combined().length }} varor</span>
+          </div>
+          <div class="bag-combined-items">
+            @for (item of combined(); track item.key) {
+              <label class="bag-combined-item" [class.bag-combined-bought]="item.isBought">
+                <input type="checkbox" [checked]="item.isBought" (change)="boughtCombined(item,$event)" />
+                <span class="bag-combined-name">{{ item.name }}</span>
+                <strong>{{ item.amount }}</strong>
+              </label>
+            }
+          </div>
+        </section>
+        <h3 class="bag-recipe-list-heading">Uppdelat per recept</h3>
+        <p class="bag-recipe-list-hint">Här kan du justera satsstorleken eller kontrollera exakt vilka ingredienser som ingår i varje rätt.</p>
+      }
       @for (r of selected(); track r.id) {
         <section class="bag-recipe">
           <div class="bag-recipe-heading">
