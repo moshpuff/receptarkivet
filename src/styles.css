@@ -276,3 +276,7 @@ app-ui-icon{flex-shrink:0}
   .bag-combined-heading{padding:0 0 10px}
   .bag-combined-items{padding:0}
 }
+
+/* Undvik att långa ingrediensnamn eller sökord skapar horisontell overflow. */
+.applied-filter-chip{max-width:100%;overflow-wrap:anywhere;text-align:left}
+.bag-combined-item strong{max-width:45%;white-space:normal;text-align:right;overflow-wrap:anywhere}
