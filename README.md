@@ -2,6 +2,14 @@
 
 Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **130 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
+## UX och designriktning
+
+Den [aktuella UX-granskningen från 8 november 2026](UX_REVIEW_2026-11-08.md)
+dokumenterar informationsarkitektur, mobil-/desktop-wireframes, ändringar i
+filter och navigation, den sammanslagna inköpslistan samt kvarvarande behov
+för köksläget och användartester. Den äldre filen
+[IA_UX_UI_GRANSKNING.md](IA_UX_UI_GRANSKNING.md) är historisk.
+
 ## Kom igång
 
 Kräver Node.js **22.12+** (eller annan version som stöds av Angular 21) och npm. Läs [Angulars versionskrav](https://angular.dev/reference/versions).
