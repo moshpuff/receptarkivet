@@ -20,17 +20,17 @@ test('sökning, kategori, tagg, land och återställning', async ({page}) => {
   await page.goto('/');
   await page.getByRole('searchbox', {name: 'Sök recept'}).fill('wallenbergare');
   await expect(page.locator('app-recipe-card')).toHaveCount(1);
-  await page.getByRole('button', {name:'Rensa filter'}).click();
+  await page.getByRole('button', {name:'Rensa alla'}).click();
   await page.getByRole('button', {name:'Svensk husman'}).click();
   await expect(page.locator('app-recipe-card').first()).toBeVisible();
   if ((page.viewportSize()?.width ?? 1000) <= 690) {
     await page.getByRole('button', {name:/Fler filter/}).click();
   }
   await page.getByRole('combobox', {name:'Filtrera efter tagg'}).selectOption('Kött');
-  await page.getByRole('button', {name:'Rensa filter'}).click();
+  await page.getByRole('button', {name:'Rensa alla'}).click();
   await page.getByRole('combobox', {name:'Filtrera efter land'}).selectOption('SE');
   await expect(page.locator('app-recipe-card').first()).toBeVisible();
-  await page.getByRole('button', {name:'Rensa filter'}).click();
+  await page.getByRole('button', {name:'Rensa alla'}).click();
   await expect(page.locator('app-recipe-card')).toHaveCount(recipeCatalog.length);
 });
 
