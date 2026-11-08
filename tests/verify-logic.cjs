@@ -29,6 +29,7 @@ const {formatAmount, ingredientAmount, ingredientNote, yieldText, normalizeSearc
 const {RecipeStore} = require('./.compiled/app/core/recipe-store.service.js');
 const {CatalogFilters} = require('./.compiled/app/core/catalog-filters.service.js');
 const {DINNER_OPTIONS, findDinnerSuggestions} = require('./.compiled/app/core/dinner-recommender.js');
+const {mergeShoppingIngredients} = require('./.compiled/app/core/shopping-merge.js');
 
 assert.ok(RECIPES.length >= 100, 'Minst 100 recept ska finnas');
 assert.equal(new Set(RECIPES.map(r => r.id)).size, RECIPES.length, 'Alla recept-ID ska vara unika');
@@ -168,6 +169,25 @@ store.clearBought();
 assert.equal(store.isBought(firstItem), false);
 console.log('✓ Separata avbockningar för handling och matlagning, återställning och lagring över omladdning');
 console.log('✓ Köksläge: stegframsteg, lagat-datum och personliga anteckningar lagras lokalt');
+// Gemensam inköpslista: endast identiskt namn och måttenhet ska räknas ihop.
+const combinedRecipes = ['wallenbergare', 'chicken-alfredo'].map(id => RECIPES.find(r=>r.id===id));
+const merged = mergeShoppingIngredients(combinedRecipes, () => 1, {});
+const butter = merged.find(item => item.name === 'Smör' && item.amount === '70 g');
+assert.ok(butter, '40 g + 30 g smör ska ge en gemensam post på 70 g');
+assert.equal(butter.ingredientKeys.length, 2);
+assert.equal(butter.isBought, false);
+const doubleScale = mergeShoppingIngredients(combinedRecipes, id => id === 'wallenbergare' ? 2 : 1, {});
+assert.equal(doubleScale.find(item => item.name === 'Smör' && item.amount.endsWith(' g')).amount, '110 g');
+const checked = Object.fromEntries(butter.ingredientKeys.map(key => [key, true]));
+const mergedBought = mergeShoppingIngredients(combinedRecipes, () => 1, checked);
+assert.equal(mergedBought.find(item => item.name === 'Smör' && item.amount === '70 g').isBought, true);
+const partial = {[butter.ingredientKeys[0]]: true};
+assert.equal(mergeShoppingIngredients(combinedRecipes, () => 1, partial)
+  .find(item => item.name === 'Smör' && item.amount === '70 g').isBought, false);
+assert.ok(merged.filter(item => item.name === 'Salt').length >= 2,
+  'Salt med andra enheter eller Efter smak ska inte slås ihop felaktigt');
+console.log('✓ Sammanräkning av inköp: enheter, portionsskalning och gemensam avbockning');
+
 console.log('✓ Totalt: logiktesten GODKÄNDA (Angular runtime/DOM behöver separat testas)');
 
 // Middagsförslag: endast granskade måltider och aldrig kortare tid än receptet.
