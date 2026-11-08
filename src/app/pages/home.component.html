@@ -72,7 +72,11 @@
     </div>
     <span class="mobile-filter-tip" aria-hidden="true">Svep för fler kategorier →</span>
   </div>
-  <div class="extra-filters">
+  <button type="button" class="advanced-filter-toggle" [attr.aria-expanded]="advancedOpen()" aria-controls="advanced-filters" (click)="toggleAdvanced()">
+    <app-ui-icon name="filter" [size]="17" /> Fler filter @if (filters.tag() !== 'Alla' || filters.country() !== 'Alla') { <span class="filter-count">Aktiva</span> }
+    <app-ui-icon name="down" [size]="16" />
+  </button>
+  <div class="extra-filters" id="advanced-filters" [class.extra-filters-open]="advancedOpen()">
     <label class="filter-field" for="tag-filter">
       <span>Tagg</span>
       <select id="tag-filter" aria-label="Filtrera efter tagg" [value]="filters.tag()" (change)="onTag($event)">
@@ -93,10 +97,28 @@
         </select>
       </span>
     </label>
+    <label class="filter-field" for="sort-filter">
+      <span>Sortera</span>
+      <select id="sort-filter" aria-label="Sortera recept" [value]="sortBy()" (change)="onSort($event)">
+        <option value="default">Standardordning</option>
+        <option value="name">Namn A–Ö</option>
+      </select>
+    </label>
     @if (hasFilters()) {
       <button type="button" class="reset-filters" (click)="filters.reset()">Rensa filter ×</button>
     }
   </div>
+  @if (appliedFilters().length) {
+    <div class="applied-filter-overview" role="group" aria-label="Aktiva filter">
+      <span class="applied-filter-label">Aktiva filter:</span>
+      @for (chip of appliedFilters(); track chip.key) {
+        <button type="button" class="applied-filter-chip" (click)="removeFilter(chip.key)" [attr.aria-label]="'Ta bort ' + chip.label">
+          {{ chip.label }} <span aria-hidden="true">×</span>
+        </button>
+      }
+      <button type="button" class="applied-filter-clear" (click)="filters.reset()">Rensa alla</button>
+    </div>
+  }
   <p class="filter-hint">Flaggan visar receptets främsta mattradition. Vissa rätter har flera ursprung eller är lokala tolkningar.</p>
   <div class="section-title" id="receptlista">
     <h2>{{ filters.favoritesOnly() ? 'Dina sparade recept' : filters.category() === 'Alla' ? 'Alla recept' : filters.category() }}</h2>
