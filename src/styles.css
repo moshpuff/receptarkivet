@@ -214,3 +214,65 @@ app-ui-icon{flex-shrink:0}
 @media(max-width:690px){.detail-visual.has-photo{order:-1;min-height:0;aspect-ratio:3/2;border-radius:18px}.card-art.has-photo{height:185px}}
 @media(prefers-reduced-motion:reduce){.recipe-card-photo{transition:none}.recipe-card:hover .recipe-card-photo{transform:none}}
 @media print{.detail-visual.has-photo{display:none}}
+
+/* UX-genomgång november 2026: separata sparade recept, tillämpade filter och gemensam inköpslista. */
+.navlinks{align-items:center}
+.navlink{min-height:44px}
+.saved-page{padding-top:37px}
+.saved-header{max-width:720px;margin-bottom:30px}
+.saved-header h1{font:normal clamp(40px,5vw,62px)/1.1 'Fraunces Variable',Georgia,serif;letter-spacing:-1.8px;margin:10px 0}
+.saved-header p{color:var(--muted);font-size:16px;line-height:1.65;max-width:56ch}
+.saved-counter{display:inline-block;margin-top:8px;font-size:13px;font-weight:750;color:var(--accent2)}
+.saved-empty{border:1px solid var(--border);border-radius:18px;padding:clamp(24px,5vw,45px);background:var(--paper);margin-bottom:65px}
+.saved-empty h2{font:normal 30px 'Fraunces Variable',Georgia,serif;margin:0 0 10px}
+.saved-empty p{max-width:50ch;color:var(--muted)}
+.advanced-filter-toggle{display:none}
+.applied-filter-overview{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:9px 0 4px}
+.applied-filter-label{color:var(--muted);font-size:12px;font-weight:750;margin-right:3px}
+.applied-filter-chip{display:inline-flex;align-items:center;gap:9px;min-height:38px;padding:7px 11px;border:1px solid #c9b9a2;border-radius:9px;background:#f1ebe1;color:var(--ink);font-size:12px;font-weight:700}
+.applied-filter-chip span{font-size:17px;line-height:1}
+.applied-filter-chip:hover{background:#eae1d3}
+.applied-filter-clear{border:0;background:transparent;text-decoration:underline;text-underline-offset:3px;color:var(--accent2);font-size:12px;font-weight:750;padding:8px 9px;min-height:38px}
+.applied-filter-chip:focus-visible,.applied-filter-clear:focus-visible,.advanced-filter-toggle:focus-visible,.navlink:focus-visible,.bag-combined-item:focus-within{outline:3px solid #7b5638;outline-offset:3px}
+.bag-combined{margin:20px 0 23px;background:#f7f4ed;border:1px solid var(--border);border-radius:15px;overflow:hidden}
+.bag-combined-heading{display:flex;justify-content:space-between;align-items:start;gap:12px;padding:19px 20px 16px;border-bottom:1px solid var(--border)}
+.bag-combined-heading h3{font:normal 25px/1.2 'Fraunces Variable',Georgia,serif;margin:0 0 6px}
+.bag-combined-heading p{font-size:12px;line-height:1.5;color:var(--muted);margin:0;max-width:55ch}
+.bag-combined-count{flex:none;background:#e8e2d6;color:var(--ink);font-size:12px;font-weight:750;border-radius:99px;padding:7px 10px}
+.bag-combined-items{padding:8px 20px 15px}
+.bag-combined-item{display:flex;align-items:center;gap:11px;padding:11px 2px;min-height:44px;border-bottom:1px solid #e6e0d6;font-size:14px;cursor:pointer}
+.bag-combined-item:last-child{border-bottom:0}
+.bag-combined-item input{flex:none;width:20px;height:20px;accent-color:var(--green)}
+.bag-combined-name{flex:1;min-width:0;line-height:1.45}
+.bag-combined-item strong{flex:none;font-size:13px;white-space:nowrap}
+.bag-combined-bought .bag-combined-name{text-decoration:line-through;color:var(--muted)}
+.bag-recipe-list-heading{font:normal 25px/1.2 'Fraunces Variable',Georgia,serif;margin:24px 0 7px}
+.bag-recipe-list-hint{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 11px}
+@media(max-width:690px){
+  .navlinks{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+  .navlink{font-size:12px;min-height:48px;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:3px 5px;padding:8px 4px}
+  .navlink app-ui-icon{width:16px}
+  .navlink .tiny{margin-left:0}
+  .advanced-filter-toggle{display:flex;align-items:center;gap:8px;width:100%;min-height:46px;margin:10px 0 6px;padding:9px 14px;border:1px solid var(--border);border-radius:10px;background:var(--paper);color:var(--ink);font-weight:750;text-align:left}
+  .advanced-filter-toggle>app-ui-icon:last-child{margin-left:auto}
+  .filter-count{font-size:11px;font-weight:700;color:var(--accent2)}
+  .extra-filters:not(.extra-filters-open){display:none}
+  .extra-filters.extra-filters-open{display:flex}
+  .applied-filter-overview{gap:7px;padding:12px 0 2px}
+  .applied-filter-label{width:100%}
+  .applied-filter-chip{min-height:42px;font-size:12px}
+  .saved-page{padding-top:20px}
+  .saved-header{margin-bottom:24px}
+  .saved-header h1{font-size:40px}
+  .bag-combined-heading{padding:16px 14px 13px}
+  .bag-combined-heading h3{font-size:22px}
+  .bag-combined-count{font-size:11px}
+  .bag-combined-items{padding:5px 14px 12px}
+}
+@media print{
+  .advanced-filter-toggle,.applied-filter-overview,.saved-header .saved-counter,.bag-recipe-list-heading,.bag-recipe-list-hint{display:none!important}
+  .bag-list .bag-recipe{display:none!important}
+  .bag-combined{border:0;background:none;margin:0}
+  .bag-combined-heading{padding:0 0 10px}
+  .bag-combined-items{padding:0}
+}
