@@ -75,7 +75,11 @@ export class HomeComponent {
     this.filters.category() !== 'Alla' || this.filters.tag() !== 'Alla' ||
     this.filters.country() !== 'Alla' || this.filters.favoritesOnly() || !!this.filters.query()
   );
-  scrollToRecipes(): void { document.getElementById('receptlista')?.scrollIntoView({behavior:'smooth', block:'start'}); }
+  scrollToRecipes(): void {
+    const search = document.getElementById('search') as HTMLInputElement | null;
+    search?.scrollIntoView({behavior:'smooth', block:'center'});
+    search?.focus({preventScroll:true});
+  }
   toggleFavorites(): void { this.filters.favoritesOnly.update(v => !v); }
   onSearch(event: Event): void { this.filters.query.set((event.target as HTMLInputElement).value); }
   onTag(event: Event): void { this.filters.tag.set((event.target as HTMLSelectElement).value); }
