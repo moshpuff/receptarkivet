@@ -22,6 +22,8 @@ export class HomeComponent {
   readonly categories = CATEGORIES;
   readonly tags = TAGS;
   readonly countries = COUNTRIES;
+  readonly advancedOpen = signal(false);
+  readonly sortBy = signal<'default' | 'name'>('default');
   readonly selectedCountry = computed(() => COUNTRIES.find(place => place.code === this.filters.country()));
 
   // Lättviktigt, lokalt beslutsstöd; inga anrop, profiler eller nya beroenden.
@@ -47,16 +49,27 @@ export class HomeComponent {
   }
   expandDinnerTime(): void { this.chooseTime(30); }
 
+  readonly appliedFilters = computed(() => {
+    const chips: { key: string; label: string }[] = [];
+    const f = this.filters;
+    if (f.query().trim()) chips.push({key:'query', label:`Sök: ${f.query().trim()}`});
+    if (f.category() !== 'Alla') chips.push({key:'category', label:`Kategori: ${f.category()}`});
+    if (f.tag() !== 'Alla') chips.push({key:'tag', label:`Tagg: ${f.tag()}`});
+    if (f.country() !== 'Alla') chips.push({key:'country', label:`Ursprung: ${this.selectedCountry()?.name ?? f.country()}`});
+    if (f.favoritesOnly()) chips.push({key:'favorites', label:'Bara sparade'});
+    return chips;
+  });
   readonly filtered = computed(() => {
     const {category, tag, country, query, favoritesOnly} = this.filters;
     const saved = this.store.favorites();
-    return RECIPES.filter(r =>
+    const matches = RECIPES.filter(r =>
       (category() === 'Alla' || r.category === category()) &&
       (tag() === 'Alla' || r.tags.includes(tag())) &&
       (country() === 'Alla' || r.countryCode === country()) &&
       (!favoritesOnly() || saved.includes(r.id)) &&
       recipeMatches(r, query())
     );
+    return this.sortBy() === 'name' ? [...matches].sort((a,b) => a.name.localeCompare(b.name,'sv-SE')) : matches;
   });
   readonly hasFilters = computed(() =>
     this.filters.category() !== 'Alla' || this.filters.tag() !== 'Alla' ||
@@ -67,4 +80,17 @@ export class HomeComponent {
   onSearch(event: Event): void { this.filters.query.set((event.target as HTMLInputElement).value); }
   onTag(event: Event): void { this.filters.tag.set((event.target as HTMLSelectElement).value); }
   onCountry(event: Event): void { this.filters.country.set((event.target as HTMLSelectElement).value); }
+  onSort(event: Event): void {
+    this.sortBy.set((event.target as HTMLSelectElement).value === 'name' ? 'name' : 'default');
+  }
+  toggleAdvanced(): void { this.advancedOpen.update(value => !value); }
+  removeFilter(key: string): void {
+    switch (key) {
+      case 'query': this.filters.query.set(''); break;
+      case 'category': this.filters.category.set('Alla'); break;
+      case 'tag': this.filters.tag.set('Alla'); break;
+      case 'country': this.filters.country.set('Alla'); break;
+      case 'favorites': this.filters.favoritesOnly.set(false); break;
+    }
+  }
 }
