@@ -23,6 +23,9 @@ test('sökning, kategori, tagg, land och återställning', async ({page}) => {
   await page.getByRole('button', {name:'Rensa filter'}).click();
   await page.getByRole('button', {name:'Svensk husman'}).click();
   await expect(page.locator('app-recipe-card').first()).toBeVisible();
+  if ((page.viewportSize()?.width ?? 1000) <= 690) {
+    await page.getByRole('button', {name:/Fler filter/}).click();
+  }
   await page.getByRole('combobox', {name:'Filtrera efter tagg'}).selectOption('Kött');
   await page.getByRole('button', {name:'Rensa filter'}).click();
   await page.getByRole('combobox', {name:'Filtrera efter land'}).selectOption('SE');
@@ -266,4 +269,50 @@ test('visar riktiga SVG-flaggor på recept, filter och detaljsida', async ({page
   const detailFlag = page.locator('app-detail h1 .origin-flag');
   await expect(detailFlag).toBeVisible();
   await expect.poll(() => detailFlag.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+});
+
+test('egen vy för sparade recept går att återbesöka', async ({page}) => {
+  await page.goto('/#/recept/wallenbergare');
+  await page.getByRole('button', {name:/Spara recept/}).click();
+  await page.locator('.navlinks').getByRole('link', {name:/Sparade/}).click();
+  await expect(page).toHaveURL(/#\/sparade$/);
+  await expect(page.locator('app-saved app-recipe-card')).toHaveCount(1);
+  await expect(page.locator('app-saved')).toContainText('Wallenbergare');
+  await page.reload();
+  await expect(page.locator('app-saved app-recipe-card')).toHaveCount(1);
+  await page.locator('app-saved .fav').click();
+  await expect(page.locator('app-saved app-recipe-card')).toHaveCount(0);
+  await expect(page.getByText('Här samlar du dina favoriter')).toBeVisible();
+});
+
+test('aktiva filter kan tas bort individuellt och sortering fungerar', async ({page}) => {
+  await page.goto('/');
+  await page.getByRole('searchbox', {name:'Sök recept'}).fill('pasta');
+  await expect(page.getByRole('group',{name:'Aktiva filter'})).toContainText('Sök: pasta');
+  await page.getByRole('button', {name:'Ta bort Sök: pasta'}).click();
+  await expect(page.getByRole('searchbox',{name:'Sök recept'})).toHaveValue('');
+  if ((page.viewportSize()?.width ?? 1000) <= 690) {
+    await page.getByRole('button', {name:/Fler filter/}).click();
+  }
+  await page.getByRole('combobox',{name:'Sortera recept'}).selectOption('name');
+  const firstTitle = await page.locator('app-recipe-card .card-title').first().textContent();
+  expect(firstTitle).toContain('Amerikanska pannkakor');
+});
+
+test('gemensam inköpslista summerar mängder och synkar avbockningar', async ({page}) => {
+  await page.goto('/#/recept/wallenbergare');
+  await page.getByRole('button',{name:/Lägg till i inköpslistan/}).click();
+  await page.goto('/#/recept/chicken-alfredo');
+  await page.getByRole('button',{name:/Lägg till i inköpslistan/}).click();
+  await page.goto('/#/inkopslista');
+  const mergedButter = page.locator('.bag-combined-item',{hasText:'Smör'}).first();
+  await expect(mergedButter).toContainText('70 g');
+  await mergedButter.locator('input').check();
+  for (const id of ['wallenbergare', 'chicken-alfredo']) {
+    const recipe = page.locator('.bag-recipe').filter({has:page.locator(`a[href$="/recept/${id}"]`)});
+    const item = recipe.locator('.bag-item',{hasText:'Smör'}).first();
+    await expect(item.locator('input')).toBeChecked();
+  }
+  await page.reload();
+  await expect(page.locator('.bag-combined-item',{hasText:'Smör'}).first().locator('input')).toBeChecked();
 });
