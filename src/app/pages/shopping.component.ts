@@ -6,6 +6,7 @@ import { RecipeStore } from '../core/recipe-store.service';
 import { ToastService } from '../core/toast.service';
 import { ingredientAmount, ingredientNote, recipeMatches, yieldText } from '../core/recipe-format';
 import { Ingredient, Recipe, Scale } from '../core/recipe.model';
+import { CombinedShoppingRow, mergeShoppingIngredients } from '../core/shopping-merge';
 
 @Component({
   selector: 'app-shopping', standalone: true, imports: [RouterLink, UiIconComponent],
@@ -21,9 +22,11 @@ export class ShoppingComponent {
   readonly visibleChoices = computed(() => RECIPES.filter(r => recipeMatches(r, this.pickerQuery())));
   readonly selected = computed(() => this.store.shoppingIds()
     .map(id => this.byId.get(id)).filter((r): r is Recipe => !!r));
-  readonly totalIngredients = computed(() => this.selected().reduce((sum, r) => sum + r.groups.reduce((s,g) => s + g.items.length, 0),0));
-  readonly boughtCount = computed(() => this.selected().reduce((sum, r) => sum + r.groups.reduce((s,g,gi) =>
-    s + g.items.filter((_,ii) => this.store.isBought(this.key(r,gi,ii))).length, 0),0));
+  readonly combined = computed(() => mergeShoppingIngredients(
+    this.selected(), id => this.store.scale(id), this.store.bought()
+  ));
+  readonly totalIngredients = computed(() => this.combined().length);
+  readonly boughtCount = computed(() => this.combined().filter(item => item.isBought).length);
   readonly hasBought = computed(() => this.boughtCount() > 0);
   readonly remainingCount = computed(() => this.totalIngredients() - this.boughtCount());
   readonly fallbackText = signal('');
@@ -35,16 +38,16 @@ export class ShoppingComponent {
   focusPicker(): void { document.getElementById('bag-search')?.focus(); }
   toggle(r: Recipe): void { this.store.toggleShopping(r.id); }
   bought(key: string, event: Event): void { this.store.setBought(key, (event.target as HTMLInputElement).checked); }
+  boughtCombined(item: CombinedShoppingRow, event: Event): void {
+    const value = (event.target as HTMLInputElement).checked;
+    for (const key of item.ingredientKeys) this.store.setBought(key, value);
+  }
   clearBought(): void { this.store.clearBought(); this.toast.show('Alla varor markerade som ej handlade'); }
   listText(): string {
-    return this.selected().map(r => {
-      const scale = this.store.scale(r.id);
-      const ingredients = r.groups.flatMap((g,gi) => g.items.map((i,ii) => {
-        const mark = this.store.isBought(this.key(r,gi,ii)) ? '☑' : '☐';
-        return `${mark} ${i.name} – ${ingredientAmount(i, scale)}`;
-      })).join('\n');
-      return `${r.name} (${this.yield(r)})\n${ingredients}`;
-    }).join('\n\n');
+    const recipes = this.selected().map(r => r.name).join(', ');
+    const items = this.combined().map(row =>
+      `${row.isBought ? '☑' : '☐'} ${row.name} – ${row.amount}`).join('\n');
+    return items ? `Inköpslista för: ${recipes}\n\n${items}` : '';
   }
   async copy(): Promise<void> {
     const content = this.listText();
