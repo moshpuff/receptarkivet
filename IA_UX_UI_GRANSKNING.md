@@ -1,3 +1,5 @@
+> **Historiskt dokument (24 oktober 2026).** En senare genomgång och den aktuella informationsarkitekturen finns i [UX_REVIEW_2026-11-08.md](UX_REVIEW_2026-11-08.md). Uppgifter nedan om två huvudflikar, 100 recept och inköpslista per recept beskriver den äldre versionen och ska inte betraktas som aktuell status.
+
 # Receptarkivet · Informationsarkitektur, UX och UI
 
 **Datum:** 24 oktober 2026  
