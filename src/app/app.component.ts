@@ -17,6 +17,7 @@ import { RECIPES } from './core/recipe-data';
         <a class="brand" routerLink="/"><span class="brand-mark" aria-hidden="true"><app-ui-icon name="chef" [size]="23" /></span> Receptarkivet</a>
         <div class="navlinks">
           <a class="navlink" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><app-ui-icon name="search" [size]="17" /> Hitta recept</a>
+          <a class="navlink" routerLink="/sparade" routerLinkActive="active"><app-ui-icon name="heart" [size]="17" /> Sparade @if (store.favorites().length) { <span class="tiny">{{ store.favorites().length }}</span> }</a>
           <a class="navlink" routerLink="/inkopslista" routerLinkActive="active">
             <app-ui-icon name="basket" [size]="17" /> Planera & handla @if (store.shoppingCount()) { <span class="tiny">{{ store.shoppingCount() }}</span> }
           </a>
