@@ -36,7 +36,7 @@ Byggfilerna hamnar i `dist/receptarkivet/browser/`. Lägg innehållet på ett HT
 
 UX-versionen inför ett tydligt flöde: **Hitta recept → Planera & handla → Laga steg för steg → Spara resultat**. Inköpslistan går att bocka av och har separat lagring från kökschecklistan. Recept har nu ett dedikerat köksläge (`/#/laga/:id`) med sparat stegframsteg och möjlighet att markera lagat och spara egna anteckningar lokalt.
 
-Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informationsarkitektur, prioriteringar, användartestplan och kvarvarande brister. **Detta är inte en slutligt användartestad eller Angular-kompilerad produktionsapp.**
+Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informationsarkitektur, prioriteringar, användartestplan och kvarvarande brister. **Angular-projektet byggs och publiceras via GitHub Actions, men omfattande verkliga användartester och tillgänglighetsgranskning återstår.**
 
 ## Teknisk struktur
 
