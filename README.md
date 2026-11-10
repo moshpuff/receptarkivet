@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **130 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **131 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 130 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 131 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -161,6 +161,15 @@ chilibas, och en mer traditionell chilivariant förklaras i tipsen.
 
 Kinas flaggfil `public/flags/cn.svg` är tillagd för Sweet & Sour Chicken.
 Samtliga tidigare 123 recept är bevarade.
+
+## Tillägg 131 (november 2026)
+
+**Klassisk köttfärssås med spaghetti** är en egen svensk vardagsvariant på cirka
+30 minuter. Receptet prioriterar bryning, fräst tomatpuré, morot och måttlig
+mängd fond, soja och grädde. Det italienska långkoket **Bolognese** finns
+kvar helt oförändrat. Recept 131 innehåller ingrediensgrupper,
+tillagningssteg, proportionsskalning, uppskattade näringsvärden, källor
+och smarta inköpsråd. Den specifika versionen är ännu inte provlagad.
 
 ## Visa appen via GitHub Pages
 
