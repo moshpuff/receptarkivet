@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **131 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **132 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 131 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 132 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -170,6 +170,21 @@ mängd fond, soja och grädde. Det italienska långkoket **Bolognese** finns
 kvar helt oförändrat. Recept 131 innehåller ingrediensgrupper,
 tillagningssteg, proportionsskalning, uppskattade näringsvärden, källor
 och smarta inköpsråd. Den specifika versionen är ännu inte provlagad.
+
+## Tillägg 132 (november 2026)
+
+**Chick-fil-A Original Chicken Sandwich (copycat)** (🇺🇸) är en
+amerikansk originalinspirerad kycklingsandwich med saftigt bröstkött,
+saltlake, mild kryddad mjölpanering, smörrostat mjukt bröd och två
+syrliga dillpickles. Originalet innehåller inte ost, sallad eller
+dressing, och vi använder inte gurkspad som marinad. Hemmaversionen
+friteras öppet med kontrollerad temperatur – aldrig med en vanlig
+tryckkokare. Raffinerad jordnötsolja, mjölkpulver och MSG beskrivs som
+möjliga originalnära tillval med svenska matbutiksalternativ.
+Receptet innehåller 8 tillagningssteg, portionsskalning,
+källor, smarta inköp och uppskattade näringsvärden. Versionen är ännu
+inte provlagad. Tid: cirka 45 minuter aktiv matlagning plus 2–4 timmar
+i kyld saltlake. Samtliga tidigare 131 recept är oförändrade.
 
 ## Visa appen via GitHub Pages
 
