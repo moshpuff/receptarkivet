@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **135 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **136 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 135 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 136 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -238,6 +238,26 @@ Receptet innehåller 7 steg, portionsskalning, uppskattad näring,
 9 källor, originaltrogna kryddproportioner och smarta inköp.
 Det är ännu inte provlagat mot restaurangens original.
 Alla tidigare 134 recept är bevarade.
+
+## Tillägg 136 (november 2026)
+
+**Domino’s Hand Tossed Pepperoni Pizza (copycat)** (🇺🇸) efterliknar den
+amerikanska varianten med mjukseg pizzadeg, kraftig lätt söt tomatsås,
+lågvätskig mozzarella med en liten mängd provolone, pepperoni och
+vitlökskryddad kant. Receptet ger två pizzor à cirka 28–30 cm och fyra
+portioner, med föredragen 18–24 timmars kyljäsning och dokumenterad
+snabbversion.
+
+Domino’s amerikanska ingredienslista och företagets lansering av den
+omformulerade Hand Tossed-pizzan 2009 är huvudkällor. Exakta mängder,
+degförfarande och såskryddning är en **hemmarekonstruktion**, inte ett
+officiellt originalrecept; varianten har ännu inte provlagats sida vid
+sida med Domino’s. Svenska Pepperoni Feast är en separat menyvariant
+och finns beskriven som möjlig anpassning, inte som identisk produkt.
+
+Receptet har nio tillagningssteg, portionsskalning, uppskattade
+näringsvärden, smarta inköp och sju källor. Alla tidigare 135 recept
+är oförändrade.
 
 ## Visa appen via GitHub Pages
 
