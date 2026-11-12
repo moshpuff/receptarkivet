@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **132 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **133 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 132 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 133 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -185,6 +185,22 @@ Receptet innehåller 8 tillagningssteg, portionsskalning,
 källor, smarta inköp och uppskattade näringsvärden. Versionen är ännu
 inte provlagad. Tid: cirka 45 minuter aktiv matlagning plus 2–4 timmar
 i kyld saltlake. Samtliga tidigare 131 recept är oförändrade.
+
+## Tillägg 133 (november 2026)
+
+**ShackBurger – Shake Shack copycat** (🇺🇸) är en originaltrogen hemmaversion av
+Shake Shacks klassiker med fyra cirka 113 g stora biffar av fet högrevsfärs,
+American cheese, smörrostade potato buns, grön bladsallad, Roma-tomat och
+**Not Quite Our ShackSauce** enligt Shake Shacks publicerade hemmarecept i
+`Shake Shack: Recipes & Stories` (2017).
+
+Exakt kommersiell köttblandning och restaurangsås är hemliga. Detta är alltså
+kedjans dokumenterade hemmavariant, inte en verifierad identisk kopia.
+Den svenska versionen har vägledning för svensk högrevsfärs, smältost och
+hamburgerbröd, rekommendation om att genomsteka butiksfärs till 70 °C,
+portionsskalning, tips, inköpsråd, näringsuppskattning och källor.
+Den är ännu inte sida-vid-sida-provsmakad med restaurangens original.
+Samtliga föregående 132 recept är oförändrade.
 
 ## Visa appen via GitHub Pages
 
