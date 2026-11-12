@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **133 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **134 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 133 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 134 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -201,6 +201,23 @@ hamburgerbröd, rekommendation om att genomsteka butiksfärs till 70 °C,
 portionsskalning, tips, inköpsråd, näringsuppskattning och källor.
 Den är ännu inte sida-vid-sida-provsmakad med restaurangens original.
 Samtliga föregående 132 recept är oförändrade.
+
+## Tillägg 134 (november 2026)
+
+**Burger King Whopper (copycat)** (🇺🇸) är en originalnära återgivning av
+Whopper med bred flammgrillad nötfärsbiff, stort mjukt sesambröd,
+fyra syrliga pickles, ketchup, rå lök, två tomatskivor, krispig
+isbergssallad och majonnäs. Grundvarianten innehåller **ingen ost
+och ingen specialdressing**. För hemmaversionen rekommenderas grill
+med riktig låga när det är möjligt; gjutjärnspanna fungerar men ger
+inte identisk smak. Köttfärsen tillagas till minst 70 °C.
+
+Researchen jämför Burger Kings officiella beskrivning och byggordning,
+svenska Whopper-uppdateringen 2024, den amerikanska från 2026 och
+publicerade copycat-recept. Exakta mängder och tider är en rekonstruktion,
+inte Burger Kings publicerade originalrecept. Receptet har 7 steg,
+portionsskalning, uppskattade näringsvärden, smarta inköp och källor.
+Denna variant är ännu inte provlagad. De tidigare 133 recepten är bevarade.
 
 ## Visa appen via GitHub Pages
 
