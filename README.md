@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **134 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **135 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 134 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 135 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -218,6 +218,26 @@ publicerade copycat-recept. Exakta mängder och tider är en rekonstruktion,
 inte Burger Kings publicerade originalrecept. Receptet har 7 steg,
 portionsskalning, uppskattade näringsvärden, smarta inköp och källor.
 Denna variant är ännu inte provlagad. De tidigare 133 recepten är bevarade.
+
+## Tillägg 135 (november 2026)
+
+**KFC Original Recipe Fried Chicken (copycat)** (🇺🇸) är en noggrant
+researchad rekonstruktion med kycklingbitar på ben och med skinn,
+en tunn enkelpanering och den mycket omtalade blandningen av **11 kryddor**
+från Chicago Tribunes publicering 2016. **MSG ingår som en separat,
+smakmässigt betydelsefull ingrediens**, efter deras jämförande provlagning.
+
+KFC har inte bekräftat den publicerade kryddlistan och företaget
+använder specialbyggd kommersiell tryckfritös med sin `7-10-7`-panering.
+Hemmaversionen använder **alltid säker, öppen fritering** och en
+kärntemperatur på minst 74 °C – aldrig en vanlig tryckkokare.
+Kärnmjölksblandningen och svenska alternativ är dokumenterade som
+copycat-adaptioner, inte verifierad originalmetod.
+
+Receptet innehåller 7 steg, portionsskalning, uppskattad näring,
+9 källor, originaltrogna kryddproportioner och smarta inköp.
+Det är ännu inte provlagat mot restaurangens original.
+Alla tidigare 134 recept är bevarade.
 
 ## Visa appen via GitHub Pages
 
