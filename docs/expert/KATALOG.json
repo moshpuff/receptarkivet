@@ -1,0 +1,1050 @@
+{
+  "schema_version": 1,
+  "source": "src/data/recipes.json",
+  "count": 149,
+  "entries": [
+    {
+      "id": "ryttarkaka",
+      "name": "Ryttarkaka",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "carbonara",
+      "name": "Pasta carbonara",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "bolognese",
+      "name": "Bolognese",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 9
+    },
+    {
+      "id": "kladdkaka",
+      "name": "Kladdkaka",
+      "category": "Bakverk & fika",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "delicatobollar",
+      "name": "Delicatobollar",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 9
+    },
+    {
+      "id": "korvstroganoff",
+      "name": "Korvstroganoff",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "loaded-fries",
+      "name": "Loaded fries",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "flygande-jacob",
+      "name": "Flygande Jacob",
+      "category": "Svensk husman",
+      "sources": 4,
+      "steps": 8
+    },
+    {
+      "id": "lasagne",
+      "name": "Lasagne",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 11
+    },
+    {
+      "id": "ost-skinksas",
+      "name": "Pasta med ost- och skinksås",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 8
+    },
+    {
+      "id": "chili-con-carne",
+      "name": "Chili con carne",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kottbullar-mos",
+      "name": "Köttbullar med potatismos",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "kottfarslimpa",
+      "name": "Köttfärslimpa",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "pannbiff",
+      "name": "Pannbiff med lök",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "kottfarsgratang",
+      "name": "Köttfärsgratäng",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "korv-med-brod",
+      "name": "Korv med bröd",
+      "category": "Snabbmat & street food",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "fisk-aggsas",
+      "name": "Fisk med äggsås",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "raggmunk",
+      "name": "Raggmunk med fläsk",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "pannkakor",
+      "name": "Pannkakor",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "marry-me-chicken",
+      "name": "Marry Me Chicken",
+      "category": "Världens kök",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "stuvade-makaroner-falukorv",
+      "name": "Stuvade makaroner med falukorv",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "smashburgare",
+      "name": "Smashburgare med hamburgardressing",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "tacos-kottfars",
+      "name": "Tacos med köttfärs",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "butter-chicken",
+      "name": "Butter Chicken",
+      "category": "Världens kök",
+      "sources": 1,
+      "steps": 6
+    },
+    {
+      "id": "lax-citronsas",
+      "name": "Ugnsbakad lax med citronsås",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "kalpudding",
+      "name": "Kålpudding med gräddsås",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "hemmagjord-pizza",
+      "name": "Hemmagjord pizza Margherita",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "kanelbullar",
+      "name": "Kanelbullar",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "morotskaka",
+      "name": "Morotskaka",
+      "category": "Bakverk & fika",
+      "sources": 1,
+      "steps": 6
+    },
+    {
+      "id": "appelsmulpaj",
+      "name": "Äppelsmulpaj med vaniljsås",
+      "category": "Efterrätter",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "tunnbrodsrulle",
+      "name": "Tunnbrödsrulle med räksallad",
+      "category": "Snabbmat & street food",
+      "sources": 1,
+      "steps": 6
+    },
+    {
+      "id": "schnitzel-cordon-bleu",
+      "name": "Schnitzel Cordon Bleu",
+      "category": "Världens kök",
+      "sources": 1,
+      "steps": 6
+    },
+    {
+      "id": "fish-and-chips",
+      "name": "Fish and chips",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "mac-and-cheese",
+      "name": "Mac & Cheese",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "moussaka",
+      "name": "Moussaka",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "sloppy-joe",
+      "name": "Sloppy Joe",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "chicken-nuggets",
+      "name": "Chicken Nuggets",
+      "category": "Snabbmat & street food",
+      "sources": 1,
+      "steps": 7
+    },
+    {
+      "id": "pytt-i-panna",
+      "name": "Pytt i panna",
+      "category": "Svensk husman",
+      "sources": 1,
+      "steps": 7
+    },
+    {
+      "id": "aggrora",
+      "name": "Äggröra",
+      "category": "Frukost & brunch",
+      "sources": 1,
+      "steps": 5
+    },
+    {
+      "id": "stekt-laxfile",
+      "name": "Stekt laxfilé med brynt citronsmör",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "smorgastarta",
+      "name": "Smörgåstårta",
+      "category": "Smörgåsar",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "varm-smorgastarta",
+      "name": "Varm smörgåstårta",
+      "category": "Smörgåsar",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "flaskpannkaka",
+      "name": "Fläskpannkaka",
+      "category": "Svensk husman",
+      "sources": 1,
+      "steps": 6
+    },
+    {
+      "id": "omelett",
+      "name": "Omelett",
+      "category": "Frukost & brunch",
+      "sources": 2,
+      "steps": 5
+    },
+    {
+      "id": "tacopaj",
+      "name": "Tacopaj",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "tonfisksallad",
+      "name": "Tonfisksallad",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "gnocchi-tomatsas",
+      "name": "Gnocchi i tomatsås",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "tiramisu",
+      "name": "Tiramisu",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "croque-monsieur",
+      "name": "Croque Monsieur",
+      "category": "Smörgåsar",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "tuna-melt",
+      "name": "Tuna Melt",
+      "category": "Smörgåsar",
+      "sources": 4,
+      "steps": 6
+    },
+    {
+      "id": "rakmacka",
+      "name": "Räkmacka",
+      "category": "Smörgåsar",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "langtradarmacka",
+      "name": "Långtradarmacka",
+      "category": "Smörgåsar",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "philly-cheesesteak",
+      "name": "Philly Cheesesteak",
+      "category": "Smörgåsar",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "toast-skagen",
+      "name": "Toast Skagen",
+      "category": "Smörgåsar",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "brownies",
+      "name": "Brownies",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "sockerbulle-espresso-house",
+      "name": "Sockerbulle i Espresso House-stil",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "creme-brulee",
+      "name": "Crème brûlée",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "pannacotta",
+      "name": "Pannacotta",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "amerikanska-pannkakor",
+      "name": "Amerikanska pannkakor",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "caesarsallad-kyckling",
+      "name": "Caesarsallad med kyckling",
+      "category": "Världens kök",
+      "sources": 4,
+      "steps": 6
+    },
+    {
+      "id": "muffins-vanilj",
+      "name": "Muffins",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "karleksmums",
+      "name": "Kärleksmums",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 9
+    },
+    {
+      "id": "banoffeepaj",
+      "name": "Banoffeepaj",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "chocolate-chip-cookies",
+      "name": "Chocolate Chip Cookies",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "kolasnittar",
+      "name": "Kolasnittar",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "wallenbergare",
+      "name": "Wallenbergare",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 10
+    },
+    {
+      "id": "fiskgratang-duchesse-rakor",
+      "name": "Fiskgratäng med räkor och duchessepotatis",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "biff-stroganoff",
+      "name": "Biff Stroganoff",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "semlor",
+      "name": "Semlor",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 9
+    },
+    {
+      "id": "gulaschsoppa",
+      "name": "Gulaschsoppa",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "kalops",
+      "name": "Kalops",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "janssons-frestelse",
+      "name": "Janssons frestelse",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "fransk-loksoppa",
+      "name": "Fransk löksoppa",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "pad-thai",
+      "name": "Pad Thai med räkor",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "svamprisotto",
+      "name": "Krämig svamprisotto",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "chicken-parmesan",
+      "name": "Chicken Parmesan",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "kebabtallrik",
+      "name": "Kebabtallrik med pommes och egna såser",
+      "category": "Snabbmat & street food",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "hallongrottor",
+      "name": "Hallongrottor",
+      "category": "Bakverk & fika",
+      "sources": 1,
+      "steps": 8
+    },
+    {
+      "id": "prinsesstarta",
+      "name": "Prinsesstårta",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 9
+    },
+    {
+      "id": "new-york-cheesecake",
+      "name": "New York Cheesecake",
+      "category": "Efterrätter",
+      "sources": 2,
+      "steps": 9
+    },
+    {
+      "id": "stekt-flask-loksas",
+      "name": "Stekt fläsk med löksås",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "potatisgratang",
+      "name": "Krämig potatisgratäng",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "kyckling-curry",
+      "name": "Kyckling i currysås med ris",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "boeuf-bourguignon",
+      "name": "Boeuf Bourguignon",
+      "category": "Världens kök",
+      "sources": 1,
+      "steps": 8
+    },
+    {
+      "id": "falafel-pita-vitlokssas",
+      "name": "Falafel i pitabröd med vitlökssås",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "ramen-kyckling",
+      "name": "Ramen med kyckling",
+      "category": "Världens kök",
+      "sources": 1,
+      "steps": 8
+    },
+    {
+      "id": "dammsugare",
+      "name": "Dammsugare (punschrullar)",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "chokladmousse",
+      "name": "Klassisk chokladmousse",
+      "category": "Efterrätter",
+      "sources": 1,
+      "steps": 8
+    },
+    {
+      "id": "artsoppa-flask",
+      "name": "Ärtsoppa med fläsk",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "kaldolmar",
+      "name": "Kåldolmar med gräddsås",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 9
+    },
+    {
+      "id": "dillkott",
+      "name": "Dillkött",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "enchiladas",
+      "name": "Enchiladas med köttfärs",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "pulled-pork",
+      "name": "Pulled Pork med coleslaw och bröd",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "mazariner",
+      "name": "Mazariner",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "sockerkaka",
+      "name": "Klassisk sockerkaka",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "toscakaka",
+      "name": "Toscakaka",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "rulltarta",
+      "name": "Rulltårta med hallonsylt",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "vaniljhjartan",
+      "name": "Vaniljhjärtan",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "potatis-purjolokssoppa",
+      "name": "Krämig potatis- och purjolökssoppa",
+      "category": "Världens kök",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "focaccia-rosmarin",
+      "name": "Focaccia med rosmarin och flingsalt",
+      "category": "Bröd & tillbehör",
+      "sources": 3,
+      "steps": 10
+    },
+    {
+      "id": "kotletter-sambal-gradde",
+      "name": "Kotletter i ugn med sambal och grädde",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kyckling-teriyaki",
+      "name": "Kyckling Teriyaki med ris",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "vasterbottensostpaj",
+      "name": "Klassisk Västerbottensostpaj",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "naan-vitlokssmor",
+      "name": "Naan med vitlökssmör",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "fattiga-riddare",
+      "name": "Fattiga riddare med kanelsocker",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "club-sandwich-kyckling",
+      "name": "Club Sandwich med kyckling och bacon",
+      "category": "Smörgåsar",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kycklingsatay-jordnotssas",
+      "name": "Kycklingsatay med jordnötssås",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "klassiska-scones",
+      "name": "Scones – klassiska och frasiga",
+      "category": "Bröd & tillbehör",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "key-lime-pie",
+      "name": "Key Lime Pie",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "flaskfilegryta-champinjoner",
+      "name": "Fläskfilégryta med champinjoner",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "kycklingsouvlaki-tzatziki",
+      "name": "Kycklingsouvlaki med tzatziki",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 5
+    },
+    {
+      "id": "broccolisoppa-cheddar",
+      "name": "Broccolisoppa med cheddar",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "eggs-benedict",
+      "name": "Eggs Benedict med hollandaisesås",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "lussekatter",
+      "name": "Lussekatter – saftiga saffransbullar",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "pepparkakor",
+      "name": "Pepparkakor – tunna och knapriga",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "pavlova-bar",
+      "name": "Pavlova med grädde och bär",
+      "category": "Efterrätter",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "pasta-amatriciana",
+      "name": "Pasta all'Amatriciana",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "crispy-chicken-burger",
+      "name": "Crispy Chicken Burger",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "chicken-katsu-curry",
+      "name": "Chicken Katsu Curry",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "thai-green-curry",
+      "name": "Thai Green Curry med kyckling",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "bibimbap-koreansk-risbowl",
+      "name": "Bibimbap",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "quesadillas-kottfars",
+      "name": "Quesadillas med köttfärs och ost",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "chokladfondant",
+      "name": "Chokladfondant",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "chicken-alfredo",
+      "name": "Chicken Alfredo",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "sweet-sour-chicken",
+      "name": "Sweet & Sour Chicken",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "panerad-rodspatta-remouladsas",
+      "name": "Panerad rödspätta med remouladsås",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "birria-tacos",
+      "name": "Birria Tacos",
+      "category": "Snabbmat & street food",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "hemmagjorda-hamburgerbrod",
+      "name": "Hemmagjorda hamburgerbröd",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "palak-paneer",
+      "name": "Palak Paneer",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "blabarspaj-smuldeg",
+      "name": "Blåbärspaj med havresmul och vaniljsås",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-kottfarssas-spaghetti",
+      "name": "Klassisk köttfärssås med spaghetti",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "chick-fil-a-original-sandwich-copycat",
+      "name": "Chick-fil-A Original Chicken Sandwich (copycat)",
+      "category": "Snabbmat & street food",
+      "sources": 5,
+      "steps": 8
+    },
+    {
+      "id": "shackburger-shake-shack-copycat",
+      "name": "ShackBurger – Shake Shack copycat",
+      "category": "Snabbmat & street food",
+      "sources": 6,
+      "steps": 8
+    },
+    {
+      "id": "burger-king-whopper-copycat",
+      "name": "Burger King Whopper (copycat)",
+      "category": "Snabbmat & street food",
+      "sources": 7,
+      "steps": 7
+    },
+    {
+      "id": "kfc-original-recipe-fried-chicken-copycat",
+      "name": "KFC Original Recipe Fried Chicken (copycat)",
+      "category": "Snabbmat & street food",
+      "sources": 9,
+      "steps": 7
+    },
+    {
+      "id": "dominos-hand-tossed-pepperoni-pizza-copycat",
+      "name": "Domino’s Hand Tossed Pepperoni Pizza (copycat)",
+      "category": "Pasta & pizza",
+      "sources": 7,
+      "steps": 9
+    },
+    {
+      "id": "subway-subbrod-copycat",
+      "name": "Subway subbröd – Italian White / Ost & Oregano (copycat)",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "klassiska-frallor",
+      "name": "Klassiska frallor",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "klassiska-tekakor",
+      "name": "Tekakor – mjuka och saftiga",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "ciabatta",
+      "name": "Ciabatta – luftiga italienska bröd",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "klassiska-baguetter",
+      "name": "Klassiska baguetter",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 9
+    },
+    {
+      "id": "pasta-alla-vodka",
+      "name": "Pasta alla Vodka",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "fried-rice-stekt-ris-agg",
+      "name": "Fried Rice – stekt ris med ägg",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "kung-pao-chicken",
+      "name": "Kung Pao Chicken",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "korean-fried-chicken",
+      "name": "Korean Fried Chicken – Yangnyeom",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "falukorv-i-ugn-klassisk",
+      "name": "Falukorv i ugn med potatismos",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-kramig-tomatsoppa",
+      "name": "Klassisk krämig tomatsoppa",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "cannoli-siciliani",
+      "name": "Cannoli Siciliani",
+      "category": "Efterrätter",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "big-mac-mcdonalds-copycat",
+      "name": "McDonald’s Big Mac (copycat)",
+      "category": "Snabbmat & street food",
+      "sources": 4,
+      "steps": 8
+    }
+  ]
+}

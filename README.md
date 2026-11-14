@@ -2,6 +2,22 @@
 
 Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **149 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
+## Receptarkivet Expert – systematisk receptkvalitet
+
+Receptarkivet har en separat, **schemalagd ChatGPT-expertgranskning** (normalt en gång per vecka) med målet **fantastisk smak, rätt konsistens, enkla hemmametoder och kristallklara instruktioner**. Den omfattar djup research, kritisk kvalitetskontroll, praktisk matlagning, säkra metoder och granskning av svenska råvaror. Publicerade recept ändras **aldrig** utan användarens godkännande.
+
+Läs [redaktionell standard och fullständigt arbetssätt](docs/expert/REDAKTIONELL_STANDARD.md). Därifrån används också [kulinarisk kunskapsbank](docs/expert/KUNSKAPSBANK.md), [granskningsregister](docs/expert/GRANSKNINGSREGISTER.json) och [kompakt receptkatalog](docs/expert/KATALOG.json). Inga tidigare recept har ändrats för att införa systemet.
+
+Katalog och registrering kan kontrolleras manuellt **utan API-kostnad eller ny GitHub Action**:
+
+```bash
+node scripts/expert-catalog.mjs --check
+node scripts/expert-catalog.mjs --queue
+node scripts/expert-catalog.mjs --write  # vid tillägg/ändring av recept
+```
+
+Kunskapen byggs upp i versionshanterade filer *när förslag godkänns*. ChatGPT tränas inte om av varje körning. Schemalagd granskning nyttjar den befintliga prenumerationens användningsgränser.
+
 ## UX och designriktning
 
 Den [aktuella UX-granskningen från 8 november 2026](UX_REVIEW_2026-11-08.md)
