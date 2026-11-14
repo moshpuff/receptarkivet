@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **136 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **149 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## UX och designriktning
 
@@ -42,7 +42,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 136 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 149 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
@@ -258,6 +258,44 @@ och finns beskriven som möjlig anpassning, inte som identisk produkt.
 Receptet har nio tillagningssteg, portionsskalning, uppskattade
 näringsvärden, smarta inköp och sju källor. Alla tidigare 135 recept
 är oförändrade.
+
+## Tillägg 137–149 (november 2026)
+
+Efter jämförelse av svenska och internationella källor har **13 recept** tillkommit:
+
+| Nr | Recept | Kort beskrivning |
+|---:|---|---|
+| 137 | Subway subbröd (copycat) | En grunddeg, två varianter: Italian White och Ost & Oregano |
+| 138 | Klassiska frallor | Mjuka frukostfrallor, med valfri kalljäsning |
+| 139 | Tekakor | Svenska mjuka, naggade tekakor |
+| 140 | Ciabatta | Luftig högvätskedeg med vikningar |
+| 141 | Klassiska baguetter | Fransk fördeg (poolish), formning och ånga |
+| 142 | Pasta alla Vodka | Krämig tomat- och parmesansås |
+| 143 | Fried Rice med ägg | Kinesiskt inspirerat stekt ris; säker hantering av kokt ris |
+| 144 | Kung Pao Chicken | Sichuaninspirerad wok med jordnötter och chili |
+| 145 | Korean Fried Chicken | Dubbel fritering och gochujangglasyr |
+| 146 | Falukorv i ugn | Klassisk ugnsfalukorv med potatismos |
+| 147 | Krämig tomatsoppa | Tomat, örter och lite grädde |
+| 148 | Cannoli Siciliani | Krispiga skal med ricotta- och chokladfyllning |
+| 149 | McDonald's Big Mac (copycat) | Två biffar, tre brödlager och originalinspirerad sås |
+
+Alla 13 innehåller svenska ingrediensmängder, tillagningssteg, tips, 
+**Typ 2-diabetes-anpassningsråd**, uppskattad näring, smarta inköp, 
+ursprungsflagga och dokumenterade källor (31 källposter totalt). 
+Recepten är **redaktionellt sammanställda och inte separat provlagade**. 
+Copycats ska inte presenteras som restaurangernas offentliggjorda originalrecept.
+
+De första 136 receptobjekten har bevarats utan ändringar. Nya recept visas 
+automatiskt med befintlig sökning, filtrering, portionsskalning och inköpslista.
+
+**Bilder:** Inga nya receptbilder har ännu kvalitetsgranskats och lagts till 
+i bildvitlistan. De nya recepten visar befintlig emoji-fallback tills godkända 
+WebP-bildpar finns.
+
+**Verifiering:** JSON-filens 149 objekt har kontrollerats för unika ID:n, 
+obligatoriska fält, ingrediensformat, källa-URL:er och näringsfält. 
+Fullständig `npm run test:all`/Angular-build och browser-test behöver kontrolleras 
+i GitHub Actions eller lokal Node-miljö.
 
 ## Visa appen via GitHub Pages
 
