@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-15",
+  "source": "src/data/recipes.json",
+  "recipe_count_at_initialization": 149,
+  "note": "Alla recept som inte finns i review_history saknar registrerad oberoende expertgranskning i detta system. Det betyder inte att de är dåliga eller saknar tidigare research. Ingen kandidat nedan är ett konstaterat fel.",
+  "review_history": [],
+  "open_findings": [],
+  "cook_tests": [],
+  "decisions": [],
+  "suggested_queue": [
+    {
+      "id": "korean-fried-chicken",
+      "priority": "P2",
+      "reason": "Fritering, textur och matlagning i hemkök: grundlig metod- och säkerhetsgranskning behövs",
+      "verified_defect": false
+    },
+    {
+      "id": "cannoli-siciliani",
+      "priority": "P2",
+      "reason": "Konditoriteknik, särskild utrustning och fyllningens hållbarhet behöver jämföras",
+      "verified_defect": false
+    },
+    {
+      "id": "big-mac-mcdonalds-copycat",
+      "priority": "P2",
+      "reason": "Originaltrogenhet och såsproportioner kan prövas mot fler primärkällor och oberoende tester",
+      "verified_defect": false
+    },
+    {
+      "id": "bolognese",
+      "priority": "P2",
+      "reason": "Äldre grundrecept, lång teknik och många möjliga metodval ger värde av oberoende jämförelse",
+      "verified_defect": false
+    },
+    {
+      "id": "klassiska-baguetter",
+      "priority": "P2",
+      "reason": "Degformel, poolish, jäsning och vanlig svensk hemmaugn behöver särskilt noggrann validering",
+      "verified_defect": false
+    },
+    {
+      "id": "fried-rice-stekt-ris-agg",
+      "priority": "P2",
+      "reason": "Riskornens textur, wokteknik och kylning av ris motiverar en dedikerad jämförelse",
+      "verified_defect": false
+    }
+  ]
+}
