@@ -30681,5 +30681,1168 @@
       "En billig degskrapa och ren kökshandduk räcker för att forma och slutjäsa, ingen baguetteplåt behövs.",
       "En baguette är ett stort bröd; näringsvärdet avser hela baguetten, inte en normal smörgåsportion."
     ]
+  },
+  {
+    "id": "pasta-alla-vodka",
+    "name": "Pasta alla Vodka",
+    "subtitle": "Silkeslen tomat- och gräddsås med parmesan och mild hetta",
+    "category": "Pasta & pizza",
+    "emoji": "🍝",
+    "tone": "ragu",
+    "badge": "Italiensk-amerikansk klassiker",
+    "yieldBase": "4 portioner",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 35–40 min",
+    "difficulty": "Medel",
+    "temp": "",
+    "intro": "Restaurangkrämig pasta med fyllig rostad tomatpuré, en balanserad skvätt vodka, grädde och parmesan. Kort pasta som rigatoni eller penne fångar den silkeslena såsen. Grunden har medvetet lite mer tomatdjup än en ren gräddsås.",
+    "origin": "Jämförelse av Claire Saffitz recept i Bon Appétit med Daniel Gritzers Penne alla Vodka på Serious Eats, inklusive The Kitchns oberoende fyrvägstest. Vår variant kombinerar brynt tomatpuré, en mindre mängd krossade tomater och pastavatten. Receptet är en egen svenskanpassad sammanställning, ännu inte separat provlagad.",
+    "groups": [
+      {
+        "title": "Pasta och sås",
+        "items": [
+          {
+            "name": "Rigatoni eller penne, torr",
+            "qty": 400,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Smör",
+            "qty": 30,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Gul lök, finhackad",
+            "qty": 1,
+            "unit": "st",
+            "extra": "ca 100 g",
+            "fixed": ""
+          },
+          {
+            "name": "Vitlöksklyftor",
+            "qty": 2,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Tomatpuré",
+            "qty": 100,
+            "unit": "g",
+            "extra": "Gärna koncentrerad.",
+            "fixed": ""
+          },
+          {
+            "name": "Finkrossade tomater",
+            "qty": 200,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vodka",
+            "qty": 60,
+            "unit": "ml",
+            "extra": "Endast till sås, inte för rå smak. För alkoholfritt alternativ se tips.",
+            "fixed": ""
+          },
+          {
+            "name": "Vispgrädde",
+            "qty": 200,
+            "unit": "ml",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Parmesan, finriven",
+            "qty": 60,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Chiliflakes",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "Efter smak.",
+            "fixed": ""
+          },
+          {
+            "name": "Salt och svartpeppar",
+            "qty": null,
+            "unit": "",
+            "extra": "",
+            "fixed": "Efter smak"
+          },
+          {
+            "name": "Pastavatten",
+            "qty": null,
+            "unit": "",
+            "extra": "",
+            "fixed": "Cirka 1–2 dl efter behov"
+          }
+        ]
+      },
+      {
+        "title": "Servering",
+        "items": [
+          {
+            "name": "Färsk basilika (valfritt)",
+            "qty": 0.5,
+            "unit": "kruka",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Extra parmesan (valfritt)",
+            "qty": 20,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Förbered allt",
+        "body": "Koka upp väl saltat pastavatten. Hacka löken fint och riv vitlöken samt parmesanen. Mät upp vodka och grädde i förväg."
+      },
+      {
+        "title": "Svett lök och vitlök",
+        "body": "Smält smöret på medelvärme i en stor stekpanna. Låt löken mjukna cirka 6–8 minuter utan att brännas. Tillsätt vitlök och chiliflakes och fräs ytterligare 30 sekunder."
+      },
+      {
+        "title": "Rosta tomatpurén",
+        "body": "Tillsätt tomatpuré och stek under omrörning 3–5 minuter tills den mörknar något och får djup sötma. Rör sedan i de finkrossade tomaterna och låt sjuda 5 minuter."
+      },
+      {
+        "title": "Tillsätt vodkan och sjud",
+        "body": "Häll i vodka och låt sjuda öppet cirka 4–5 minuter så att den råa alkoholtonen rundas av. All alkohol försvinner inte nödvändigtvis; välj alkoholfritt alternativ vid behov."
+      },
+      {
+        "title": "Gör såsen krämig",
+        "body": "Rör ner vispgrädde och sjud försiktigt 3–4 minuter. Mixa eventuellt såsen slät med stavmixer i tillräckligt djup kastrull för ännu silkeslenare konsistens."
+      },
+      {
+        "title": "Koka pastan nästan färdig",
+        "body": "Koka pastan cirka 1 minut kortare än förpackningens al dente-tid. Spara 2 dl pastavatten innan du häller av."
+      },
+      {
+        "title": "Emulgera med pasta och ost",
+        "body": "Vänd ner pastan i såsen på låg till medelhög värme. Späd gradvis med pastavatten tills såsen klänger blankt runt pastan. Dra från hög värme och rör i parmesanen, lite i taget, tills den smälter utan klumpar. Smaka av med salt och peppar."
+      },
+      {
+        "title": "Servera direkt",
+        "body": "Lägg upp med extra parmesan och färsk basilika om så önskas."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Vodka är en smakkomponent",
+        "body": "En liten mängd bidrar till såsens arombalans. Den ska inte dominera. Sås som sjudit innehåller inte garanterat noll alkohol."
+      },
+      {
+        "title": "Alkoholfri version",
+        "body": "Uteslut vodkan och tillsätt några teskedar vatten och en liten skvätt vitvinsvinäger eller citron för balans. Det blir god krämig tomatpasta men inte samma arom som vodka."
+      },
+      {
+        "title": "Finriven ost",
+        "body": "Riv parmesan själv och sänk värmen före inrörning för att minska risk för grynig sås."
+      },
+      {
+        "title": "Mindre än full burk tomat",
+        "body": "Frys 200 g kvarvarande tomater från en 400 g-förpackning eller använd dem i annan rätt."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Byt till fullkornspasta, minska torr pastamängd per portion och servera tillsammans med grönsaker och protein, exempelvis kyckling. Minska grädden något om du vill; vodkan är inte det som avgör kolhydratmängden."
+      }
+    ],
+    "sources": [
+      [
+        "Bon Appétit – Pasta Alla Vodka (4,8/5, över 500 betyg)",
+        "https://www.bonappetit.com/recipe/rigatoni-with-easy-vodka-sauce"
+      ],
+      [
+        "Serious Eats – Penne Alla Vodka",
+        "https://www.seriouseats.com/pasta-with-vodka-sauce"
+      ],
+      [
+        "The Kitchn – jämförelse av fyra vodkasåser",
+        "https://www.thekitchn.com/vodka-sauce-recipe-reviews-23214793"
+      ]
+    ],
+    "tags": [
+      "Pasta",
+      "Vegetariskt",
+      "30–45 minuter"
+    ],
+    "countryCode": "US",
+    "countryName": "USA",
+    "countryFlag": "🇺🇸",
+    "countryNote": "USA – italiensk-amerikansk restaurangklassiker med omdiskuterat ursprung.",
+    "nutrition": {
+      "per": "portion",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 735,
+      "protein": 24,
+      "carbs": 92,
+      "fat": 30
+    },
+    "shoppingTips": [
+      "Använd 400 g ur ett vanligt 500 g-pastapaket. Rigatoni är bra till tjock sås men penne fungerar utmärkt.",
+      "100 g tomatpuré motsvarar ofta en liten tub eller del av större; rester av finkrossade tomater kan frysas.",
+      "Parmesan och vodka är smakbärare. För den som inte vill använda alkohol finns ett separat alternativ i tipsen."
+    ]
+  },
+  {
+    "id": "fried-rice-stekt-ris-agg",
+    "name": "Fried Rice – stekt ris med ägg",
+    "subtitle": "Separata riskorn, högt stektempo och klassisk kinesisk smak",
+    "category": "Världens kök",
+    "emoji": "🍚",
+    "tone": "golden",
+    "badge": "Snabb vardagsfavorit",
+    "yieldBase": "4 portioner",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 25 min + kylning av kokt ris",
+    "difficulty": "Enkel–medel",
+    "temp": "",
+    "intro": "Klassiskt kinesiskt inspirerat stekt ris med ägg, ärtor, morot, salladslök, soja och några droppar sesamolja. Det viktigaste är torrt, kallt ris, hög värme och att steka i omgångar – inte stora mängder sås.",
+    "origin": "The Woks of Lifes metod för egg fried rice och separat riskorn, jämförd med ICA:s svenska fried rice med grönsaker och ägg. Vår variant håller sig till vanliga svenska butiksråvaror. Receptet är en egen svenskanpassad sammanställning, ännu inte separat provlagad.",
+    "groups": [
+      {
+        "title": "Ris och ägg",
+        "items": [
+          {
+            "name": "Kokt, kallt jasminris",
+            "qty": 700,
+            "unit": "g",
+            "extra": "Motsvarar cirka 250 g torrt ris. Kyl snabbt efter kokning och förvara kylt.",
+            "fixed": ""
+          },
+          {
+            "name": "Ägg",
+            "qty": 4,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Rapsolja",
+            "qty": 3,
+            "unit": "msk",
+            "extra": "Till stekning, dela upp.",
+            "fixed": ""
+          },
+          {
+            "name": "Gul lök, liten",
+            "qty": 1,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Morot",
+            "qty": 1,
+            "unit": "st",
+            "extra": "Finhackad, cirka 100 g.",
+            "fixed": ""
+          },
+          {
+            "name": "Frysta gröna ärtor",
+            "qty": 150,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Salladslök",
+            "qty": 3,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vitlöksklyftor",
+            "qty": 2,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Smaksättning",
+        "items": [
+          {
+            "name": "Japansk eller kinesisk ljus soja",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Sesamolja",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vitpeppar",
+            "qty": 1,
+            "unit": "krm",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Salt",
+            "qty": null,
+            "unit": "",
+            "extra": "",
+            "fixed": "Efter smak"
+          },
+          {
+            "name": "MSG (valfritt)",
+            "qty": 1,
+            "unit": "krm",
+            "extra": "Ger extra restauranglik umami men kan uteslutas.",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Förbered riset säkert",
+        "body": "Använd 700 g redan kokt och helt kallt ris. Om du kokar nytt: sprid tunt på en ren plåt eller i grunda behållare, kyl snabbt och ställ i kyl inom cirka 1 timme. Lämna aldrig ris över natten i rumstemperatur. Bryt isär klumparna med händer eller gaffel."
+      },
+      {
+        "title": "Hacka och mät upp",
+        "body": "Finhacka lök, morot och vitlök. Skiva salladslök och skilj den gröna delen för garnering. Tina ärtorna. Vispa äggen lätt med en nypa salt."
+      },
+      {
+        "title": "Stek äggen snabbt",
+        "body": "Hetta upp cirka 1 msk rapsolja i en stor stekpanna eller wok. Häll i äggen och rör hastigt till mjuka äggbitar. Ta ur pannan innan de blir torra."
+      },
+      {
+        "title": "Fräs grönsakerna",
+        "body": "Höj värmen och tillsätt ytterligare 1 msk olja. Stek lök och morot 2–3 minuter. Vänd in vitlök, ärtor och salladslökens vita delar och stek ytterligare cirka 1 minut."
+      },
+      {
+        "title": "Stek riset i två omgångar",
+        "body": "Lägg undan grönsakerna. Hetta upp resterande olja och stek riset i två omgångar på hög värme, gärna 2–3 minuter per omgång, så att kornen blir varma och separata i stället för ångkokta."
+      },
+      {
+        "title": "Smaksätt och blanda ihop",
+        "body": "Lägg tillbaka allt ris och grönsaker. Tillsätt soja runt pannans kant, vitpeppar, valfri MSG och sesamolja. Rör om kraftigt i cirka 1 minut tills allt är genomvarmt. Vänd till sist ner äggen och den gröna salladslöken."
+      },
+      {
+        "title": "Servera direkt",
+        "body": "Servera som komplett lätt middag eller som tillbehör till wokad kyckling. Kyl eventuella rester snabbt och värm bara upp en gång, tills de är genomheta."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Kallt ris är enklast",
+        "body": "Överblivet ris som kylts snabbt är idealiskt. Nytt ris går också, men sprid ut och kyl mycket snabbt."
+      },
+      {
+        "title": "Stek i omgångar",
+        "body": "En stor kall massa ris sänker pannans temperatur. Två eller tre mindre omgångar ger bättre textur."
+      },
+      {
+        "title": "Lite soja, inte dränkt",
+        "body": "Målet är varma, separata och smakrika korn; för mycket sås gör det fuktigt."
+      },
+      {
+        "title": "Ris och livsmedelssäkerhet",
+        "body": "Bacillus cereus kan växa i tillagat ris som står ljummet länge. Snabb kylning och kyld förvaring är viktigare än om riset är från gårdagen."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Byt gärna en del av riset mot finhackad stekt blomkål och öka ärtor/ägg eller tillsätt tofu. Fullkornsris kan öka fiberhalten; håll kontroll på mängden tillagat ris per portion."
+      }
+    ],
+    "sources": [
+      [
+        "The Woks of Life – Egg Fried Rice",
+        "https://thewoksoflife.com/egg-fried-rice/"
+      ],
+      [
+        "The Woks of Life – How to Make Fried Rice",
+        "https://thewoksoflife.com/how-to-make-fried-rice-formula/"
+      ],
+      [
+        "ICA – Fried rice med grönsaker och ägg",
+        "https://www.ica.se/recept/fried-rice-med-gronsaker-och-agg-712897/"
+      ]
+    ],
+    "tags": [
+      "Ris",
+      "Vegetariskt",
+      "Snabbt",
+      "Asiatiskt"
+    ],
+    "countryCode": "CN",
+    "countryName": "Kina",
+    "countryFlag": "🇨🇳",
+    "countryNote": "Kina – huvudsaklig mattradition för denna version.",
+    "nutrition": {
+      "per": "portion",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 440,
+      "protein": 14,
+      "carbs": 66,
+      "fat": 13
+    },
+    "shoppingTips": [
+      "250 g torrt jasminris brukar ge cirka 700 g kokt, men det varierar med vattenmängd.",
+      "Frysta ärtor från en 500–600 g-påse är smidigt; resten används till fler rätter.",
+      "Sesamolja är koncentrerad; en liten flaska räcker mycket länge."
+    ]
+  },
+  {
+    "id": "kung-pao-chicken",
+    "name": "Kung Pao Chicken",
+    "subtitle": "Sichuaninspirerad kyckling med jordnötter, chili och syrlig woksås",
+    "category": "Världens kök",
+    "emoji": "🍗",
+    "tone": "ragu",
+    "badge": "Kinesisk wokklassiker",
+    "yieldBase": "4 portioner med ris",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 40 min",
+    "difficulty": "Medel",
+    "temp": "",
+    "intro": "Saftiga små kycklingbitar, knapriga jordnötter, aromatisk vitlök och ingefära samt en välbalanserad lätt syrlig, sötstark sås. Sichuanpeppar ger en särskild citrusaktig, lätt pirrande ton men kan utelämnas.",
+    "origin": "Utgår främst från Judy Leungs Kung Pao Chicken hos The Woks of Life (högt läsarbetyg och omfattande kommentarer), jämfört med svenska tolkningar hos ICA. Metoden med kort marinering och snabb wokning bevaras. Receptet är en egen svenskanpassad sammanställning, ännu inte separat provlagad.",
+    "groups": [
+      {
+        "title": "Kyckling och marinad",
+        "items": [
+          {
+            "name": "Benfri kycklinglårfilé",
+            "qty": 600,
+            "unit": "g",
+            "extra": "Bröstfilé fungerar, men stek kortare.",
+            "fixed": ""
+          },
+          {
+            "name": "Majsstärkelse",
+            "qty": 2,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Ljus soja",
+            "qty": 1,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Rapsolja",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Wok och sås",
+        "items": [
+          {
+            "name": "Rostade osaltade jordnötter",
+            "qty": 90,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Salladslök",
+            "qty": 4,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vitlöksklyftor",
+            "qty": 3,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Färsk ingefära",
+            "qty": 20,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Torkad röd chili",
+            "qty": 2,
+            "unit": "st",
+            "extra": "Minska till 1 eller uteslut för mildare.",
+            "fixed": ""
+          },
+          {
+            "name": "Malen sichuanpeppar (valfritt)",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "Finns i asiatiska butiker, annars uteslut.",
+            "fixed": ""
+          },
+          {
+            "name": "Rapsolja till wokning",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Ljus soja",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Risvinäger",
+            "qty": 1.5,
+            "unit": "msk",
+            "extra": "Ersätt med äppelcidervinäger om det behövs.",
+            "fixed": ""
+          },
+          {
+            "name": "Strösocker",
+            "qty": 2,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vatten",
+            "qty": 4,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Majsstärkelse",
+            "qty": 1.5,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Mörk soja (valfritt)",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "Främst för färg.",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Servering",
+        "items": [
+          {
+            "name": "Jasminris, torrt",
+            "qty": 250,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Koka riset",
+        "body": "Koka jasminris enligt förpackningen och håll varmt."
+      },
+      {
+        "title": "Marinera kycklingen",
+        "body": "Skär kyckling i jämna 2 cm stora bitar. Blanda med 1 msk ljus soja, 2 tsk majsstärkelse och 1 tsk rapsolja. Låt stå cirka 15–20 minuter i kyl medan allt annat förbereds."
+      },
+      {
+        "title": "Blanda såsen",
+        "body": "Vispa ihop 2 msk ljus soja, 1,5 msk risvinäger, 2 tsk socker, 4 msk vatten, 1,5 tsk majsstärkelse och valfri mörk soja. Håll nära spisen."
+      },
+      {
+        "title": "Förbered aromerna",
+        "body": "Hacka ingefära och vitlök fint, skär salladslök i 2 cm bitar och bryt torkad chili i bitar om du vill ha mer hetta. Använd färdigrostade osaltade jordnötter eller rosta snabbt i torr panna."
+      },
+      {
+        "title": "Bryn kyckling snabbt",
+        "body": "Hetta upp 1 msk olja i stor wok eller panna. Stek kycklingen i två omgångar på hög värme tills den får färg och är nästan genomstekt. Lägg åt sidan och låt inte stå ljummen länge."
+      },
+      {
+        "title": "Fräs kryddorna",
+        "body": "Sänk värmen något, tillsätt resterande olja och fräs vitlök, ingefära, chili, salladslökens vita delar och valfri sichuanpeppar cirka 30–60 sekunder utan att bränna."
+      },
+      {
+        "title": "Glasera snabbt och avsluta säkert",
+        "body": "Lägg tillbaka kycklingen. Rör om såsen så stärkelsen blandas och häll i. Woka 1–2 minuter tills såsen tjocknar och kycklingen är genomstekt (cirka 72 °C i kärnan). Vänd i jordnötterna och salladslökens gröna delar precis före servering."
+      },
+      {
+        "title": "Servera",
+        "body": "Servera genast med ris så att jordnötterna behåller krispigheten."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Sichuan eller svensk vardagsvariant?",
+        "body": "Torkad chili och sichuanpeppar ger mer originalnära stil. Utan sichuanpeppar blir det fortfarande en god Kung Pao-inspirerad vardagswok."
+      },
+      {
+        "title": "Jordnötterna sist",
+        "body": "De ska vara knapriga, inte mjukkokta i såsen."
+      },
+      {
+        "title": "Undvik att steka för mycket kyckling samtidigt",
+        "body": "För trång panna gör kycklingen kokt i stället för brynt."
+      },
+      {
+        "title": "Allergener",
+        "body": "Innehåller jordnötter och soja. Byt inte bara nötter om du lagar åt någon med nötallergi utan att säkerställa trygg hantering."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Servera mindre mängd ris, gärna fullkornsris eller blomkålsris, och öka grönsaker som paprika eller broccoli. Minska sockret i såsen något om smaken tillåter; största kolhydratkällan är normalt riset."
+      }
+    ],
+    "sources": [
+      [
+        "The Woks of Life – Kung Pao Chicken (4,94/5, 94 röster)",
+        "https://thewoksoflife.com/kung-pao-chicken/"
+      ],
+      [
+        "ICA – Receptkategori med kung pao-kyckling och sichuanpeppar",
+        "https://www.ica.se/recept/het/kyckling/"
+      ]
+    ],
+    "tags": [
+      "Kyckling",
+      "Wok",
+      "Asiatiskt",
+      "Jordnötter"
+    ],
+    "countryCode": "CN",
+    "countryName": "Kina",
+    "countryFlag": "🇨🇳",
+    "countryNote": "Kina – huvudsaklig mattradition för denna version.",
+    "nutrition": {
+      "per": "portion",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 705,
+      "protein": 42,
+      "carbs": 63,
+      "fat": 29
+    },
+    "shoppingTips": [
+      "Färska kycklinglårfiléer säljs ofta i 600–700 g-förpackningar. Majsstärkelse står bland mjöl och redningar.",
+      "En 200 g-påse rostade osaltade jordnötter räcker till två satser.",
+      "Risvinäger och ljus soja finns ofta i större svenska butiker. Sichuanpeppar är frivilligt och kan kräva asiatisk livsmedelsbutik."
+    ]
+  },
+  {
+    "id": "korean-fried-chicken",
+    "name": "Korean Fried Chicken – Yangnyeom",
+    "subtitle": "Dubbelkrispig kyckling i klibbig gochujangglasyr",
+    "category": "Världens kök",
+    "emoji": "🍗",
+    "tone": "ragu",
+    "badge": "Koreansk favorit",
+    "yieldBase": "4 portioner",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 60 min",
+    "difficulty": "Medel–avancerad",
+    "temp": "",
+    "intro": "Koreansk friterad kyckling med superfrasigt majsstärkelsepanerat skal och en söt, syrlig, mildhet som går att anpassa i gochujangglasyr. Dubbel fritering och sås precis före servering ger rätt kontrast.",
+    "origin": "Teknik och kryddprofil jämförda mellan Maangchis Yangnyeom-tongdak och My Korean Kitchens Korean Fried Chicken samt soy garlic-dakgangjeong. Vår version använder kycklinglårfilé i bitar för enklare, säkrare hemmalagning och svenska butiksmängder. Receptet är en egen svenskanpassad sammanställning, ännu inte separat provlagad.",
+    "groups": [
+      {
+        "title": "Kyckling och panering",
+        "items": [
+          {
+            "name": "Kycklinglårfilé utan ben",
+            "qty": 750,
+            "unit": "g",
+            "extra": "Skär i jämna bitar 3–4 cm.",
+            "fixed": ""
+          },
+          {
+            "name": "Färsk ingefära, riven",
+            "qty": 10,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Salt",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Svartpeppar",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Majsstärkelse",
+            "qty": 120,
+            "unit": "g",
+            "extra": "Potatisstärkelse ger också bra fras.",
+            "fixed": ""
+          },
+          {
+            "name": "Rapsolja till fritering",
+            "qty": 1,
+            "unit": "liter",
+            "extra": "Cirka, kastrullens storlek avgör; all olja absorberas inte.",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Sötstark koreansk glasyr",
+        "items": [
+          {
+            "name": "Gochujang",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "Minska till 1 msk för mildare hetta.",
+            "fixed": ""
+          },
+          {
+            "name": "Ketchup",
+            "qty": 3,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Honung",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Brun farin",
+            "qty": 1,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Japansk soja",
+            "qty": 1.5,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Risvinäger",
+            "qty": 1,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vitlöksklyftor, pressade",
+            "qty": 2,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Sesamolja",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vatten",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Garnering",
+        "items": [
+          {
+            "name": "Rostade sesamfrön",
+            "qty": 1,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Salladslök",
+            "qty": 2,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Förbered trygg fritering",
+        "body": "Ta fram stor tjockbottnad kastrull och termometer. Fyll högst en tredjedel med olja och ha lock nära till hands men lägg aldrig på lock under normal fritering. Ingen vattenkontakt med het olja. Värm mot cirka 170–175 °C."
+      },
+      {
+        "title": "Krydda kycklingen",
+        "body": "Torka kycklingbitarna noga med hushållspapper, blanda med riven ingefära, salt och peppar. Vänd runt i majsstärkelsen så alla ytor får ett tunt, jämnt lager. Skaka bort överskott."
+      },
+      {
+        "title": "Koka ihop såsen",
+        "body": "Rör samman gochujang, ketchup, honung, farin, soja, risvinäger, vitlök, sesamolja och vatten i liten kastrull. Låt sjuda försiktigt 3–4 minuter tills blank och lätt klibbig. Håll varm på låg värme."
+      },
+      {
+        "title": "Första friteringen",
+        "body": "Fritera kycklingen i små omgångar vid cirka 170 °C 4–6 minuter beroende på storlek, tills köttet är nästan eller helt genomstekt. Temperaturen sjunker när kyckling tillsätts; stek inte för mycket åt gången. Lyft upp på galler."
+      },
+      {
+        "title": "Låt vila och kontrollera",
+        "body": "Låt kycklingen vila 5 minuter medan oljan återgår till 180 °C. Kontrollera med sticktermometer att tjocka bitar till slut når minst cirka 72 °C i kärnan."
+      },
+      {
+        "title": "Andra friteringen",
+        "body": "Fritera samma bitar igen i omgångar 1,5–3 minuter vid cirka 180 °C tills riktigt krispiga och gyllene. Låt rinna av på galler; undvik pappershandduk under som kan göra undersidan mjuk."
+      },
+      {
+        "title": "Glasera och servera omedelbart",
+        "body": "Vänd kycklingen hastigt i den varma såsen precis före servering eller servera såsen bredvid för maximalt fras. Strö sesam och strimlad salladslök över. Servera gärna med snabbpicklad gurka och ris."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Dubbel fritering är nyckeln",
+        "body": "Första omgången lagar kycklingen, den andra torkar och krispar ytan. Använd termometer och fritering i små omgångar."
+      },
+      {
+        "title": "Gochujang kan variera",
+        "body": "Koreansk fermenterad chilipasta finns i många större svenska matbutiker men olika märken är olika salta och heta. Börja försiktigt."
+      },
+      {
+        "title": "Mindre hetta, samma karaktär",
+        "body": "Minska gochujang och öka ketchup lite; den blir då mildare men fortfarande söt, syrlig och klibbig."
+      },
+      {
+        "title": "Friteringssäkerhet",
+        "body": "Häll aldrig vatten på brinnande olja. Stäng värmen och kväv med lock eller brandfilt om det är säkert; lämna annars och larma. Låt använd olja svalna helt innan hantering."
+      },
+      {
+        "title": "Servera sås separat",
+        "body": "Förbered kycklingen och värm såsen men blanda först när allt ska ätas så bevaras maximal krispighet."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Servera gärna glasyren separat och använd en mindre mängd eftersom honung, farin och ketchup tillför socker. Kombinera med grönsaker och mindre risportion. Minska stärkelse och socker försiktigt om smak och panering tillåter, men den valda versionen är en indulgent rätt."
+      }
+    ],
+    "sources": [
+      [
+        "Maangchi – Yangnyeom-tongdak (4,6/5, 782 röster)",
+        "https://www.maangchi.com/recipe/yangnyeom-tongdak"
+      ],
+      [
+        "My Korean Kitchen – Korean Fried Chicken (4,95/5, 135 röster)",
+        "https://mykoreankitchen.com/korean-fried-chicken/"
+      ],
+      [
+        "My Korean Kitchen – Soy Garlic Dakgangjeong",
+        "https://mykoreankitchen.com/dakgangjeong-soy-garlic-fried-chicken/"
+      ]
+    ],
+    "tags": [
+      "Kyckling",
+      "Friterat",
+      "Asiatiskt"
+    ],
+    "countryCode": "KR",
+    "countryName": "Sydkorea",
+    "countryFlag": "🇰🇷",
+    "countryNote": "Sydkorea – huvudsaklig mattradition för denna version.",
+    "nutrition": {
+      "per": "portion",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 640,
+      "protein": 39,
+      "carbs": 53,
+      "fat": 30
+    },
+    "shoppingTips": [
+      "Gochujang finns ofta i asiatiska sortiment på ICA/Coop; annars i asiatisk livsmedelsbutik. Gochujang är inte samma sak som vanlig sweet chilisås.",
+      "Majsstärkelse (Maizena) i standardförpackning räcker gott; risvinäger kan bytas mot mild äppelcidervinäger.",
+      "Köp minst cirka 1 liter neutral rapsolja för att kunna fritera säkert i lagom stor kastrull. All olja går inte åt i maten."
+    ]
+  },
+  {
+    "id": "falukorv-i-ugn-klassisk",
+    "name": "Falukorv i ugn med potatismos",
+    "subtitle": "Ugnsgratinerad falukorv med senap, tomat och smält ost",
+    "category": "Svensk husman",
+    "emoji": "🥘",
+    "tone": "golden",
+    "badge": "Svensk vardagsklassiker",
+    "yieldBase": "4 portioner",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 45 min",
+    "difficulty": "Enkel",
+    "temp": "225 °C",
+    "intro": "En svensk favorit med klassiskt skårad falukorv, mild senap, lökskivor, tomat och gratinerad ost. Till den ett fluffigt, smörigt potatismos. Mycket smak utan onödig krångel.",
+    "origin": "Bygger på Arlas klassiska ugnsfalukorv med senap, tomater och ost, jämförd med ICA:s gratinerade version med lök och bostongurka. Svensk vardagsvariant som kombinerar fyllningen och gör potatismos från grunden. Receptet är en egen svenskanpassad sammanställning, ännu inte separat provlagad.",
+    "groups": [
+      {
+        "title": "Falukorv i ugn",
+        "items": [
+          {
+            "name": "Falukorv",
+            "qty": 600,
+            "unit": "g",
+            "extra": "En vanlig ring, gärna hög kötthalt.",
+            "fixed": ""
+          },
+          {
+            "name": "Gul lök",
+            "qty": 1,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Tomater",
+            "qty": 2,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Mild svensk senap",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Ketchup",
+            "qty": 1,
+            "unit": "msk",
+            "extra": "Valfritt för en lätt sötare klassisk smak.",
+            "fixed": ""
+          },
+          {
+            "name": "Riven lagrad ost",
+            "qty": 120,
+            "unit": "g",
+            "extra": "Exempelvis prästost eller mild cheddar.",
+            "fixed": ""
+          },
+          {
+            "name": "Svartpeppar",
+            "qty": 1,
+            "unit": "krm",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Hemlagat potatismos",
+        "items": [
+          {
+            "name": "Mjölig potatis",
+            "qty": 800,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Standardmjölk",
+            "qty": 200,
+            "unit": "ml",
+            "extra": "Värm före inblandning.",
+            "fixed": ""
+          },
+          {
+            "name": "Smör",
+            "qty": 25,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Salt",
+            "qty": null,
+            "unit": "",
+            "extra": "",
+            "fixed": "Efter smak"
+          },
+          {
+            "name": "Vitpeppar",
+            "qty": 1,
+            "unit": "krm",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Till servering",
+        "items": [
+          {
+            "name": "Blandsallad eller rivna morötter",
+            "qty": 200,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Sätt på ugnen",
+        "body": "Värm till 225 °C över- och undervärme. Skala potatisen och sätt en kastrull med lättsaltat vatten på spisen."
+      },
+      {
+        "title": "Skär och fyll korven",
+        "body": "Lägg falukorven i en ugnsform och skär täta skåror cirka tre fjärdedelar ner – inte helt igenom. Skiva lök och tomater tunt. Fördela lök och tomat i skårorna. Bred senap och eventuell ketchup över korven."
+      },
+      {
+        "title": "Gratinera med ost",
+        "body": "Strö riven ost över och krydda lätt med svartpeppar. Grädda i mitten cirka 20–25 minuter tills korven är het rakt igenom och osten gyllene."
+      },
+      {
+        "title": "Koka potatisen",
+        "body": "Skär potatisen i jämna bitar och koka 15–20 minuter tills den är helt mjuk. Häll av och låt ånga av någon minut."
+      },
+      {
+        "title": "Gör ett fluffigt mos",
+        "body": "Värm mjölk och smör försiktigt. Pressa eller mosa potatisen, vänd i varm mjölkblandning lite i taget. Rör inte för kraftigt eller länge – då kan moset bli klistrigt. Smaka av med salt och vitpeppar."
+      },
+      {
+        "title": "Servera",
+        "body": "Lägg upp nygratinerad falukorv med mos och fräsch sallad eller rivna morötter."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Håll ihop korven",
+        "body": "Skårorna ska inte gå genom hela ringen; använd två träskedar som stopp om det hjälper."
+      },
+      {
+        "title": "Hög kötthalt",
+        "body": "Korv med högre kötthalt kan ge fylligare smak men kan också vara saltare. Smaka av tillbehören separat."
+      },
+      {
+        "title": "Bostongurka som variation",
+        "body": "Lägg lite bostongurka i några skåror om du vill åt ICA:s klassiska festliga variant."
+      },
+      {
+        "title": "Mos utan klister",
+        "body": "Potatispress eller stöt ger bättre konsistens än stavmixer."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Ta en mindre portion mos och komplettera med mer sallad eller blomkålsmos. Välj gärna falukorv med hög kötthalt och jämför salthalt, samt var sparsam med ketchup. Rätten innehåller fortfarande potatis och processat kött."
+      }
+    ],
+    "sources": [
+      [
+        "Arla – Falukorv i ugn med mos",
+        "https://www.arla.se/recept/falukorv-i-ugn/"
+      ],
+      [
+        "ICA – Festlig falukorv i ugn (4,4/5)",
+        "https://www.ica.se/recept/festlig-falukorv-i-ugn-722389/"
+      ]
+    ],
+    "tags": [
+      "Korv",
+      "Ugn",
+      "Vardagsmat",
+      "Potatis"
+    ],
+    "countryCode": "SE",
+    "countryName": "Sverige",
+    "countryFlag": "🇸🇪",
+    "countryNote": "Sverige – huvudsaklig mattradition för denna version.",
+    "nutrition": {
+      "per": "portion",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 720,
+      "protein": 30,
+      "carbs": 48,
+      "fat": 45
+    },
+    "shoppingTips": [
+      "600 g falukorv är en praktisk svensk förpackningsstorlek; välj gärna ring med hög kötthalt.",
+      "En vanlig 150 g-påse färdigriven ost täcker receptet med lite marginal.",
+      "Köp cirka 1 kg mjölig potatis och använd 800 g till moset."
+    ]
   }
 ]
