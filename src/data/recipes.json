@@ -31844,5 +31844,717 @@
       "En vanlig 150 g-påse färdigriven ost täcker receptet med lite marginal.",
       "Köp cirka 1 kg mjölig potatis och använd 800 g till moset."
     ]
+  },
+  {
+    "id": "klassisk-kramig-tomatsoppa",
+    "name": "Klassisk krämig tomatsoppa",
+    "subtitle": "Rostad tomatpuré, mild grädde och färsk basilika",
+    "category": "Världens kök",
+    "emoji": "🥣",
+    "tone": "ragu",
+    "badge": "Enkel vardagsklassiker",
+    "yieldBase": "4 portioner",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 35 min",
+    "difficulty": "Enkel",
+    "temp": "",
+    "intro": "En mustig, len tomatsoppa med koncentrerad tomatsmak från fräst tomatpuré, bra krossade tomater, vitlök och basilika. Lite grädde rundar av syran utan att dölja tomatsmaken. Servera gärna med grillad ostsmörgås eller hembakad ciabatta.",
+    "origin": "Kombination av Arlas krämiga tomatsoppa och ICA:s matiga tomatsoppa med långsamt frästa aromatiska grönsaker. Vi använder konserverade tomater som smakar bra året runt och lyfter dem med rostad tomatpuré. Receptet är redaktionellt sammanställt och ännu inte separat provlagat.",
+    "groups": [
+      {
+        "title": "Soppa",
+        "items": [
+          {
+            "name": "Krossade eller hela skalade tomater",
+            "qty": 800,
+            "unit": "g",
+            "extra": "2 vanliga burkar à 400 g.",
+            "fixed": ""
+          },
+          {
+            "name": "Gul lök",
+            "qty": 1,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Morot",
+            "qty": 1,
+            "unit": "st",
+            "extra": "Cirka 100 g, ger naturlig sötma.",
+            "fixed": ""
+          },
+          {
+            "name": "Vitlöksklyftor",
+            "qty": 3,
+            "unit": "st",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Tomatpuré",
+            "qty": 2,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Olivolja",
+            "qty": 1.5,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Grönsaksbuljong, färdig",
+            "qty": 500,
+            "unit": "ml",
+            "extra": "Dosera fond efter förpackningen.",
+            "fixed": ""
+          },
+          {
+            "name": "Vispgrädde",
+            "qty": 100,
+            "unit": "ml",
+            "extra": "Alternativt matlagningsgrädde, men soppan blir lättare.",
+            "fixed": ""
+          },
+          {
+            "name": "Torkad oregano",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Färsk basilika",
+            "qty": 0.5,
+            "unit": "kruka",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Socker (valfritt)",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "Bara om tomaterna är mycket syrliga.",
+            "fixed": ""
+          },
+          {
+            "name": "Salt och svartpeppar",
+            "qty": null,
+            "unit": "",
+            "extra": "",
+            "fixed": "Efter smak"
+          }
+        ]
+      },
+      {
+        "title": "Till servering – valfritt",
+        "items": [
+          {
+            "name": "Ciabatta eller frallor",
+            "qty": 4,
+            "unit": "st",
+            "extra": "Uteslut om soppan serveras som lätt förrätt.",
+            "fixed": ""
+          },
+          {
+            "name": "Färsk basilika, extra",
+            "qty": null,
+            "unit": "",
+            "extra": "",
+            "fixed": "Några blad"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Förbered grönsakerna",
+        "body": "Skala och finhacka lök, morot och vitlök. Mät upp övriga ingredienser."
+      },
+      {
+        "title": "Bygg grunden långsamt",
+        "body": "Värm olivoljan i en gryta på medelvärme. Fräs lök och morot i 7–8 minuter tills mjuka utan att brännas."
+      },
+      {
+        "title": "Rosta tomatpuré och vitlök",
+        "body": "Tillsätt vitlök och oregano och fräs 30 sekunder. Rör ner tomatpurén och låt steka cirka 2 minuter tills den mörknar något och doftar sött."
+      },
+      {
+        "title": "Sjud tomatsoppan",
+        "body": "Häll i tomater och buljong. Låt småputtra utan lock cirka 15–20 minuter, tills grönsakerna är mjuka och smakerna har gått ihop."
+      },
+      {
+        "title": "Mixa till önskad konsistens",
+        "body": "Ta av från stark värme, tillsätt basilikan och mixa med stavmixer i djup kastrull tills slät. Skydda mot heta stänk. Vill du ha finare konsistens kan soppan passeras genom sil."
+      },
+      {
+        "title": "Runda av med grädde",
+        "body": "Häll i grädden och värm på låg värme 2–3 minuter utan häftig kokning. Smaka av med salt, peppar och en liten nypa socker bara om tomaterna behöver det."
+      },
+      {
+        "title": "Servera",
+        "body": "Toppa med basilika och servera gärna med nybakat bröd eller grillad ostsmörgås. Brödets näringsvärde ingår inte i beräkningen."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Konserverade tomater är ofta bäst",
+        "body": "När färska tomater inte är riktigt mogna ger hela skalade konserverade tomater ofta fylligare smak."
+      },
+      {
+        "title": "Mixa med försiktighet",
+        "body": "Undvik att mixa stora mängder het soppa i för liten sluten blender. Stavmixer i djup kastrull är enklast."
+      },
+      {
+        "title": "Vegetarisk om rätt fond används",
+        "body": "Kontrollera grönsaksbuljongen; vill du ha vegansk soppa byt grädden mot havrebaserad matlagningsprodukt."
+      },
+      {
+        "title": "Frysvänlig",
+        "body": "Soppan kan frysas och värmas försiktigt. Grädde kan ibland ge lätt förändrad konsistens efter upptining."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Uteslut tillsatt socker och välj tomatkonserver utan tillsatt socker. Soppan har relativt måttligt med kolhydrater utan bröd, men servera gärna med protein som ägg eller keso i stället för stora mängder ljust bröd."
+      }
+    ],
+    "sources": [
+      [
+        "Arla – Tomatsoppa",
+        "https://www.arla.se/recept/tomatsoppa/"
+      ],
+      [
+        "ICA – Matig tomatsoppa",
+        "https://www.ica.se/recept/matig-tomatsoppa-168570/"
+      ]
+    ],
+    "tags": [
+      "Soppa",
+      "Vegetariskt",
+      "Snabbt"
+    ],
+    "countryCode": "IT",
+    "countryName": "Italien",
+    "countryFlag": "🇮🇹",
+    "countryNote": "Italienskt inspirerad tomat- och basilikasoppa; klassiska tomatsoppor finns i många europeiska kök.",
+    "nutrition": {
+      "per": "portion",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 200,
+      "protein": 5,
+      "carbs": 20,
+      "fat": 12
+    },
+    "shoppingTips": [
+      "Två burkar tomat à 400 g ger rätt mängd, och buljong kan blandas av vanlig fond/tärning och vatten.",
+      "Köp 2 dl eller 2,5 dl grädde om minsta storleken saknas; rester kan användas till pasta alla vodka.",
+      "Ciabattan vi lagt till passar som tillbehör men är valfri och ingår inte i näringsvärdet."
+    ]
+  },
+  {
+    "id": "cannoli-siciliani",
+    "name": "Cannoli Siciliani",
+    "subtitle": "Spröda friterade skal med len ricotta, choklad och pistage",
+    "category": "Efterrätter",
+    "emoji": "🍰",
+    "tone": "golden",
+    "badge": "Siciliansk dessertklassiker",
+    "yieldBase": "12 cannoli",
+    "yields": [
+      6,
+      0,
+      12,
+      0,
+      24,
+      0
+    ],
+    "time": "Ca 1 tim 15 min aktivt + 8–12 tim avrinning + 1–2 tim degvila",
+    "difficulty": "Avancerad",
+    "temp": "",
+    "intro": "Klassiska sicilianska cannoli: mycket tunna, bubbliga och spröda friterade skal som fylls med väl avrunnen ricottakräm och toppas med mörk choklad, pistage och apelsinskal. Skalen fylls först när de ska serveras så att de förblir krispiga.",
+    "origin": "Tradition och teknik hämtade från Siciliens officiella turismsida samt italienska GialloZafferano. Fyllningen baseras på ricotta och socker, inte vaniljkräm eller mascarpone. Den svenska hemmaversionen använder smör och komjölksricotta när fårmjölksricotta saknas. Receptet är redaktionellt sammanställt och ännu inte separat provlagat.",
+    "groups": [
+      {
+        "title": "Cannoliskal – 12 stycken",
+        "items": [
+          {
+            "name": "Vetemjöl",
+            "qty": 230,
+            "unit": "g",
+            "extra": "Vanligt vetemjöl; 00-mjöl fungerar också.",
+            "fixed": ""
+          },
+          {
+            "name": "Strösocker",
+            "qty": 25,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Smör, kallt",
+            "qty": 25,
+            "unit": "g",
+            "extra": "Traditionellt används ofta ister.",
+            "fixed": ""
+          },
+          {
+            "name": "Ägg",
+            "qty": 1,
+            "unit": "st",
+            "extra": "Till degen; spara 1 msk uppvispat till förslutning.",
+            "fixed": ""
+          },
+          {
+            "name": "Marsalavin",
+            "qty": 50,
+            "unit": "ml",
+            "extra": "Ger traditionell arom; se alkoholfritt alternativ.",
+            "fixed": ""
+          },
+          {
+            "name": "Vitvinsvinäger",
+            "qty": 10,
+            "unit": "ml",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Kakao",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "Valfritt för klassisk gyllene mörk ton.",
+            "fixed": ""
+          },
+          {
+            "name": "Kanel",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Fint salt",
+            "qty": 1,
+            "unit": "krm",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Rapsolja till fritering",
+            "qty": 1,
+            "unit": "liter",
+            "extra": "Cirka; mängden beror på kastrullen, allt absorberas inte.",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Ricottafyllning",
+        "items": [
+          {
+            "name": "Ricotta",
+            "qty": 500,
+            "unit": "g",
+            "extra": "Låt rinna av i kyl minst 8–12 timmar i finmaskig sil.",
+            "fixed": ""
+          },
+          {
+            "name": "Florsocker",
+            "qty": 120,
+            "unit": "g",
+            "extra": "Sikta i så det inte blir klumpar.",
+            "fixed": ""
+          },
+          {
+            "name": "Mörk choklad, finhackad",
+            "qty": 50,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Apelsin, finrivet skal",
+            "qty": 1,
+            "unit": "st",
+            "extra": "Endast yttersta orange skalet.",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Dekoration",
+        "items": [
+          {
+            "name": "Pistagenötter, osaltade",
+            "qty": 30,
+            "unit": "g",
+            "extra": "Hackade; valfritt.",
+            "fixed": ""
+          },
+          {
+            "name": "Florsocker till pudring",
+            "qty": 1,
+            "unit": "msk",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Låt ricottan rinna av dagen före",
+        "body": "Lägg ricottan i finmaskig sil över skål och ställ täckt i kyl minst 8–12 timmar. Detta är avgörande för tjock, formstabil fyllning. Häll bort vasslen."
+      },
+      {
+        "title": "Gör en fast tunn deg",
+        "body": "Blanda mjöl, socker, salt, kanel och eventuellt kakao. Nyp in kallt smör. Tillsätt ägg, Marsala och vinäger och knåda 5–8 minuter tills degen går ihop till en ganska fast, smidig boll. Beroende på mjöl kan några droppar vatten behövas. Plasta och vila i kyl 1–2 timmar."
+      },
+      {
+        "title": "Rör ihop ricottakrämen",
+        "body": "Passera väl avrunnen ricotta genom finmaskig sil för slät struktur. Rör i siktat florsocker, apelsinskal och mörk choklad. Förvara i kyl medan skalen görs."
+      },
+      {
+        "title": "Kavla mycket tunt",
+        "body": "Dela degen i fyra delar och håll resten täckt. Kavla med maskin eller kavel till cirka 1–1,5 mm tjocklek. Stansa ut 12 cirklar på cirka 10 cm eller motsvarande ovala bitar. Rulla ut rester varsamt vid behov."
+      },
+      {
+        "title": "Forma på cannolirör",
+        "body": "Linda varje degbit runt ett rent cannolirör av metall (cirka 2–3 cm diameter). Överlappa kanterna och pensla försiktigt med lite uppvispat ägg för att limma skarven. Tryck ihop men undvik att limma degen mot röret."
+      },
+      {
+        "title": "Fritera säkert och krispigt",
+        "body": "Värm neutral rapsolja till cirka 175 °C i en tjockbottnad kastrull fylld högst en tredjedel. Fritera få rör åt gången cirka 1–2 minuter tills gyllene och bubbliga; vänd vid behov. Använd tång och termometer. Friteringsolja får aldrig komma i kontakt med vatten. Lyft upp på galler och låt svalna helt innan metallrören dras ur."
+      },
+      {
+        "title": "Fyll precis före servering",
+        "body": "Skeda krämen i spritspåse. Spritsa från båda öppningarna så hela skalet blir fyllt. Doppa kanterna i hackad pistage eller extra choklad och pudra tunt med florsocker."
+      },
+      {
+        "title": "Servera genast",
+        "body": "Servera inom kort efter fyllning för tydlig kontrast mellan frasigt skal och krämig ricotta. Förvara ofyllda skal lufttätt, aldrig fyllda länge."
+      }
+    ],
+    "tips": [
+      {
+        "title": "En metallform behövs",
+        "body": "Cannolirör i rostfritt stål är starkt rekommenderade och säkrare än improviserade plast- eller pappersrullar i het olja."
+      },
+      {
+        "title": "Sila ricotta – viktigast",
+        "body": "Fuktig ricotta ger lös fyllning och mjuka skal. Fårmjölksricotta är traditionell men komjölksricotta avrunnen över natt fungerar."
+      },
+      {
+        "title": "Fyll aldrig i förväg",
+        "body": "Skalen kan förberedas 1–2 dygn i lufttät burk; fyllningen kylförvaras separat och spritsas i först före servering."
+      },
+      {
+        "title": "Alkoholfritt alternativ",
+        "body": "Byt Marsala mot 40 ml druvjuice eller vatten med 1 tsk extra vitvinsvinäger; aromen blir mindre traditionell. Alkohol kan finnas kvar efter fritering."
+      },
+      {
+        "title": "Fritera tryggt",
+        "body": "Använd termometer och fyll högst en tredjedel av kastrullen med olja. Häll aldrig vatten på brinnande olja; kväv med lock eller brandfilt om möjligt."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "En cannolo är fortfarande en söt, friterad dessert. Minska florsockret i fyllningen något och fyll små skal om det passar; prioritera portionsstorlek och ät gärna som efterrätt till en balanserad måltid. Näringsvärdet avser originalversionen."
+      }
+    ],
+    "sources": [
+      [
+        "Visit Sicily – Cannoli Siciliani, officiell tradition",
+        "https://www.visitsicily.info/en/ricetta/cannoli-siciliani-2/"
+      ],
+      [
+        "GialloZafferano – Sicilian Cannoli",
+        "https://www.giallozafferano.com/recipes/sicilian-cannoli.html"
+      ]
+    ],
+    "tags": [
+      "Dessert",
+      "Italienskt",
+      "Friterat"
+    ],
+    "countryCode": "IT",
+    "countryName": "Italien",
+    "countryFlag": "🇮🇹",
+    "countryNote": "Italien, Sicilien – traditionell dessert med ricotta i frasigt skal.",
+    "nutrition": {
+      "per": "cannolo",
+      "servings": 12,
+      "estimated": true,
+      "kcal": 280,
+      "protein": 7,
+      "carbs": 31,
+      "fat": 14
+    },
+    "shoppingTips": [
+      "Ricotta säljs ofta i 250 g-burkar: köp två och låt dem rinna av över natten.",
+      "Cannolirör är ett av få särskilda verktyg som faktiskt behövs; metallrör finns i bakköksbutiker och kan återanvändas.",
+      "Marsala kan vara svårare att hitta i vanlig matbutik; alkoholfritt alternativ finns i tipsen."
+    ]
+  },
+  {
+    "id": "big-mac-mcdonalds-copycat",
+    "name": "McDonald’s Big Mac (copycat)",
+    "subtitle": "Två tunna biffar, tre lager sesambröd och Big Mac-sås utan ketchup",
+    "category": "Snabbmat & street food",
+    "emoji": "🍔",
+    "tone": "golden",
+    "badge": "Copycat • Originalnära",
+    "yieldBase": "4 hamburgare",
+    "yields": [
+      2,
+      0,
+      4,
+      0,
+      8,
+      0
+    ],
+    "time": "Ca 30–40 min (plus såsvila)",
+    "difficulty": "Medel",
+    "temp": "",
+    "intro": "Originalnära Big Mac-copycat med två små tunna nötköttsbiffar, ett extra mellanbröd, mild amerikansk cheddar, finstrimlad isbergssallad, mycket finhackad lök, dillpickles och krämig sötsyrlig sås. Såsen bygger på majonnäs, söt gurkrelish, senap och kryddor – ingen ketchup.",
+    "origin": "Originaluppbyggnaden verifierad mot McDonald’s officiella amerikanska Big Mac-ingredienser och den svenska produktsidan. Såsen är en noggrant svenskbutiksanpassad rekonstruktion utifrån officiell ingredienslista, The Kitchns Big Mac-sås och tidigare McDonald’s-kockens publicerade genomgång. Exakta restaurangproportioner, bröd och köttskivornas stekmetod är inte offentliga originalrecept. Receptet är redaktionellt sammanställt och ännu inte separat provlagat.",
+    "groups": [
+      {
+        "title": "Två biffar och klassisk montering",
+        "items": [
+          {
+            "name": "Nötfärs, cirka 15–20 % fett",
+            "qty": 400,
+            "unit": "g",
+            "extra": "8 platta biffar à 50 g.",
+            "fixed": ""
+          },
+          {
+            "name": "Sesamhamburgerbröd, relativt höga",
+            "qty": 4,
+            "unit": "st",
+            "extra": "Varje bröd delas i tre skivor: botten, mitten, topp. Använd vid behov en extra brödbotten som mittskiva.",
+            "fixed": ""
+          },
+          {
+            "name": "Amerikansk cheddar, skivad",
+            "qty": 4,
+            "unit": "skivor",
+            "extra": "Smältostlik, mild gul ost; 1 skiva per burgare.",
+            "fixed": ""
+          },
+          {
+            "name": "Isbergssallad",
+            "qty": 120,
+            "unit": "g",
+            "extra": "Mycket fint strimlad.",
+            "fixed": ""
+          },
+          {
+            "name": "Gul lök, liten",
+            "qty": 1,
+            "unit": "st",
+            "extra": "Finhackad; gärna sköljd och avrunnen för mildare smak.",
+            "fixed": ""
+          },
+          {
+            "name": "Dillpickles eller smörgåsgurka utan söt lag",
+            "qty": 60,
+            "unit": "g",
+            "extra": "Skivade, cirka 2–3 skivor per burgare.",
+            "fixed": ""
+          },
+          {
+            "name": "Fint salt",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Nymalen svartpeppar",
+            "qty": 0.25,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          }
+        ]
+      },
+      {
+        "title": "Big Mac-sås – cirka 1,5 dl",
+        "items": [
+          {
+            "name": "Majonnäs",
+            "qty": 90,
+            "unit": "g",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Finhackad söt inlagd gurka eller relish",
+            "qty": 35,
+            "unit": "g",
+            "extra": "Om bara salt/syrlig gurka finns: tillsätt en liten nypa extra socker.",
+            "fixed": ""
+          },
+          {
+            "name": "Mild gul senap",
+            "qty": 15,
+            "unit": "g",
+            "extra": "Vanlig svensk senap kan vara sötare; minska sockret vid behov.",
+            "fixed": ""
+          },
+          {
+            "name": "Vitvinsvinäger",
+            "qty": 1,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Paprikapulver",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Lökpulver",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Vitlökspulver",
+            "qty": 0.25,
+            "unit": "tsk",
+            "extra": "",
+            "fixed": ""
+          },
+          {
+            "name": "Strösocker (valfritt)",
+            "qty": 0.5,
+            "unit": "tsk",
+            "extra": "Beroende på gurkans sötma.",
+            "fixed": ""
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Rör ihop Big Mac-såsen först",
+        "body": "Finhacka inlagd gurka mycket fint. Blanda med majonnäs, senap, vinäger, paprikapulver, lökpulver, vitlökspulver och eventuellt en nypa socker. Låt gärna stå i kyl 20–30 minuter så smakerna går ihop. Ingen ketchup behövs."
+      },
+      {
+        "title": "Förbered det klassiska trelagersbrödet",
+        "body": "Använd fyra relativt höga sesambröd och skär varje i tre horisontella delar: botten, tunn mellanskiva och topp. Är bröden för låga, ta istället mellanlagret från ett extra bröd. Rosta snittytorna snabbt i torr panna; de ska förbli mjuka och inte bli krispiga som toast."
+      },
+      {
+        "title": "Hacka grönsakerna fint",
+        "body": "Strimla isbergssalladen mycket fint. Hacka den gula löken till små tärningar och skiva pickles. Lägg upp fyra ostskivor."
+      },
+      {
+        "title": "Forma åtta tunna biffar",
+        "body": "Dela 400 g nötfärs i åtta bollar à 50 g. Pressa ut eller kavla mellan bakplåtspapper till tunna biffar med något större diameter än brödet eftersom de krymper vid stekning. Salta och peppra precis före stekning."
+      },
+      {
+        "title": "Stek hett och snabbt",
+        "body": "Hetta upp en stekpanna ordentligt. Stek 2–4 biffar åt gången ungefär 1–2 minuter per sida beroende på tjocklek. De ska vara tydligt brynta och genomstekta. Lyft av; vänta med osten till monteringen om du vill efterlikna Big Macs montering."
+      },
+      {
+        "title": "Bygg undre våningen",
+        "body": "Lägg bottenbrödet på tallrik, bred på cirka 1 msk sås och fördela lite finhackad lök samt mycket fint strimlad isbergssallad. Lägg på en skiva amerikansk cheddar och sedan en varm köttbiff."
+      },
+      {
+        "title": "Bygg övre våningen",
+        "body": "Lägg mellanskivan på den första biffen, bred på ytterligare cirka 1 msk sås och toppa med lök, isbergssallad, 2–3 skivor pickles och den andra varma biffen. Lägg på sesambrödets topp."
+      },
+      {
+        "title": "Servera direkt",
+        "body": "Tryck ihop lätt utan att platta till helt. Servera genast när biffarna fortfarande är varma och grönsakerna krispiga. Pommes frites är valfritt och ingår inte i näringsvärdet."
+      }
+    ],
+    "tips": [
+      {
+        "title": "Såsen ska inte ha ketchup",
+        "body": "McDonald’s officiella amerikanska ingredienslista anger söt gurkrelish, vinäger, äggbaserad sås, kryddor, paprikaextrakt och senapliknande kryddprofil – men inte ketchup. Paprikan bidrar med färgen."
+      },
+      {
+        "title": "Två tunna biffar, inte smashburgare",
+        "body": "Big Mac har två relativt små, tunna biffar. Kraftig smashbryning ger en god hamburgare men en annan profil än originalet."
+      },
+      {
+        "title": "Tre lager bröd",
+        "body": "Mellanbrödet är inte valfritt om du efterliknar Big Macs utseende och proportioner. Hembakade hamburgerbröd kan användas om de är höga nog."
+      },
+      {
+        "title": "Bara en ostskiva",
+        "body": "I standard-Big Mac används en skiva amerikansk ost, inte en per biff. Osten ligger på den nedre våningen."
+      },
+      {
+        "title": "Håll såsen kall",
+        "body": "Såsen kan röras ihop i förväg och ska förvaras kyld. Anpassa sötman efter hur söta svenska pickles är."
+      },
+      {
+        "title": "Typ 2-diabetes – anpassning",
+        "body": "Använd lite mindre sås och servera gärna med extra sallad utan pommes. För mindre kolhydrater kan en tunnare brödvariant eller färre brödskivor användas, men då är det inte längre en exakt Big Mac-copycat. Standardversionen har bröd från tre lager."
+      }
+    ],
+    "sources": [
+      [
+        "McDonald’s USA – officiell Big Mac och ingredienslista",
+        "https://www.mcdonalds.com/us/en-us/product/big-mac.html"
+      ],
+      [
+        "McDonald’s Sverige – Big Mac",
+        "https://www.mcdonalds.com/se/sv-se/product/big-mac.html"
+      ],
+      [
+        "The Kitchn – Big Mac Sauce Copycat",
+        "https://www.thekitchn.com/big-mac-sauce-266998"
+      ],
+      [
+        "Cheapism – före detta McDonald’s-kock om Big Mac-sås",
+        "https://www.cheapism.com/mcdonalds-big-mac-sauce-copycat/"
+      ]
+    ],
+    "tags": [
+      "Hamburgare",
+      "Copycat",
+      "Snabbmat"
+    ],
+    "countryCode": "US",
+    "countryName": "USA",
+    "countryFlag": "🇺🇸",
+    "countryNote": "USA – huvudsaklig mattradition för denna version.",
+    "nutrition": {
+      "per": "burgare",
+      "servings": 4,
+      "estimated": true,
+      "kcal": 710,
+      "protein": 35,
+      "carbs": 49,
+      "fat": 42
+    },
+    "shoppingTips": [
+      "400 g nötfärs används till exakt åtta biffar à 50 g; köp 400–500 g beroende på butikens förpackningsstorlek.",
+      "Välj högre sesambröd för att kunna skära tre lager, eller använd en extra brödbotten per burgare. Vårt recept på hemmagjorda hamburgerbröd är ett alternativ.",
+      "Söt pickle relish är inte alltid lätt att hitta i svensk butik. Finhackad söt smörgåsgurka fungerar, men använd syrlig dillgurka till burgarens pickles för balans.",
+      "Till osten är amerikanska cheese slices/smältost med cheddarsmak mest originalnära, snarare än vällagrad hårdost."
+    ]
   }
 ]
