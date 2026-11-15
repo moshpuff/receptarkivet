@@ -106,6 +106,16 @@
             }
           </section>
         }
+        @if (pairings().length) {
+          <section class="source-box" aria-label="Recept som passar tillsammans">
+            <strong>{{ r.category === 'Såser, dressingar & röror' ? 'Passar till' : 'Såser och röror som passar' }}</strong>
+            <div class="source-links">
+              @for (related of pairings(); track related.id) {
+                <a [routerLink]="['/recept', related.id]">{{ related.emoji }} {{ related.name }}</a>
+              }
+            </div>
+          </section>
+        }
         @if (r.nutrition; as nutrition) {
           <details class="nutrition-details">
             <summary>
