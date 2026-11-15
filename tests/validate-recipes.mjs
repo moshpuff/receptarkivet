@@ -52,6 +52,16 @@ for (const [index, historicalRecipe] of baseline.entries()) {
       `Originalrecept ${index + 1} (${historicalRecipe.id}) har ändrats oväntat`);
   }
 }
+// Fristående såser och röror kan länka till relevanta maträtter – alltid giltiga recept-ID:n.
+for (const recipe of recipes) {
+  if (recipe.pairings === undefined) continue;
+  assert.ok(Array.isArray(recipe.pairings), `${recipe.id}: pairings måste vara en lista`);
+  assert.equal(new Set(recipe.pairings).size, recipe.pairings.length, `${recipe.id}: dubbla parningar`);
+  for (const id of recipe.pairings) {
+    assert.ok(ids.has(id), `${recipe.id}: okänt recept-ID i pairings: ${id}`);
+    assert.notEqual(id, recipe.id, `${recipe.id}: självkoppling`);
+  }
+}
 console.log(`✓ ${recipes.length} unika recept, kompletta ingredienser, steg, källor och näringsvärden`);
 console.log('✓ 98 historiska recept matchar säkerhetskopian; 2 tidigare godkända uppdateringar är tillåtna');
 
