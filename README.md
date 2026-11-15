@@ -1,6 +1,22 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **149 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **173 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+
+## Såser, dressingar & röror (recept 150–173)
+
+En helt ny kategori med **24 fristående recept** – 7 varma såser, 7 kalla såser/dippar, 5 internationella smaksättare och 5 röror/dressingbaser. Alla har fullständiga ingredienser, svenska mått, tydliga steg, uppskattat näringsvärde, källor, inköpstips och förvaringsråd.
+
+**Varma:** Bearnaisesås, pepparsås, rödvinssås, gräddsås, svampsås, hollandaisesås, brunsås.
+
+**Kalla:** Aioli, tzatziki, vitlökssås, vit kebabsås, ranchdressing, romsås, remouladsås.
+
+**Internationella:** Pesto Genovese, chimichurri, guacamole, hummus, BBQ-sås.
+
+**Röror/dressingbaser:** Skagenröra, tonfiskröra, hamburgerdressing, caesardressing, majonnäs.
+
+Varje nytt recept innehåller valda `pairings` till befintliga rätter och dessa visas som **klickbara ”Passar till”** i receptvyn. Befintliga maträtter visar i gengäld passande nya såser. Detta påverkar inte de specialanpassade såsrecept som redan är inbyggda i maträtterna – de finns kvar oförändrade.
+
+**Kvalitetsstatus:** Recepten är nya, källjämförda hemversioner. De exakta formuleringarna är inte separat provlagade och de ungefärliga näringsvärdena är inte laboratorieverifierade. Vid ny expertgranskning ska de utvärderas och förbättras efter godkännande.
 
 ## Receptarkivet Expert – systematisk receptkvalitet
 
@@ -58,7 +74,7 @@ Läs [`IA_UX_UI_GRANSKNING.md`](IA_UX_UI_GRANSKNING.md) för målgrupp, informat
 
 | Fil eller mapp | Ansvar |
 |---|---|
-| `src/data/recipes.json` | Allt receptinnehåll, 149 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
+| `src/data/recipes.json` | Allt receptinnehåll, 173 recept; 98 historiska recept oförändrade, 2 senare förbättrade |
 | `src/app/core/recipe.model.ts` | Typer för recept, ingredienser, näringsvärden |
 | `src/app/core/recipe-format.ts` | Söknormalisering, portionsskalning, måttformat |
 | `src/app/core/recipe-store.service.ts` | Favoriter, inköpslista, avbockade ingredienser, satsstorlekar |
