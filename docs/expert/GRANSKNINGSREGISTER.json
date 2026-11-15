@@ -44,6 +44,26 @@
       "priority": "P2",
       "reason": "Riskornens textur, wokteknik och kylning av ris motiverar en dedikerad jämförelse",
       "verified_defect": false
+    },
+    {
+      "id": "klassisk-bearnaisesas",
+      "priority": "P2",
+      "reason": "Noggrann expertgranskning av äggemulsion, temperaturkontroll och hemmabruk",
+      "verified_defect": false
+    },
+    {
+      "id": "pesto-genovese",
+      "priority": "P2",
+      "reason": "Jämför klassiskt mortelförfarande med praktisk svensk mixerbaserad hemversion",
+      "verified_defect": false
+    },
+    {
+      "id": "extra-kramig-hummus",
+      "priority": "P2",
+      "reason": "Tahini- och kikärtsproportioner för maximal krämighet; nutriologisk kontroll",
+      "verified_defect": false
     }
-  ]
+  ],
+  "recipe_count_current": 173,
+  "notes_on_new_recipes": "24 nya fristående såser, dressingar och röror är researchbaserade och redo att använda, men är inte deklarerade som oberoende expertgranskade eller provlagade."
 }
