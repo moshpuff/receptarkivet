@@ -46,5 +46,7 @@ export interface Recipe {
   countryNote: string;
   nutrition: Nutrition;
   shoppingTips: string[];
+  /** Recept som det här fristående tillbehöret passar särskilt bra till. */
+  pairings?: string[];
 }
 export type Scale = 0.5 | 1 | 2;
