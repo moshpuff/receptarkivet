@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 149,
+  "count": 173,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1045,6 +1045,174 @@
       "category": "Snabbmat & street food",
       "sources": 4,
       "steps": 8
+    },
+    {
+      "id": "klassisk-bearnaisesas",
+      "name": "Bearnaisesås",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "klassisk-pepparsas",
+      "name": "Krämig pepparsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "rodvinssas",
+      "name": "Rödvinssås",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-graddsas",
+      "name": "Klassisk gräddsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "kramig-svampsas",
+      "name": "Krämig svampsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-hollandaisesas",
+      "name": "Hollandaisesås",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-brunsas",
+      "name": "Klassisk brunsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "aioli-vitloksmajonnas",
+      "name": "Aioli – vitlöksmajonnäs",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "grekisk-tzatziki",
+      "name": "Tzatziki",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "kall-vitlokssas",
+      "name": "Kall vitlökssås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-vit-kebabsas",
+      "name": "Vit kebabsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "ranchdressing",
+      "name": "Ranchdressing",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "kall-romsas",
+      "name": "Kall romsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "remouladsas",
+      "name": "Remouladsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "pesto-genovese",
+      "name": "Pesto Genovese",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "chimichurri",
+      "name": "Chimichurri",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-guacamole",
+      "name": "Guacamole",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "extra-kramig-hummus",
+      "name": "Extra krämig hummus",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-bbq-sas",
+      "name": "Klassisk BBQ-sås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-skagenrora",
+      "name": "Skagenröra",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "kramig-tonfiskrora",
+      "name": "Krämig tonfiskröra",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "klassisk-hamburgerdressing",
+      "name": "Hamburgerdressing",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "caesardressing",
+      "name": "Caesardressing",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 4
+    },
+    {
+      "id": "hemgjord-majonnas",
+      "name": "Hemgjord majonnäs",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 4
     }
   ]
 }

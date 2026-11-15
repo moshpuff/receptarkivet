@@ -24,6 +24,13 @@ export class DetailComponent {
   private readonly routeParams = toSignal(this.route.paramMap);
   readonly recipe = computed(() => RECIPES.find(r => r.id === this.routeParams()?.get('id')));
   readonly currentScale = computed(() => this.store.scale(this.recipe()?.id ?? ''));
+  readonly pairings = computed(() => {
+    const selected = this.recipe();
+    if (!selected) return [];
+    const ids = selected.pairings ?? RECIPES.filter(r => r.pairings?.includes(selected.id)).map(r => r.id);
+    const byId = new Map(RECIPES.map(r => [r.id, r]));
+    return ids.map(id => byId.get(id)).filter((r): r is Recipe => !!r).slice(0, 6);
+  });
   readonly scales: readonly Scale[] = [0.5, 1, 2];
 
   ingredientKey(r: Recipe, group: number, item: number): string { return `${r.id}/${group}/${item}`; }
