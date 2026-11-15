@@ -9,7 +9,7 @@ export const RECIPES: readonly Recipe[] = rawRecipes as unknown as Recipe[];
 const categoryOrder = [
   'Svensk husman', 'Pasta & pizza', 'Världens kök',
   'Snabbmat & street food', 'Smörgåsar', 'Frukost & brunch',
-  'Bakverk & fika', 'Bröd & tillbehör', 'Efterrätter'
+  'Bakverk & fika', 'Bröd & tillbehör', 'Såser, dressingar & röror', 'Efterrätter'
 ];
 const tagOrder = [
   'Snabbt', 'Köttfärs', 'Nötkött', 'Kött', 'Kyckling',
