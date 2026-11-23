@@ -1,12 +1,24 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **247 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **257 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## Redaktionell princip: alla recept kan förbättras
 
 Alla **239 recept** är levande recept – även de ursprungliga 100 får uppdateras när bättre research, kockkunskap, provlagning eller användarfeedback visar på förbättringar. Det gäller ingredienser, mängder, metod, tid, smak, tillbehör och instruktioner. Ingen historisk identitetskontroll hindrar innehållsändringar.
 
 Vi bevarar stabila recept-ID:n för appens favoriter och receptkopplingar, och behåller den äldre HTML-filen som historisk säkerhetskopia (inte som ett låst kvalitetsfacit). GitHubs automatiska tester kontrollerar i stället att receptdata är komplett och att appen fortfarande fungerar. Förbättringar ska dokumenteras och genomgå research och kvalitetskontroll enligt [redaktionell standard](docs/expert/REDAKTIONELL_STANDARD.md); schemalagd expertgranskning föreslår ändringar och publicerar inte utan godkännande.
+
+## Tillägg 248–257 – tio nya restauranginspirerade rätter och nitton vidareutvecklingar (24 november 2026)
+
+Efter användarens 32 val från Pappa Grappa, Östgöta Kök, Grazie Pasteria & Deli, Taverna Averna, Tavolo, Restaurang Familjen, Bistro Bestick, Urban Deli och Bouchon har Receptarkivet nu **257 recept**.
+
+**Tio nya hemmarecept:** Burrata med sotad persika; Rigatoni med oxfilé, svamp och tryffel; Tortelloni med kantarell och Västerbottensost; Varmrökt lax med sauce verte; Ćevapi med ajvar och vitlökssås; Grillad kyckling med örtslungad penne; Laxcannelloni med béchamel och tomat; Flanksteksmörgås med jalapeñomajonnäs; Fläskkotlett med shiitake, potatiskroketter och grönpepparsås; Rårakor med kallrökt lax och citronkräm.
+
+Pappa Grappas och Grazies oxfilépastor har sammanförts till ett recept och köttbulleinspirationen från Östgöta Kök och Bistro Bestick till ett gemensamt förbättringsspår. Salsicciapastans rödvin och fänkål kombineras som en valfri variant. **Nitton befintliga recept** fick totalt nitton frivilliga serverings- eller teknikspår (med kvantiteter i recepttips), utan att deras grundmetoder raderades eller deras stabila ID:n ändrades. Rårakor är ett nytt recept, eftersom råraka inte är samma sak som raggmunk.
+
+**Status:** Samtliga nya recept är självständiga, källjämförda hemmaversioner, **inte provlagade, blindtestade eller verifierade restaurangrecept**. De frivilliga tillvalsvarianterna i `tips` inkluderas **inte automatiskt** i receptets inköpslista eller basnutrition. Receptens näringsvärden är uppskattningar, inte fullständigt verifierade näringsberäkningar. En Bosnien och Hercegovina-flagga har tillkommit för ćevapi. Ingen ny automation eller GitHub Action.
+
+Se [hela beslutsregistret, 32 nummer, källjämförelser, säkerhetskrav och provlagningsplan](docs/expert/RESTAURANGURVAL_32_RATTER_2026-11-24.md).
 
 ## Tillägg 243–247 – samtliga 25 Hemma Hos-inspirationer omhändertagna (23 november 2026)
 
