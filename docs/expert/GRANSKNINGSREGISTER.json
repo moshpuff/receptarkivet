@@ -122,9 +122,57 @@
       "priority": "P2",
       "reason": "Testa rostning, hållbarhet, honungsmängd och klusterbildning",
       "verified_defect": false
+    },
+    {
+      "id": "citronmarangpaj",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Förgräddat skal, bunden citronkräm och uppvärmd schweizisk maräng; termometer rekommenderas.",
+      "verified_defect": false
+    },
+    {
+      "id": "klassisk-saftig-chokladtarta",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Filmjölk, olja och varmt kaffe/vatten för fukt; lagom tjock chokladganache.",
+      "verified_defect": false
+    },
+    {
+      "id": "saftiga-kottfarspiroger",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Mjuk jästdeg, relativt torr och sval fyllning och god förslutning.",
+      "verified_defect": false
+    },
+    {
+      "id": "pizza-vesuvio-svensk-pizzeria",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Måttlig topping på tunn deg; varm förvärmd plåt/sten i vanlig svensk hemmaugn.",
+      "verified_defect": false
+    },
+    {
+      "id": "klassiska-frasvafflor",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Kolsyrat vatten sist och vila på galler; jämfört ICA:s bubbelvattenvariant med Arlas frasvåfflor.",
+      "verified_defect": false
+    },
+    {
+      "id": "italienska-kottbullar-tomatsas",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Mjölkpanad och blandfärs för saftighet; italiensk polpette separat från italiensk-amerikansk spaghetti-montering.",
+      "verified_defect": false
+    },
+    {
+      "id": "chicken-shawarma-wrap",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Lårfilé, citron, kardemumma och bryning; minst tre timmars marinering för mer källtrogen smak.",
+      "verified_defect": false
+    },
+    {
+      "id": "frasiga-fish-tacos",
+      "priority": "P2",
+      "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Panko grundstekt i stället för traditionell ölfrityr; tydlig smak-/enkelhetskompromiss.",
+      "verified_defect": false
     }
   ],
-  "recipe_count_current": 183,
+  "recipe_count_current": 200,
   "notes_on_new_recipes": "24 nya fristående såser, dressingar och röror är researchbaserade och redo att använda, men är inte deklarerade som oberoende expertgranskade eller provlagade.",
-  "note_additions_2026_11_23": "Tio nya researchbaserade recept, nr 174–183. Samtliga behöver ännu separat expertgranskning och provlagning; ingen verifierad brist har konstaterats."
+  "note_additions_2026_11_23": "Totalt 27 nya recept den 23 november 2026, senast 17 kompletterande favoriter nr 184–200. Källjämförda och fullständigt redaktionellt utarbetade, men inte separat provlagade eller oberoende expertgodkända. Näringsvärden är grova uppskattningar. Inga verifierade fel är registrerade."
 }

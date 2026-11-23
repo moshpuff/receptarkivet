@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 183,
+  "count": 200,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1281,6 +1281,125 @@
       "id": "hemgjord-krispig-granola",
       "name": "Hemgjord krispig granola",
       "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "klassiska-frasvafflor",
+      "name": "Våfflor – klassiskt frasiga",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "italienska-kottbullar-tomatsas",
+      "name": "Italienska köttbullar i tomatsås",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kramig-tacogratang",
+      "name": "Tacogratäng",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "fisksoppa-saffran-aioli",
+      "name": "Fisksoppa med saffran och aioli",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kebabrulle-egen-kebabsas",
+      "name": "Kebabrulle med egen kebabsås",
+      "category": "Snabbmat & street food",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-ost-skinkpaj",
+      "name": "Klassisk ost- och skinkpaj",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "chicken-shawarma-wrap",
+      "name": "Chicken Shawarma",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "frasiga-fish-tacos",
+      "name": "Fish Tacos",
+      "category": "Snabbmat & street food",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "chili-sin-carne-bonor-linser",
+      "name": "Chili sin Carne",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "saftiga-kottfarspiroger",
+      "name": "Köttfärspiroger",
+      "category": "Svensk husman",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "pizza-vesuvio-svensk-pizzeria",
+      "name": "Pizza Vesuvio – svensk pizzeriastil",
+      "category": "Pasta & pizza",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "grilled-cheese-sandwich",
+      "name": "Grilled Cheese Sandwich",
+      "category": "Smörgåsar",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-chokladpudding",
+      "name": "Klassisk chokladpudding",
+      "category": "Efterrätter",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "citronmarangpaj",
+      "name": "Citronmarängpaj",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "saftig-svensk-appelkaka",
+      "name": "Saftig svensk äppelkaka",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "sticky-toffee-pudding",
+      "name": "Sticky Toffee Pudding",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "klassisk-saftig-chokladtarta",
+      "name": "Klassisk chokladtårta",
+      "category": "Bakverk & fika",
       "sources": 3,
       "steps": 7
     }
