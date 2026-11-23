@@ -1,6 +1,6 @@
 # Receptarkivet Expert – kvalitets- och researchsystem
 
-**Version:** 2.0 · **Start:** 2026-11-15 · **Källa:** `src/data/recipes.json`
+**Version:** 2.1 · **Start:** 2026-11-15 · **Öppet förbättringsarbete:** 2026-11-23 · **Källa:** `src/data/recipes.json`
 
 Receptarkivets löfte: **så gott som möjligt, så enkelt som möjligt hemma, med instruktioner som är lätta att lyckas med**. Recept får inte bli mer avancerade bara för att en professionell teknik verkar imponerande. Vi behåller moment som ger en väsentlig förbättring och tar bort moment som mest skapar friktion.
 
@@ -11,6 +11,15 @@ Receptarkivets löfte: **så gott som möjligt, så enkelt som möjligt hemma, m
 - **Publicera eller ändra inte recept, kod eller GitHub-filer automatiskt** från den schemalagda granskningen. Föreslå ändringar och invänta uttryckligt godkännande. Även uppdatering av kunskapsbank/register sker efter godkännande.
 - Gör ingen upprepningsresearch utan ny anledning. Läs katalog och register först, därefter enbart de utvalda recepten och de mest relevanta källorna. Om GitHub eller webbkällor inte är tillgängliga: redovisa begränsningen; hitta inte på.
 - Arkivets initiala recept kan vara välresearchade utan att vara **oberoende expertgranskade**. Att ett recept saknar registerpost betyder ”ej granskad i detta system”, inte ”dåligt recept”.
+
+### Recepten är förbättringsbara – inga frysta original
+
+- **Inget recept är låst mot förbättring.** Även de första 100 recepten och recept som tidigare märkts som färdiga kan ändras i ingredienser, mängder, steg, temperaturer, tid, tillbehör och presentation när evidensen talar för det.
+- Originalfilen med 100 recept är en **historisk säkerhetskopia och jämförelsekälla**, inte ett facit som nya versioner måste vara identiska med.
+- Ändra för faktisk förväntad förbättring av smak, konsistens, enkelhet, tydlighet eller säkerhet. Dokumentera före/efter, källstöd, avvägningar, eventuella nackdelar och provlagningsbehov. Bevara fungerande delar av receptet när det är motiverat.
+- **Behåll ett recepts stabila `id`** när samma rätt förbättras så att sparade favoriter, ingredienslistor och `pairings` fungerar. Om ID behöver bytas krävs separat migrering av hänvisningar och användardata; namn och innehåll får ändras utan ID-byte.
+- Tekniska tester skyddar struktur, innehållsfältskompletthet, giltiga referenser och byggbar app – **inte historisk text- eller ingredienslikhet**. Testframgång är inte bevis för att smaken är bättre.
+- Reglerna för den schemalagda expertkörningen är oförändrade: den föreslår och analyserar, men gör inga automatiska repoändringar utan uttryckligt godkännande. Vanliga uttryckliga ändringsuppdrag får implementeras direkt enligt test- och kvalitetsgrindarna.
 
 ## 2. Filer och beständighet
 
@@ -100,7 +109,7 @@ Leverera en **kort, läsbar sammanfattning** även om underliggande research är
 ## 9. Godkännande, versionering och dataskydd
 
 - Veckogranskningen är **läsande och rådgivande**, inte skrivande.
-- Vid uttryckligt användargodkännande kan vi i en vanlig konversation uppdatera ett recept i `src/data/recipes.json`, köra befintliga tester och samtidigt anteckna beslut, källor, version/datum och lärdomar i register/kunskapsbank. Behåll receptets ID och historik.
+- Vid uttryckligt användargodkännande kan vi förbättra **vilket som helst** av recepten i `src/data/recipes.json` (ingredienser, proportioner, metod och text), köra befintliga tester och samtidigt anteckna beslut, källor, version/datum och lärdomar i register/kunskapsbank. Behåll receptets stabila ID; själva receptinnehållet är inte låst.
 - Avslag dokumenteras med skäl efter godkännande, så samma idé inte återkommer utan nytt stöd.
 - Ingen hemlig, betald eller upphovsrättsligt skyddad fulltextdatabas. Lagra korta originalskrivna slutsatser, länkar och metadata, inte kopior av hela källrecept.
 - Även med detta system kan AI ha fel och inte provsmaka; kvaliteten behöver på sikt prövas i riktiga kök.

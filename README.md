@@ -2,6 +2,12 @@
 
 Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **239 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
+## Redaktionell princip: alla recept kan förbättras
+
+Alla **239 recept** är levande recept – även de ursprungliga 100 får uppdateras när bättre research, kockkunskap, provlagning eller användarfeedback visar på förbättringar. Det gäller ingredienser, mängder, metod, tid, smak, tillbehör och instruktioner. Ingen historisk identitetskontroll hindrar innehållsändringar.
+
+Vi bevarar stabila recept-ID:n för appens favoriter och receptkopplingar, och behåller den äldre HTML-filen som historisk säkerhetskopia (inte som ett låst kvalitetsfacit). GitHubs automatiska tester kontrollerar i stället att receptdata är komplett och att appen fortfarande fungerar. Förbättringar ska dokumenteras och genomgå research och kvalitetskontroll enligt [redaktionell standard](docs/expert/REDAKTIONELL_STANDARD.md); schemalagd expertgranskning föreslår ändringar och publicerar inte utan godkännande.
+
 ## Hemma Hos Norrköping-inspirerade recept 231–239 (november 2026)
 
 Nio självständiga hemrecept inspirerade av smakkombinationer från en äldre meny hos Hemma Hos Norrköping: gratinerat vitlöksbröd med parmesan, okonomiyaki med räkor, chèvre chaud med rödbetor, chili cheese-gratinerad kyckling, fläskschnitzel med tartarkräm och syltad lök, fiskgryta med hummersås, saltkolapaj med lingoncoulis, brownie med vispad hallonpannacotta och nyponsoppa med vaniljbavaroise. Arkivet omfattar nu **239 unika recept**.
