@@ -428,6 +428,24 @@
       "priority": "P3",
       "reason": "Ny valfri serveringsvariant/testhypotes inspirerad av Hemma Hos. Testa smak och steg, ersätt inte ursprungsrecept utan utvärdering.",
       "verified_defect": false
+    },
+    {
+      "id": "linguine-rakor-hummersas",
+      "priority": "P2",
+      "reason": "Nytt restauranginspirerat recept: oberoende test av fondens sälta, såsens bindning med pastavatten och räktiming krävs; ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "frasig-flatbread-chevre-bianco",
+      "priority": "P2",
+      "reason": "Ny tunn botten med sex toppingalternativ: jämför bottenkrisp, tid på vanlig svensk plåt, mängd ost, honung/syra; ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "rodbetstartar-tryffelchips",
+      "priority": "P2",
+      "reason": "Ny förrätt: verifiera vinäger-/dijonbalans, rödbetornas vätska, chipskrisp, löpe- och näringsangivelser; ej provlagad",
+      "verified_defect": false
     }
   ],
   "recipe_count_current": 239,
