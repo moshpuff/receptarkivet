@@ -79,6 +79,16 @@ for (const recipe of recipes) {
   }
 }
 console.log(`✓ ${recipes.length} unika recept, kompletta ingredienser, steg, källor och näringsvärden`);
+const catalog = JSON.parse(fs.readFileSync(path.join(root,'docs/expert/KATALOG.json'),'utf8'));
+const register = JSON.parse(fs.readFileSync(path.join(root,'docs/expert/GRANSKNINGSREGISTER.json'),'utf8'));
+assert.equal(catalog.count,recipes.length,'Expertkatalogen har fel antal');
+assert.equal(catalog.entries.length,recipes.length,'Expertkatalogen är ofullständig');
+assert.deepEqual(new Set(catalog.entries.map(e=>e.id)),ids,'Expertkatalogen innehåller fel ID:n');
+assert.equal(register.recipe_count_current,recipes.length,'Expertregistret har fel antal');
+const queueIds = (register.suggested_queue || []).map(r=>r.id);
+assert.equal(new Set(queueIds).size,queueIds.length,'Dubbletter i expertkön');
+assert.ok(queueIds.every(id=>ids.has(id)),'Okända recept-ID:n i expertkön');
+console.log('✓ Expertkatalog och granskningsregister synkroniserade');
 console.log('✓ 100 historiska recept-ID:n bevarade; innehåll, proportioner och steg får kvalitetsförbättras');
 
 const countryCodes = new Set(recipes.map(r => r.countryCode));
