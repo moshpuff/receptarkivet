@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 230,
+  "count": 239,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -84,7 +84,7 @@
       "id": "kottbullar-mos",
       "name": "Köttbullar med potatismos",
       "category": "Svensk husman",
-      "sources": 3,
+      "sources": 5,
       "steps": 7
     },
     {
@@ -588,7 +588,7 @@
       "id": "boeuf-bourguignon",
       "name": "Boeuf Bourguignon",
       "category": "Världens kök",
-      "sources": 1,
+      "sources": 2,
       "steps": 8
     },
     {
@@ -812,7 +812,7 @@
       "id": "pavlova-bar",
       "name": "Pavlova med grädde och bär",
       "category": "Efterrätter",
-      "sources": 2,
+      "sources": 3,
       "steps": 6
     },
     {
@@ -1611,6 +1611,69 @@
       "name": "Källarfranska – mjuka klassiska frallor",
       "category": "Bröd & tillbehör",
       "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "vitloksbrod-surdegsbrod-parmesan",
+      "name": "Gratinerat vitlöksbröd med parmesan",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 5
+    },
+    {
+      "id": "okonomiyaki-rakor-sriracha",
+      "name": "Okonomiyaki med räkor och srirachamajonnäs",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "chevre-chaud-rodbetor-tryffelhonung",
+      "name": "Chèvre chaud med rödbetor och valnötter",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "chili-cheese-gratinerad-kyckling",
+      "name": "Chili cheese-gratinerad kycklingfilé",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "flaskschnitzel-tartarkram-syltad-lok",
+      "name": "Fläskschnitzel med tartarkräm och syltad lök",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "fiskgryta-hummersas-lax-kolja",
+      "name": "Krämig fiskgryta med hummersås",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "saltkolapaj-lingoncoulis",
+      "name": "Saltkolapaj med lingoncoulis",
+      "category": "Efterrätter",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "brownie-vispad-hallonpannacotta",
+      "name": "Brownie med vispad hallonpannacotta",
+      "category": "Efterrätter",
+      "sources": 4,
+      "steps": 8
+    },
+    {
+      "id": "nyponsoppa-vaniljbavaroise-mandelbiskvier",
+      "name": "Nyponsoppa med vaniljbavaroise och mandelbiskvier",
+      "category": "Efterrätter",
+      "sources": 4,
       "steps": 8
     }
   ]
