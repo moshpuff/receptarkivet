@@ -316,3 +316,15 @@ test('gemensam inköpslista summerar mängder och synkar avbockningar', async ({
   await page.reload();
   await expect(page.locator('.bag-combined-item',{hasText:'Smör'}).first().locator('input')).toBeChecked();
 });
+
+test('valfria ingredienser kan läggas till utan att förväxlas med handlade varor', async ({page}) => {
+  await page.goto('/#/inkopslista');
+  await page.getByRole('searchbox', {name: 'Sök bland recepten'}).fill('Burrata med sotad persika');
+  await page.locator('.bag-choice input').check();
+  await expect(page.locator('.bag-combined-item', {hasText: 'Surdegsbröd'})).toHaveCount(0);
+  await page.getByRole('checkbox', {name: 'Ta med valfri ingrediens: Surdegsbröd'}).check();
+  await expect(page.locator('.bag-combined-item', {hasText: 'Surdegsbröd'})).toHaveCount(1);
+  await page.reload();
+  await expect(page.getByRole('checkbox', {name: 'Ta med valfri ingrediens: Surdegsbröd'})).toBeChecked();
+  await expect(page.locator('.bag-combined-item', {hasText: 'Surdegsbröd'}).locator('input')).not.toBeChecked();
+});
