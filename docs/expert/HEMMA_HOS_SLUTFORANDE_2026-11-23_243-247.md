@@ -9,7 +9,7 @@
 | Nr | ID | Rätt | Huvudval | Kvalitetsfråga vid provlagning |
 |---:|---|---|---|---|
 | 243 | `mezze-maniche-kyckling-bacon` | Mezze maniche med kyckling och bacon | Lårfilé, separat rostade grönsaker, gräddig tomatsås och pecorino; rigatoni/penne som normalbutiksalternativ | Grönsakernas rostning och saftig genomlagad kyckling |
-| 244 | `ravioli-kalvfars-pepparparmesansås` | Ravioli med kalvfärs och pepparparmesansås | Färdig färsk ravioli för rimlig arbetsinsats, brynt genomstekt kalvfärs, lätt gräddbaserad parmesansås och svartpeppar | Undvik klumpig ost och trasiga raviolikuddar; inte autentisk romersk cacio e pepe |
+| 244 | `ravioli-kalvfars-pepparparmesansas` | Ravioli med kalvfärs och pepparparmesansås | Färdig färsk ravioli för rimlig arbetsinsats, brynt genomstekt kalvfärs, lätt gräddbaserad parmesansås och svartpeppar | Undvik klumpig ost och trasiga raviolikuddar; inte autentisk romersk cacio e pepe |
 | 245 | `briefylld-kyckling-lufttorkad-skinka` | Briefylld kyckling med lufttorkad skinka | Fyllda kycklingbröst med brie och prosciutto, rostad potatis och små mängder sås | Kontrollera minst cirka 72°C i köttet, inte i osten; jämför en eller två såser |
 | 246 | `chevre-chaud-frasig-polenta` | Chèvre chaud med frasig polenta | Snabbpolenta som först får stelna, sedan ugnsrostas frasig med chèvre, rödlök och rostade grönsaker | Polentans vätska, stelning och fras; snabbpolenta skiljer mellan fabrikat |
 | 247 | `tillagad-bifftartar-tryffelchips` | Tillagad bifftartar med tryffelchips | Genomstekt flankstek fint tärnad, kapris, rödbetor, tryffelmajonnäs, chips | **Ersätter avsiktligt råbiffen** med tillagad version p.g.a. Ehec/Salmonella; undersök mörhet, hygien och smakkontrast |
