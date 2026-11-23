@@ -25,7 +25,7 @@ Module._load = function(request, parent, isMain) {
 };
 const root = path.join(__dirname, '..');
 const {RECIPES, CATEGORIES, TAGS, COUNTRIES} = require('./.compiled/app/core/recipe-data.js');
-const {formatAmount, ingredientAmount, ingredientNote, yieldText, normalizeSearch, recipeMatches} = require('./.compiled/app/core/recipe-format.js');
+const {formatAmount, ingredientAmount, ingredientNote, yieldText, normalizeSearch, recipeMatches, isOptionalIngredient} = require('./.compiled/app/core/recipe-format.js');
 const {RecipeStore} = require('./.compiled/app/core/recipe-store.service.js');
 const {CatalogFilters} = require('./.compiled/app/core/catalog-filters.service.js');
 const {DINNER_OPTIONS, findDinnerSuggestions} = require('./.compiled/app/core/dinner-recommender.js');
@@ -187,6 +187,24 @@ assert.equal(mergeShoppingIngredients(combinedRecipes, () => 1, partial)
 assert.ok(merged.filter(item => item.name === 'Salt').length >= 2,
   'Salt med andra enheter eller Efter smak ska inte slås ihop felaktigt');
 console.log('✓ Sammanräkning av inköp: enheter, portionsskalning och gemensam avbockning');
+const optRecipe = RECIPES.find(r=>r.id==='burrata-sotad-persika-tomat');
+const optG = optRecipe.groups.findIndex(g=>g.items.some(i=>i.name==='Surdegsbröd'));
+const optI = optRecipe.groups[optG].items.findIndex(i=>i.name==='Surdegsbröd');
+const optItem = optRecipe.groups[optG].items[optI];
+const optKey = `${optRecipe.id}/${optG}/${optI}`;
+assert.equal(isOptionalIngredient(optItem), true);
+assert.equal(isOptionalIngredient(optRecipe.groups[0].items[0]), false);
+values = new Map(); store = new RecipeStore();
+const allowOpt = (item,key) => !isOptionalIngredient(item) || store.isOptionalIncluded(key);
+assert.equal(mergeShoppingIngredients([optRecipe],()=>1,{},allowOpt).some(r=>r.name==='Surdegsbröd'),false);
+store.setOptionalIncluded(optKey,true);
+assert.equal(mergeShoppingIngredients([optRecipe],()=>1,{},allowOpt).some(r=>r.name==='Surdegsbröd'),true);
+store = new RecipeStore();
+assert.equal(store.isOptionalIncluded(optKey),true);
+store.toggleShopping(optRecipe.id);
+store.toggleShopping(optRecipe.id);
+assert.equal(store.isOptionalIncluded(optKey),false);
+console.log('✓ Valfria ingredienser: medvetet tillval, summering och beständig lagring');
 
 console.log('✓ Totalt: logiktesten GODKÄNDA (Angular runtime/DOM behöver separat testas)');
 
