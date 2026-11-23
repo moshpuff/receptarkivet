@@ -1,7 +1,7 @@
 import rawRecipes from '../../data/recipes.json';
 import { Recipe } from './recipe.model';
 
-// Recepten är migrerade utan innehållsändringar från original-Receptarkivet-100.html.
+// De första 100 recepten har historisk säkerhetskopia men får förbättras.
 // En ny rätt läggs till genom att utöka src/data/recipes.json och köra npm run test:data.
 export const RECIPES: readonly Recipe[] = rawRecipes as unknown as Recipe[];
 // Avled filtervärden från recepten så nya kategorier/taggar aldrig blir osökbara.
