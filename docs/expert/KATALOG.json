@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 247,
+  "count": 257,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1731,6 +1731,76 @@
       "category": "Världens kök",
       "sources": 4,
       "steps": 6
+    },
+    {
+      "id": "burrata-sotad-persika-tomat",
+      "name": "Burrata med sotad persika och tomater",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "rigatoni-oxfile-svamp-tryffel",
+      "name": "Rigatoni med oxfilé, svamp och tryffelsås",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "tortelloni-kantarell-vasterbotten",
+      "name": "Tortelloni med kantarell och Västerbottensost",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 6
+    },
+    {
+      "id": "varmrokt-lax-sauce-verte",
+      "name": "Varmrökt lax med sauce verte och potatis",
+      "category": "Svensk husman",
+      "sources": 4,
+      "steps": 5
+    },
+    {
+      "id": "cevapi-ajvar-vitlokssas",
+      "name": "Cevapi med ajvar och vitlökssås",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "ortslungad-penne-kyckling-svampkram",
+      "name": "Grillad kyckling med örtslungad penne och svampkräm",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "laxcannelloni-bechamel-tomat",
+      "name": "Laxcannelloni med béchamel och tomat",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "flankstekmacka-jalapenomajonnas",
+      "name": "Flanksteksmörgås med jalapeñomajonnäs",
+      "category": "Smörgåsar",
+      "sources": 4,
+      "steps": 6
+    },
+    {
+      "id": "flaskkotlett-shiitake-gronpepparsas",
+      "name": "Fläskkotlett med shiitake och grönpepparsås",
+      "category": "Svensk husman",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "rarakor-kallrokt-lax-citronkram",
+      "name": "Rårakor med kallrökt lax och citronkräm",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 5
     }
   ]
 }
