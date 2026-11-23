@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 173,
+  "count": 183,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1213,6 +1213,76 @@
       "category": "Såser, dressingar & röror",
       "sources": 2,
       "steps": 4
+    },
+    {
+      "id": "chicken-tikka-masala",
+      "name": "Chicken Tikka Masala",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "saftigt-bananbrod",
+      "name": "Saftigt bananbröd",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "thai-red-curry-kyckling",
+      "name": "Thai Red Curry med kyckling",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 7
+    },
+    {
+      "id": "overnight-oats-grundrecept",
+      "name": "Overnight Oats – grundrecept",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "basque-burnt-cheesecake",
+      "name": "Basque Burnt Cheesecake",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "svensk-pannpizza-langpanna",
+      "name": "Svensk pannpizza i långpanna",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "klassisk-hasselbackspotatis",
+      "name": "Hasselbackspotatis",
+      "category": "Bröd & tillbehör",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "chicken-fajitas",
+      "name": "Chicken Fajitas",
+      "category": "Snabbmat & street food",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "klassisk-marangsviss",
+      "name": "Klassisk marängsviss",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "hemgjord-krispig-granola",
+      "name": "Hemgjord krispig granola",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 7
     }
   ]
 }
