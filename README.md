@@ -1,6 +1,14 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **183 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **214 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+
+## Tillägg 201–214 – fjorton efterfrågade favoriter (november 2026)
+
+Receptarkivet innehåller nu **214 recept** efter ytterligare fjorton tillägg: Kyckling Cashew, krämig Salsicciapasta, indisk Daal, Shakshuka, torskrygg med Sandefjordsås, jordgubbstårta, risgrynsgröt, vegetarisk lasagne med spenat och ricotta, havregrynsgröt, Minestronesoppa, Tonkatsu, hemgjord vaniljsås, Pico de Gallo och burrito med kryddig färs och ris.
+
+Recepten är källjämförda hemmaversioner med svenska mått, portionering, steg, inköpsråd, ursprung, källor och avrundad uppskattad nutrition. De exakta versionerna är ännu inte separat provlagade och är inte markerade som expertgodkända. Ursprungliga 200 recept är bevarade. Två lokala SVG-flaggor (Norge och Tunisien) tillkommer. Expertkatalog och granskningskö synkroniseras.
+
+Se [researchunderlag för 14 favoriter](docs/expert/NYA_FAVORITER_2026-11-23_201-214.md) för avvägningar, källor och planerad provlagning.
 
 ## Såser, dressingar & röror (recept 150–173)
 
