@@ -302,9 +302,57 @@
       "priority": "P2",
       "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: rabarberns vätska, stärkelsemängd och smulans fras",
       "verified_defect": false
+    },
+    {
+      "id": "skomakarlada-klassisk",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Stektid för ryggbiff, mosets textur och rödvinsskyns reduktion",
+      "verified_defect": false
+    },
+    {
+      "id": "kroppkakor-kokt-potatis",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Potatissort, mjölmängd och provkok för att undvika sönderfall",
+      "verified_defect": false
+    },
+    {
+      "id": "gyoza-japanska-potstickers",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Fyllningsmängd, veckning, genomlagning och krisp efter ångning",
+      "verified_defect": false
+    },
+    {
+      "id": "vegetarisk-linsbolognese",
+      "priority": "P3",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Grönsakernas bryning, vätskemängd och balansen mellan tomat och linser",
+      "verified_defect": false
+    },
+    {
+      "id": "broccolipaj-lagrad-ost",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Pajskalets förgräddning, broccoliavvattning och äggstanningens sättning",
+      "verified_defect": false
+    },
+    {
+      "id": "vitvinssas-till-fisk",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Reduktionens syra/sälta och smöremulsionens temperatur",
+      "verified_defect": false
+    },
+    {
+      "id": "snickerskaka-cornflakes",
+      "priority": "P3",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Sirapsvärmning, cornflakeskrisp och täckets skärbarhet",
+      "verified_defect": false
+    },
+    {
+      "id": "klassiska-kallarfranska",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: oberoende provlagning/expertgranskning behövs – Degvätska, degutbyte, jäsning och mjuk skorpa",
+      "verified_defect": false
     }
   ],
-  "recipe_count_current": 222,
+  "recipe_count_current": 230,
   "notes_on_new_recipes": "24 nya fristående såser, dressingar och röror är researchbaserade och redo att använda, men är inte deklarerade som oberoende expertgranskade eller provlagade.",
-  "note_additions_2026_11_23": "Totalt 49 nya researchbaserade recept den 23 november 2026, inklusive 8 nya favoriter nr 215–222. Ej provlagade eller oberoende expertgodkända. Näringsvärden är uppskattningar och tillval ingår bara när detta anges."
+  "note_additions_2026_11_23": "Totalt 57 nya researchbaserade recept den 23 november 2026, inklusive 8 favoriter nr 223–230: skomakarlåda, kroppkakor, gyoza, linsbolognese, broccolipaj, vitvinssås, snickerskaka, källarfranska. De exakta nya varianterna är inte provlagade och näringsvärdena är ungefärliga. Inga ytterligare oberoende granskningar markerade som genomförda."
 }

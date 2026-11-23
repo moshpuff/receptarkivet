@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 222,
+  "count": 230,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1556,6 +1556,62 @@
       "category": "Efterrätter",
       "sources": 3,
       "steps": 7
+    },
+    {
+      "id": "skomakarlada-klassisk",
+      "name": "Skomakarlåda – klassisk",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "kroppkakor-kokt-potatis",
+      "name": "Kroppkakor – småländsk stil",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "gyoza-japanska-potstickers",
+      "name": "Gyoza / Potstickers",
+      "category": "Världens kök",
+      "sources": 4,
+      "steps": 9
+    },
+    {
+      "id": "vegetarisk-linsbolognese",
+      "name": "Vegetarisk linsbolognese",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "broccolipaj-lagrad-ost",
+      "name": "Broccolipaj med lagrad ost",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "vitvinssas-till-fisk",
+      "name": "Vitvinssås till fisk",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "snickerskaka-cornflakes",
+      "name": "Snickerskaka – krispiga rutor",
+      "category": "Bakverk & fika",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "klassiska-kallarfranska",
+      "name": "Källarfranska – mjuka klassiska frallor",
+      "category": "Bröd & tillbehör",
+      "sources": 3,
+      "steps": 8
     }
   ]
 }
