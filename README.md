@@ -1,12 +1,22 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **242 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **247 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## Redaktionell princip: alla recept kan förbättras
 
 Alla **239 recept** är levande recept – även de ursprungliga 100 får uppdateras när bättre research, kockkunskap, provlagning eller användarfeedback visar på förbättringar. Det gäller ingredienser, mängder, metod, tid, smak, tillbehör och instruktioner. Ingen historisk identitetskontroll hindrar innehållsändringar.
 
 Vi bevarar stabila recept-ID:n för appens favoriter och receptkopplingar, och behåller den äldre HTML-filen som historisk säkerhetskopia (inte som ett låst kvalitetsfacit). GitHubs automatiska tester kontrollerar i stället att receptdata är komplett och att appen fortfarande fungerar. Förbättringar ska dokumenteras och genomgå research och kvalitetskontroll enligt [redaktionell standard](docs/expert/REDAKTIONELL_STANDARD.md); schemalagd expertgranskning föreslår ändringar och publicerar inte utan godkännande.
+
+## Tillägg 243–247 – samtliga 25 Hemma Hos-inspirationer omhändertagna (23 november 2026)
+
+Fem nya självständiga, restauranginspirerade hemmarecept: **Mezze maniche med kyckling och bacon**, **Ravioli med kalvfärs och pepparparmesansås**, **Briefylld kyckling med lufttorkad skinka**, **Chèvre chaud med frasig polenta** och **Tillagad bifftartar med tryffelchips**. Den sista är medvetet en **genomlagad tartar, inte råbiff**, med hänvisning till Livsmedelsverkets riskråd för rått nötkött. Samtliga 25 rätter i andra menyomgångens fyra bilder har nu matchats mot arkivet: som nytt recept, dokumenterat toppingalternativ, valfri serveringsvariant eller redan befintligt motsvarande recept.
+
+Nio nya frivilliga serveringsvarianter har lagts som tips på sju befintliga recept: svamprisotto (2), fläskschnitzel (1), fiskgryta (1), Mac & Cheese (1), Caesarsallad (2), chèvre chaud (1) och Västerbottensostpaj (1). Alla andra 235 befintliga recept från föregående version är oförändrade. Receptarkivet omfattar nu **247 recept**, alla med unika och stabila ID:n.
+
+**Status:** källjämförda och redaktionellt formulerade, **inte provlagade** eller oberoende expertgodkända. Tillvalsvarianter i `tips` inkluderas ännu inte automatiskt i appens inköpslista eller nutrition; basversionen används där. Ingen ny GitHub Action eller schemaläggning har införts.
+
+Se [slutredovisning med alla 25 menyrätter, källor och kvalitetsgrindar](docs/expert/HEMMA_HOS_SLUTFORANDE_2026-11-23_243-247.md).
 
 ## Tillägg 240–242 – nya restauranginspirerade favoriter (23 november 2026)
 
