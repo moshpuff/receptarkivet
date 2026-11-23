@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 200,
+  "count": 214,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1402,6 +1402,104 @@
       "category": "Bakverk & fika",
       "sources": 3,
       "steps": 7
+    },
+    {
+      "id": "kyckling-cashew-thai",
+      "name": "Kyckling Cashew – thailändsk wok",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kramig-salsicciapasta-tomat",
+      "name": "Krämig Salsicciapasta",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "indisk-daal-roda-linser",
+      "name": "Indisk Daal – röda linser",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-shakshuka",
+      "name": "Shakshuka",
+      "category": "Frukost & brunch",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "torskrygg-sandefjordsas",
+      "name": "Torskrygg med Sandefjordsås",
+      "category": "Svensk husman",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "klassisk-jordgubbstarta",
+      "name": "Klassisk jordgubbstårta",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 8
+    },
+    {
+      "id": "klassisk-risgrynsgrot",
+      "name": "Klassisk risgrynsgröt",
+      "category": "Frukost & brunch",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "vegetarisk-lasagne-spenat-ricotta",
+      "name": "Vegetarisk lasagne med spenat och ricotta",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-havregrynsgrot",
+      "name": "Klassisk havregrynsgröt",
+      "category": "Frukost & brunch",
+      "sources": 2,
+      "steps": 4
+    },
+    {
+      "id": "italiensk-minestronesoppa",
+      "name": "Minestronesoppa",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "japansk-tonkatsu-schnitzel",
+      "name": "Tonkatsu – japansk schnitzel",
+      "category": "Världens kök",
+      "sources": 2,
+      "steps": 8
+    },
+    {
+      "id": "hemgjord-vaniljsas-akta-vanilj",
+      "name": "Hemgjord vaniljsås",
+      "category": "Såser, dressingar & röror",
+      "sources": 2,
+      "steps": 6
+    },
+    {
+      "id": "pico-de-gallo-farsk-tomatsalsa",
+      "name": "Pico de Gallo – färsk tomatsalsa",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 5
+    },
+    {
+      "id": "burrito-kryddig-fars-ris",
+      "name": "Burrito med kryddig färs och ris",
+      "category": "Snabbmat & street food",
+      "sources": 3,
+      "steps": 8
     }
   ]
 }

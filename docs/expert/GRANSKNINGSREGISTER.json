@@ -170,9 +170,93 @@
       "priority": "P2",
       "reason": "Nytt recept: genomför oberoende teknik-/provlagningsgranskning efter redaktionellt tillägg; Panko grundstekt i stället för traditionell ölfrityr; tydlig smak-/enkelhetskompromiss.",
       "verified_defect": false
+    },
+    {
+      "id": "kyckling-cashew-thai",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: stekning i omgångar, såsbalans och nötternas krisp",
+      "verified_defect": false
+    },
+    {
+      "id": "kramig-salsicciapasta-tomat",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: korvens sälta, såsens emulsion och pastavatten",
+      "verified_defect": false
+    },
+    {
+      "id": "indisk-daal-roda-linser",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: linsernas vätskekvot och tadkans kryddbalans",
+      "verified_defect": false
+    },
+    {
+      "id": "klassisk-shakshuka",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: tomatsåsens tjocklek och äggens tillagning",
+      "verified_defect": false
+    },
+    {
+      "id": "torskrygg-sandefjordsas",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: fiskens kärntemperatur och smöremulsion",
+      "verified_defect": false
+    },
+    {
+      "id": "klassisk-jordgubbstarta",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: bottenhöjd, vaniljkräm, fyllning och kylning",
+      "verified_defect": false
+    },
+    {
+      "id": "klassisk-risgrynsgrot",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: mjölk/vatten-balans och risets tillagningstid",
+      "verified_defect": false
+    },
+    {
+      "id": "vegetarisk-lasagne-spenat-ricotta",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: vätskebalans, torkade plattor och formstorlek",
+      "verified_defect": false
+    },
+    {
+      "id": "klassisk-havregrynsgrot",
+      "priority": "P3",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: havregrynens vätskekvot",
+      "verified_defect": false
+    },
+    {
+      "id": "italiensk-minestronesoppa",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: pastans koktid och grönsakernas textur",
+      "verified_defect": false
+    },
+    {
+      "id": "japansk-tonkatsu-schnitzel",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: panering, oljetemperatur och säker köttkärna",
+      "verified_defect": false
+    },
+    {
+      "id": "hemgjord-vaniljsas-akta-vanilj",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: äggtemperatur, stärkelse och kylförvaring",
+      "verified_defect": false
+    },
+    {
+      "id": "pico-de-gallo-farsk-tomatsalsa",
+      "priority": "P3",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: tomat/lök-balans och vätskekontroll",
+      "verified_defect": false
+    },
+    {
+      "id": "burrito-kryddig-fars-ris",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: risförvaring, rullbarhet och fyllningsmängd",
+      "verified_defect": false
     }
   ],
-  "recipe_count_current": 200,
+  "recipe_count_current": 214,
   "notes_on_new_recipes": "24 nya fristående såser, dressingar och röror är researchbaserade och redo att använda, men är inte deklarerade som oberoende expertgranskade eller provlagade.",
-  "note_additions_2026_11_23": "Totalt 27 nya recept den 23 november 2026, senast 17 kompletterande favoriter nr 184–200. Källjämförda och fullständigt redaktionellt utarbetade, men inte separat provlagade eller oberoende expertgodkända. Näringsvärden är grova uppskattningar. Inga verifierade fel är registrerade."
+  "note_additions_2026_11_23": "Totalt 41 nya researchbaserade recept den 23 november 2026, inklusive 14 nya favoriter nr 201–214. Ej separat provlagade eller oberoende expertgodkända; näringsvärden är uppskattningar."
 }
