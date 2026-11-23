@@ -47,3 +47,9 @@ export function recipeMatches(recipe: Recipe, query: string): boolean {
     ...recipe.groups.flatMap(g => g.items.map(item => item.name))].join(' ');
   return normalizeSearch(text).includes(normalizeSearch(query));
 }
+
+/** Optional ingredient notes in historical recipe data.
+ * A future schema can replace this with an explicit optional flag. */
+export function isOptionalIngredient(item: Ingredient): boolean {
+  return /\b(valfri(?:t|a)?|eventuell(?:t|a)?|kan uteslutas|om du vill|ingår inte i näringsvärdet)\b/i.test(item.extra);
+}
