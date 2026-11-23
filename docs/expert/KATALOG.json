@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 242,
+  "count": 247,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1645,7 +1645,7 @@
       "id": "flaskschnitzel-tartarkram-syltad-lok",
       "name": "Fläskschnitzel med tartarkräm och syltad lök",
       "category": "Svensk husman",
-      "sources": 3,
+      "sources": 4,
       "steps": 7
     },
     {
@@ -1696,6 +1696,41 @@
       "category": "Världens kök",
       "sources": 3,
       "steps": 7
+    },
+    {
+      "id": "mezze-maniche-kyckling-bacon",
+      "name": "Mezze maniche med kyckling och bacon",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "ravioli-kalvfars-pepparparmesansås",
+      "name": "Ravioli med kalvfärs och pepparparmesansås",
+      "category": "Pasta & pizza",
+      "sources": 5,
+      "steps": 7
+    },
+    {
+      "id": "briefylld-kyckling-lufttorkad-skinka",
+      "name": "Briefylld kyckling med lufttorkad skinka",
+      "category": "Världens kök",
+      "sources": 4,
+      "steps": 7
+    },
+    {
+      "id": "chevre-chaud-frasig-polenta",
+      "name": "Chèvre chaud med frasig polenta",
+      "category": "Världens kök",
+      "sources": 5,
+      "steps": 7
+    },
+    {
+      "id": "tillagad-bifftartar-tryffelchips",
+      "name": "Tillagad bifftartar med tryffelchips",
+      "category": "Världens kök",
+      "sources": 4,
+      "steps": 6
     }
   ]
 }
