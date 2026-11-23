@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 239,
+  "count": 242,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1675,6 +1675,27 @@
       "category": "Efterrätter",
       "sources": 4,
       "steps": 8
+    },
+    {
+      "id": "linguine-rakor-hummersas",
+      "name": "Linguine med räkor och hummersås",
+      "category": "Pasta & pizza",
+      "sources": 4,
+      "steps": 8
+    },
+    {
+      "id": "frasig-flatbread-chevre-bianco",
+      "name": "Frasig flatbread – chèvre bianco",
+      "category": "Pasta & pizza",
+      "sources": 3,
+      "steps": 9
+    },
+    {
+      "id": "rodbetstartar-tryffelchips",
+      "name": "Rödbetstartar med tryffelchips",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
     }
   ]
 }
