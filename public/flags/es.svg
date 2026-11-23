@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-es" viewBox="0 0 640 480">
+  <path fill="#aa151b" d="M0 0h640v480H0z"/>
+  <path fill="#f1bf00" d="M0 120h640v240H0z"/>
+  <g transform="translate(195 240)">
+    <path fill="#aa151b" d="M-24 -35h48v52c0 20-13 34-24 40-11-6-24-20-24-40z"/>
+    <path fill="#fff" d="M-16 -27h32v40c0 15-8 25-16 29-8-4-16-14-16-29z"/>
+    <path fill="#aa151b" d="M-10 -22h20v20h-20z"/>
+    <path fill="#f1bf00" d="M-3 -12h6v19h-6z"/>
+    <path fill="#aa151b" d="M-8 17h16v7H-8z"/>
+    <path fill="#aa151b" d="M-28 -44h56v8h-56z"/>
+    <path fill="#f1bf00" d="M-15 -52h30v8h-30z"/>
+  </g>
+</svg>
