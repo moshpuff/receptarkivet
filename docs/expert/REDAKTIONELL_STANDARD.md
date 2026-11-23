@@ -1,12 +1,12 @@
 # Receptarkivet Expert – kvalitets- och researchsystem
 
-**Version:** 2.1 · **Start:** 2026-11-15 · **Öppet förbättringsarbete:** 2026-11-23 · **Källa:** `src/data/recipes.json`
+**Version:** 2.2 · **Start:** 2026-11-15 · **Öppet förbättringsarbete:** 2026-11-23 · **Källa:** `src/data/recipes.json`
 
 Receptarkivets löfte: **så gott som möjligt, så enkelt som möjligt hemma, med instruktioner som är lätta att lyckas med**. Recept får inte bli mer avancerade bara för att en professionell teknik verkar imponerande. Vi behåller moment som ger en väsentlig förbättring och tar bort moment som mest skapar friktion.
 
 ## 1. Driftsregler (bindande)
 
-- Endast den redan befintliga schemalagda **ChatGPT-uppgiften**, måndagar cirka kl. 15 Europe/Stockholm. Ingen ny GitHub Action, extern AI-tjänst, API-nyckel eller prenumeration. Respektera ChatGPT-planens användningsgränser.
+- Endast den redan befintliga schemalagda **ChatGPT-uppgiften**, för närvarande måndag, onsdag och fredag kl. 14 Europe/Stockholm. Schemat ändras inte av detta dokument. Ingen ny GitHub Action, extern AI-tjänst, API-nyckel eller prenumeration. Respektera ChatGPT-planens användningsgränser.
 - Varje körning granskar **hellre ett recept exceptionellt väl än tre ytligt**; vanligtvis 1–3. Begränsa aldrig källsökning till ett godtyckligt antal om fler källor faktiskt kan avgöra en svår fråga.
 - **Publicera eller ändra inte recept, kod eller GitHub-filer automatiskt** från den schemalagda granskningen. Föreslå ändringar och invänta uttryckligt godkännande. Även uppdatering av kunskapsbank/register sker efter godkännande.
 - Gör ingen upprepningsresearch utan ny anledning. Läs katalog och register först, därefter enbart de utvalda recepten och de mest relevanta källorna. Om GitHub eller webbkällor inte är tillgängliga: redovisa begränsningen; hitta inte på.
@@ -54,6 +54,8 @@ Välj recept utifrån dokumenterade behov, inte namnordning eller nyhetshype:
 - **P1 – Funktionellt fel:** motsägelse mellan mängd och steg, orimliga tider, trasig metod eller tydligt felaktig copycat-uppgift.
 - **P2 – Stor kvalitetsvinst:** välgrundad möjlighet till märkbart bättre smak/textur eller mycket enklare instruktioner, osäker nyckelteknik, större kunskapslucka.
 - **P3 – Redigering/finlir:** tydligare ordval och mindre viktiga alternativ.
+
+Prioritet för verifierat fel och prioritet för provlagning av en osäker rätt ska inte förväxlas. Avsaknad av provlagning är inte automatiskt P1.
 
 Utgångspunkt: öppna observationer i registret, användarens verkliga provlagning/feedback, tidigare granskningar och signaler från receptet (t.ex. fritering, komplex bakning, många moment, få källor). **Få källor, hög komplexitet eller avsaknad av provlagning är en prioriteringssignal, inte bevis för dålig kvalitet.**
 
