@@ -45,6 +45,14 @@ jobs:
           npm run build -- --base-href "/${REPOSITORY_NAME}/"
           touch dist/receptarkivet/browser/.nojekyll
 
+      - name: Installera Chromium för begränsat UI-smoketest
+        if: github.event_name == 'pull_request'
+        run: npx playwright install --with-deps chromium
+
+      - name: Kontrollera valbara inköpsingredienser i webbläsare
+        if: github.event_name == 'pull_request'
+        run: npx playwright test --project=desktop-chromium --grep "valfria ingredienser"
+
       - name: Förbered GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
