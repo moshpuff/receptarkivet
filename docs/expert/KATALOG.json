@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "src/data/recipes.json",
-  "count": 214,
+  "count": 222,
   "entries": [
     {
       "id": "ryttarkaka",
@@ -1500,6 +1500,62 @@
       "category": "Snabbmat & street food",
       "sources": 3,
       "steps": 8
+    },
+    {
+      "id": "klassisk-kramig-potatissallad",
+      "name": "Krämig potatissallad",
+      "category": "Bröd & tillbehör",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "klassisk-kramig-coleslaw",
+      "name": "Coleslaw",
+      "category": "Såser, dressingar & röror",
+      "sources": 3,
+      "steps": 6
+    },
+    {
+      "id": "kramig-pastasallad-kyckling",
+      "name": "Krämig pastasallad med kyckling",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "vegetariska-zucchinibiffar-feta",
+      "name": "Vegetariska zucchinibiffar med feta",
+      "category": "Världens kök",
+      "sources": 3,
+      "steps": 7
+    },
+    {
+      "id": "pinocchiotarta-brittatarta",
+      "name": "Pinocchiotårta / Brittatårta",
+      "category": "Bakverk & fika",
+      "sources": 2,
+      "steps": 9
+    },
+    {
+      "id": "klassiska-chokladbiskvier",
+      "name": "Chokladbiskvier – klassiska",
+      "category": "Bakverk & fika",
+      "sources": 3,
+      "steps": 10
+    },
+    {
+      "id": "saftiga-kardemummabullar",
+      "name": "Kardemummabullar – saftiga och smöriga",
+      "category": "Bakverk & fika",
+      "sources": 4,
+      "steps": 10
+    },
+    {
+      "id": "rabarberpaj-smuldeg",
+      "name": "Rabarberpaj med smuldeg",
+      "category": "Efterrätter",
+      "sources": 3,
+      "steps": 7
     }
   ]
 }
