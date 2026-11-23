@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23",
+  "updated_at": "2026-11-24",
   "source": "src/data/recipes.json",
   "recipe_count_at_initialization": 149,
   "note": "Alla recept som inte finns i review_history saknar registrerad oberoende expertgranskning i detta system. Det betyder inte att de är dåliga eller saknar tidigare research. Ingen kandidat nedan är ett konstaterat fel.",
@@ -475,6 +475,132 @@
       "id": "tillagad-bifftartar-tryffelchips",
       "priority": "P2",
       "reason": "Särskild säkerhetskontroll: restaurangmenyn anger råbiff, men arkivversionen använder helt genomlagat kött med hygieninstruktioner p.g.a. Ehec/Salmonella. Kontrollera mörhet i flankstek och alternativ styckningsdetalj.",
+      "verified_defect": false
+    },
+    {
+      "id": "burrata-sotad-persika-tomat",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "rigatoni-oxfile-svamp-tryffel",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "tortelloni-kantarell-vasterbotten",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "varmrokt-lax-sauce-verte",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "cevapi-ajvar-vitlokssas",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "ortslungad-penne-kyckling-svampkram",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "laxcannelloni-bechamel-tomat",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "flankstekmacka-jalapenomajonnas",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "flaskkotlett-shiitake-gronpepparsas",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "rarakor-kallrokt-lax-citronkram",
+      "priority": "P2",
+      "reason": "Nytt självständigt restauranginspirerat hemmarecept (urval 2026-11-24): granska proportioner, tillagning, svensk inköpsbarhet, säkerhet och uppskattad nutrition; ännu ej provlagat",
+      "verified_defect": false
+    },
+    {
+      "id": "pannacotta",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "lasagne",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "wallenbergare",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "focaccia-rosmarin",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "fisksoppa-saffran-aioli",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "appelsmulpaj",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "mac-and-cheese",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "chokladmousse",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "caesarsallad-kyckling",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "smashburgare",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
+      "verified_defect": false
+    },
+    {
+      "id": "fransk-loksoppa",
+      "priority": "P3",
+      "reason": "Nytt frivilligt restauranginspirerat serveringsalternativ 2026-11-24: granska balans och tydlighet, överväg provlagning innan ordinarie bas ändras",
       "verified_defect": false
     }
   ],
