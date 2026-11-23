@@ -1,6 +1,14 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **230 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **239 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+
+## Hemma Hos Norrköping-inspirerade recept 231–239 (november 2026)
+
+Nio självständiga hemrecept inspirerade av smakkombinationer från en äldre meny hos Hemma Hos Norrköping: gratinerat vitlöksbröd med parmesan, okonomiyaki med räkor, chèvre chaud med rödbetor, chili cheese-gratinerad kyckling, fläskschnitzel med tartarkräm och syltad lök, fiskgryta med hummersås, saltkolapaj med lingoncoulis, brownie med vispad hallonpannacotta och nyponsoppa med vaniljbavaroise. Arkivet omfattar nu **239 unika recept**.
+
+Fyra befintliga recept får valfria serverings- och testtips: Toast Skagen, köttbullar med mos, Boeuf Bourguignon och Pavlova. Crème brûlée lämnas oförändrad. Inga andra befintliga recept ändras. Expertindex och granskningskön hålls synkroniserade. De nya recepten är **researchbaserade, inte provlagade och inte restaurangernas verifierade originalrecept**.
+
+Se [research och kvalitetsunderlag](docs/expert/HEMMA_HOS_NORRKOPING_RESEARCH_2026-11-23.md).
 
 ## Tillägg 223–230 – åtta kompletterande favoriter (november 2026)
 
