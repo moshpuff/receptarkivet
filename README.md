@@ -1,6 +1,6 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **173 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **183 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
 ## Såser, dressingar & röror (recept 150–173)
 
@@ -17,6 +17,27 @@ En helt ny kategori med **24 fristående recept** – 7 varma såser, 7 kalla s�
 Varje nytt recept innehåller valda `pairings` till befintliga rätter och dessa visas som **klickbara ”Passar till”** i receptvyn. Befintliga maträtter visar i gengäld passande nya såser. Detta påverkar inte de specialanpassade såsrecept som redan är inbyggda i maträtterna – de finns kvar oförändrade.
 
 **Kvalitetsstatus:** Recepten är nya, källjämförda hemversioner. De exakta formuleringarna är inte separat provlagade och de ungefärliga näringsvärdena är inte laboratorieverifierade. Vid ny expertgranskning ska de utvärderas och förbättras efter godkännande.
+
+## Tillägg 174–183 – tio populära favoriter (november 2026)
+
+Efter research bland svenska och internationella receptkällor tillkom tio efterfrågade recept:
+
+| Nr | Recept | Kategori |
+|---:|---|---|
+| 174 | Chicken Tikka Masala | Världens kök |
+| 175 | Saftigt bananbröd | Bakverk & fika |
+| 176 | Thai Red Curry med kyckling | Världens kök |
+| 177 | Overnight Oats – grundrecept | Frukost & brunch |
+| 178 | Basque Burnt Cheesecake | Efterrätter |
+| 179 | Svensk pannpizza i långpanna | Pasta & pizza |
+| 180 | Hasselbackspotatis | Bröd & tillbehör |
+| 181 | Chicken Fajitas | Snabbmat & street food |
+| 182 | Klassisk marängsviss | Efterrätter |
+| 183 | Hemgjord krispig granola | Frukost & brunch |
+
+Varje nytt recept innehåller anpassade svenska inköpsmått, arbetsmoment med praktiska kännetecken, källor, uppskattat näringsvärde per portion eller bit, typ 2-diabetesanpassning och inköpsråd. **De exakta receptversionerna har inte provlagats separat**, och näringsvärdena är inte laboratorieverifierade. De nya recepten är upptagna i expertens granskningskö.
+
+Spaniens flagga har tillkommit för baskisk cheesecake. Inga äldre recept eller existerande GitHub Actions har ändrats för att lägga till dessa recept.
 
 ## Receptarkivet Expert – systematisk receptkvalitet
 
