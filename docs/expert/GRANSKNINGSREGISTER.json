@@ -446,6 +446,36 @@
       "priority": "P2",
       "reason": "Ny förrätt: verifiera vinäger-/dijonbalans, rödbetornas vätska, chipskrisp, löpe- och näringsangivelser; ej provlagad",
       "verified_defect": false
+    },
+    {
+      "id": "mezze-maniche-kyckling-bacon",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: rosta grönsaker, mät genomstekning av kyckling, stek bacon; verifiera såsbalans, portioner och tidsåtgång i hemmakök.",
+      "verified_defect": false
+    },
+    {
+      "id": "ravioli-kalvfars-pepparparmesansås",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: kontrollera kalvfärsens genomstekning, pastakuddarnas tillagning och parmesanemulsion; tydliggör att såsen inte är klassisk cacio e pepe.",
+      "verified_defect": false
+    },
+    {
+      "id": "briefylld-kyckling-lufttorkad-skinka",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: verifiera korrekt kärntemperatur i fylld kyckling, täthet runt smält brie och såsernas smakbalans; en sås kan vara bättre än två.",
+      "verified_defect": false
+    },
+    {
+      "id": "chevre-chaud-frasig-polenta",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept: kontrollera polentans vätskekvot och om den sätter sig på 30 minuter, samt fras efter ugnsbakning och smakkombination med chèvre.",
+      "verified_defect": false
+    },
+    {
+      "id": "tillagad-bifftartar-tryffelchips",
+      "priority": "P2",
+      "reason": "Särskild säkerhetskontroll: restaurangmenyn anger råbiff, men arkivversionen använder helt genomlagat kött med hygieninstruktioner p.g.a. Ehec/Salmonella. Kontrollera mörhet i flankstek och alternativ styckningsdetalj.",
+      "verified_defect": false
     }
   ],
   "recipe_count_current": 239,
