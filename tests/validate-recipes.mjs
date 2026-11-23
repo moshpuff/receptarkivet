@@ -44,11 +44,26 @@ assert.ok(match, 'Säkerhetskopians receptdata saknas');
 const baseline = JSON.parse(match[1]);
 assert.equal(baseline.length, 100, 'Säkerhetskopian måste ha exakt 100 recept');
 const deliberatelyUpdated = new Set(['kladdkaka', 'fisk-aggsas']);
+// Dessa tre originalrecept har efter uttryckligt godkännande fått ENBART
+// valfria tips och kompletterande källor. Ingredienser, steg, ordning,
+// grundmetadata och alla ursprungliga tips/källor måste förbli identiska.
+// OBS: detta är ett snävare skydd än att helt undanta recepten från testet.
+const tipsOnlyExtended = new Set(['toast-skagen', 'kottbullar-mos', 'boeuf-bourguignon']);
 for (const [index, historicalRecipe] of baseline.entries()) {
-  assert.equal(recipes[index].id, historicalRecipe.id,
+  const current = recipes[index];
+  assert.equal(current.id, historicalRecipe.id,
     `Originalrecept ${index + 1} har bytt ID eller ordning`);
-  if (!deliberatelyUpdated.has(historicalRecipe.id)) {
-    assert.deepEqual(recipes[index], historicalRecipe,
+  if (tipsOnlyExtended.has(historicalRecipe.id)) {
+    assert.deepEqual(current.tips.slice(0, historicalRecipe.tips.length), historicalRecipe.tips,
+      `Originalrecept ${index + 1} har förlorat eller ändrat ursprungliga tips`);
+    assert.deepEqual(current.sources.slice(0, historicalRecipe.sources.length), historicalRecipe.sources,
+      `Originalrecept ${index + 1} har förlorat eller ändrat ursprungliga källor`);
+    assert.ok(current.tips.length > historicalRecipe.tips.length,
+      `Originalrecept ${index + 1} saknar godkända valfria tips`);
+    assert.deepEqual({...current, tips: historicalRecipe.tips, sources: historicalRecipe.sources},
+      historicalRecipe, `Originalrecept ${index + 1} har ändrats utöver tips och källor`);
+  } else if (!deliberatelyUpdated.has(historicalRecipe.id)) {
+    assert.deepEqual(current, historicalRecipe,
       `Originalrecept ${index + 1} (${historicalRecipe.id}) har ändrats oväntat`);
   }
 }
@@ -63,7 +78,7 @@ for (const recipe of recipes) {
   }
 }
 console.log(`✓ ${recipes.length} unika recept, kompletta ingredienser, steg, källor och näringsvärden`);
-console.log('✓ 98 historiska recept matchar säkerhetskopian; 2 tidigare godkända uppdateringar är tillåtna');
+console.log('✓ 95 historiska recept matchar säkerhetskopian helt; 2 äldre godkända ändringar och 3 snävt skyddade tipsutökningar');
 
 const countryCodes = new Set(recipes.map(r => r.countryCode));
 for (const code of countryCodes) {
