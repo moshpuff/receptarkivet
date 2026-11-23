@@ -1,6 +1,14 @@
 # Receptarkivet – Angular
 
-Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **214 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **222 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
+
+## Tillägg 215–222 – åtta nya favoriter (november 2026)
+
+Efter användarens godkännande har åtta nya recept lagts till: krämig potatissallad, coleslaw, krämig pastasallad med kyckling, vegetariska zucchinibiffar med feta, Pinocchiotårta/Brittatårta, chokladbiskvier, kardemummabullar och rabarberpaj med smuldeg.
+
+Arkivet har nu **222 recept**. Varje recept har svenska inköpsmått, justerbara satser, arbetsmoment, tips, källor och uppskattad nutrition. Befintliga 214 recept har behållits semantiskt oförändrade. Tillbehören är länkade till relevanta huvudrätter. Katalog och expertgranskningskö är synkroniserade. **De nya recepten är researchbaserade men inte separat provlagade eller oberoende expertgodkända.**
+
+Se [redaktionellt researchunderlag för recept 215–222](docs/expert/NYA_FAVORITER_2026-11-23_215-222.md).
 
 ## Tillägg 201–214 – fjorton efterfrågade favoriter (november 2026)
 

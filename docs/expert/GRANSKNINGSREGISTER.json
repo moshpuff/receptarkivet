@@ -254,9 +254,57 @@
       "priority": "P2",
       "reason": "Nytt researchbaserat recept som behöver oberoende expertgranskning/provlagning. Fokus: risförvaring, rullbarhet och fyllningsmängd",
       "verified_defect": false
+    },
+    {
+      "id": "klassisk-kramig-potatissallad",
+      "priority": "P3",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: fast potatis, syra-salt-balans och kylkedja",
+      "verified_defect": false
+    },
+    {
+      "id": "klassisk-kramig-coleslaw",
+      "priority": "P3",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: kålens krisp och dressingens mängd",
+      "verified_defect": false
+    },
+    {
+      "id": "kramig-pastasallad-kyckling",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: kycklingens genomlagning och säker snabb nedkylning",
+      "verified_defect": false
+    },
+    {
+      "id": "vegetariska-zucchinibiffar-feta",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: urpressning av zucchini och biffarnas hållfasthet",
+      "verified_defect": false
+    },
+    {
+      "id": "pinocchiotarta-brittatarta",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: gräddning, marängens konsistens och montering",
+      "verified_defect": false
+    },
+    {
+      "id": "klassiska-chokladbiskvier",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: mandelbottnarnas storlek, smörkrämen och chokladtäckets temperatur",
+      "verified_defect": false
+    },
+    {
+      "id": "saftiga-kardemummabullar",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: degstruktur, jäsning, bakning och sockerlag",
+      "verified_defect": false
+    },
+    {
+      "id": "rabarberpaj-smuldeg",
+      "priority": "P2",
+      "reason": "Nytt researchbaserat recept, separat expertgranskning/provlagning behövs: rabarberns vätska, stärkelsemängd och smulans fras",
+      "verified_defect": false
     }
   ],
-  "recipe_count_current": 214,
+  "recipe_count_current": 222,
   "notes_on_new_recipes": "24 nya fristående såser, dressingar och röror är researchbaserade och redo att använda, men är inte deklarerade som oberoende expertgranskade eller provlagade.",
-  "note_additions_2026_11_23": "Totalt 41 nya researchbaserade recept den 23 november 2026, inklusive 14 nya favoriter nr 201–214. Ej separat provlagade eller oberoende expertgodkända; näringsvärden är uppskattningar."
+  "note_additions_2026_11_23": "Totalt 49 nya researchbaserade recept den 23 november 2026, inklusive 8 nya favoriter nr 215–222. Ej provlagade eller oberoende expertgodkända. Näringsvärden är uppskattningar och tillval ingår bara när detta anges."
 }
