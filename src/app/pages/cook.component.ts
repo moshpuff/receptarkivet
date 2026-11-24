@@ -1,3 +1,4 @@
+import { ingredientIcon, equipmentForRecipe } from '../core/recipe-presentation';
 import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -15,6 +16,8 @@ import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 export class CookComponent {
   private readonly route = inject(ActivatedRoute);
   readonly store = inject(RecipeStore);
+  readonly ingredientIcon = ingredientIcon;
+  readonly equipmentForRecipe = equipmentForRecipe;
   private readonly toast = inject(ToastService);
   private readonly params = toSignal(this.route.paramMap);
   readonly recipe = computed(() => RECIPES.find(r => r.id === this.params()?.get('id')));
