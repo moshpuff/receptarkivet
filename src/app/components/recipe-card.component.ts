@@ -31,13 +31,10 @@ import { CountryFlagComponent } from './country-flag.component';
           }
         </div>
         <div class="card-body">
-          <div class="card-category">{{ recipe.category }}</div>
           <h3 class="card-title"><app-country-flag [code]="recipe.countryCode" [name]="recipe.countryName"
             [description]="recipe.countryNote" />{{ recipe.name }}</h3>
-          <p class="card-desc">{{ recipe.subtitle }}</p>
           <div class="card-bottom">
             <span><app-ui-icon name="clock" [size]="14" /> {{ recipe.time }}</span>
-            <span><app-ui-icon name="chef" [size]="14" /> {{ recipe.difficulty }}</span>
           </div>
         </div>
       </a>
