@@ -46,6 +46,8 @@ export interface Recipe {
   countryNote: string;
   nutrition: Nutrition;
   shoppingTips: string[];
+  /** Granskad utrustningslista. Saknas listan visas bara redskap uttryckligen nämnda i stegen. */
+  equipment?: string[];
   /** Recept som det här fristående tillbehöret passar särskilt bra till. */
   pairings?: string[];
 }
