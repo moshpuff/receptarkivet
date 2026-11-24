@@ -35,13 +35,9 @@ import { CountryFlagComponent } from './country-flag.component';
           <h3 class="card-title"><app-country-flag [code]="recipe.countryCode" [name]="recipe.countryName"
             [description]="recipe.countryNote" />{{ recipe.name }}</h3>
           <p class="card-desc">{{ recipe.subtitle }}</p>
-          <div class="card-tags">
-            @for (tag of recipe.tags.slice(0, 2); track tag) { <span>{{ tag }}</span> }
-          </div>
           <div class="card-bottom">
             <span><app-ui-icon name="clock" [size]="14" /> {{ recipe.time }}</span>
             <span><app-ui-icon name="chef" [size]="14" /> {{ recipe.difficulty }}</span>
-            <span aria-hidden="true"><app-ui-icon name="external" [size]="16" /></span>
           </div>
         </div>
       </a>
