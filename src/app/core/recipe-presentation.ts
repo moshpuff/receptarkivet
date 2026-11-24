@@ -1,5 +1,5 @@
 import type { Recipe } from './recipe.model';
-import type { UiIconName } from '../components/ui-icon.component';
+import type { UiIconName } from './ui-icon.types';
 
 /** Konsekventa, neutrala Tabler-symboler. Matcha mest specifika råvara först. */
 const ingredientRules: ReadonlyArray<readonly [RegExp, UiIconName]> = [
