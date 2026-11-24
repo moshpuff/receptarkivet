@@ -1,20 +1,29 @@
-# Ikonsystem – Tabler + Lucide
+# Ikonsystem – Tabler Icons
 
-**Beslutat 2026-11-24.**
+**Beslutat 2026-11-24 · Uppdaterat för endast Tabler Icons.**
 
-Appens primära gränssnittsikoner använder nu utvalda **Tabler Icons (outline)** i samma `app-ui-icon`-komponent som tidigare, medan övriga ikoner fortsätter använda redan installerade Lucide som kompatibel fallback. Syftet är en konsekvent, ren nordisk ikonstil med låg visuell vikt.
+Samtliga ikoner i Receptarkivets gränssnitt levereras nu av **Tabler Icons (outline)** genom en enda Angular-komponent: `src/app/components/ui-icon.component.ts`.
 
-## Principer
-- En ikonkomponent för hela Angular-appen: `src/app/components/ui-icon.component.ts`.
-- Primära Tabler-ikoner: sök, hjärta, korg, kockmössa, klocka, personer, skrivare, vänster-/högerpil, bock, plus, nedåtpil, stäng, filter.
-- Storlek anpassas till användningsområde, normalt 16–20 px; linjetjocklek 2 för Tabler och Lucide.
-- Ikoner kompletterar kort text och ska inte göra det viktigare receptinnehållet svårare att läsa.
-- Dekorativa SVG:er är `aria-hidden`; knappar och länkar behåller synlig text eller tillgänglig `aria-label`.
-- Ingen ikonfont, extern CDN, API-nyckel, ny GitHub Action eller ytterligare npm-dependency har införts.
-- Om fler ikoner läggs till: prioritera Tabler för nya primära åtgärder, återanvänd befintliga namn och undvik flera ikonfamiljer bredvid varandra i samma kontroll.
+## Regler
 
-## Upphov och licens
-De inbäddade Tabler SVG-paths är hämtade från [tabler/tabler-icons](https://github.com/tabler/tabler-icons), MIT-licens. Full licenstext: https://github.com/tabler/tabler-icons/blob/main/LICENSE . Lucide-ikonerna används via det redan installerade `@lucide/angular`.
+- **Endast Tabler Icons.** Ingen Lucide-fallback eller annan ikonfamilj för gränssnittet.
+- **Stroke 2** för samtliga ikoner, med rundade linjeändar och hörn.
+- Vanligtvis 16–20 px, större där semantik eller användning kräver det.
+- Ikoner är diskreta visuella stöd, inte dekor som konkurrerar med receptbilder eller text.
+- Ikonens interna SVG är `aria-hidden`; knappar/länkar ska ha en synlig etikett eller `aria-label`.
+- För att lägga till nya ikonvarianter: hämta motsvarande `icons/outline/<name>.svg` från Tablers officiella repository och lägg till en `@case` i komponenten. Bevara komponentens befintliga ikon-namn som används i appen.
+- SVG:erna är inbäddade lokalt: ingen CDN, ikonfont, ytterligare npm-dependency eller extern runtime-begäran.
 
-## Kontroll
-Ändringen är bakåtkompatibel med befintliga namn och är begränsad till ikonkomponenten. Kontrollera särskilt ikonernas rendering i Angular-kompilering, navigering, favoritstatus, inköpsknappar, köksläge och mobil före färdig release. Befintliga funktioner ska vara opåverkade.
+## Tillgängliga namn
+
+`search`, `heart`, `basket`, `chef`, `clock`, `users`, `printer`, `left`, `right`, `check`, `plus`, `refresh`, `done`, `down`, `external`, `close`, `copy`, `cook`, `bookmark`, `filter`.
+
+## Licens
+
+SVG-vägarna är hämtade från [tabler/tabler-icons](https://github.com/tabler/tabler-icons), MIT-licens. [Licenstext](https://github.com/tabler/tabler-icons/blob/main/LICENSE).
+
+## Status
+
+Komponenten har bytts till enbart Tabler, och oanvända `@lucide/angular` har tagits bort från `package.json`. Repo innehåller ingen `package-lock.json`, så ingen låsfil behövde uppdateras.
+
+**Återstår:** kör Angular-bygge och browser-tester för att verifiera alla ikoner och knappar i applikationen. Den statiska implementationen är inte liktydig med godkänt produktionstest.
