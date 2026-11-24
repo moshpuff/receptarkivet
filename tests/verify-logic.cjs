@@ -30,6 +30,32 @@ const {RecipeStore} = require('./.compiled/app/core/recipe-store.service.js');
 const {CatalogFilters} = require('./.compiled/app/core/catalog-filters.service.js');
 const {DINNER_OPTIONS, findDinnerSuggestions} = require('./.compiled/app/core/dinner-recommender.js');
 const {mergeShoppingIngredients} = require('./.compiled/app/core/shopping-merge.js');
+const {ingredientIcon, equipmentForRecipe} = require('./.compiled/app/core/recipe-presentation.js');
+
+// Tabler-symboler: svenska böjningsformer, kompakt utrustningslista och inga gissade verktyg.
+for (const [name, expected] of [
+  ['Äggulor', 'i-egg'], ['Vispgrädde', 'i-milk'], ['Fetaost', 'i-cheese'],
+  ['Torskrygg', 'i-fish'], ['Kantareller', 'i-mushroom'],
+  ['Citronsaft', 'i-lemon'], ['Rödbetor', 'i-carrot'],
+  ['Vitlöksklyftor', 'i-carrot'], ['Basmatiris', 'i-wheat'],
+  ['Olivolja', 'i-bottle'], ['Grillkrydda', 'i-package'],
+  ['Okänd råvara', 'i-package']
+]) assert.equal(ingredientIcon(name), expected, 'Fel råvarusymbol: ' + name);
+const equipFixture = steps => ({steps:steps.map(body=>({title:'Gör så här',body}))});
+const detected = equipmentForRecipe(equipFixture([
+  'Värm ugnen och lägg på bakplåten.',
+  'Vispa i en bunke. Värm i kastrull.',
+  'Stek i stekpanna, kontrollera med termometer.'
+]));
+assert.deepEqual(detected.map(e=>e.label), ['Ugn','Stekpanna','Kastrull','Bunke','Visp','Bakplåt'],
+  'Utrustning ska vara deterministisk, utan dubbletter och begränsad till sex');
+assert.deepEqual(equipmentForRecipe(equipFixture(['Blanda med en sked och servera.'])), [],
+  'Hitta inte på redskap när stegtexten inte nämner dem');
+assert.deepEqual(equipmentForRecipe({equipment:['Visp','Kastrull'],steps:[]}).map(e=>e.label),
+  ['Visp','Kastrull'], 'Granskad utrustning tar företräde');
+assert.deepEqual(equipmentForRecipe({equipment:[],steps:[]}), [],
+  'En granskad tom utrustningslista ska respekteras');
+console.log('✓ Tabler-ikoner: svensk råvarumatchning, neutral fallback och försiktig utrustningsidentifiering');
 
 assert.ok(RECIPES.length >= 100, 'Minst 100 recept ska finnas');
 assert.equal(new Set(RECIPES.map(r => r.id)).size, RECIPES.length, 'Alla recept-ID ska vara unika');
