@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { RECIPES } from '../core/recipe-data';
 import { RecipeStore } from '../core/recipe-store.service';
 import { ToastService } from '../core/toast.service';
-import { ingredientAmount, ingredientNote, recipeMatches, yieldText } from '../core/recipe-format';
+import { ingredientAmount, ingredientNote, isOptionalIngredient, recipeMatches, yieldText } from '../core/recipe-format';
 import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 import { CombinedShoppingRow, mergeShoppingIngredients } from '../core/shopping-merge';
 
@@ -23,7 +23,8 @@ export class ShoppingComponent {
   readonly selected = computed(() => this.store.shoppingIds()
     .map(id => this.byId.get(id)).filter((r): r is Recipe => !!r));
   readonly combined = computed(() => mergeShoppingIngredients(
-    this.selected(), id => this.store.scale(id), this.store.bought()
+    this.selected(), id => this.store.scale(id), this.store.bought(),
+    (item, key) => !isOptionalIngredient(item) || this.store.isOptionalIncluded(key)
   ));
   readonly totalIngredients = computed(() => this.combined().length);
   readonly boughtCount = computed(() => this.combined().filter(item => item.isBought).length);
@@ -34,6 +35,8 @@ export class ShoppingComponent {
   key(r: Recipe, group: number, item: number): string { return `${r.id}/${group}/${item}`; }
   amount(item: Ingredient, scale: Scale): string { return ingredientAmount(item, scale); }
   note(item: Ingredient, scale: Scale): string { return ingredientNote(item.extra, scale); }
+  isOptional(item: Ingredient): boolean { return isOptionalIngredient(item); }
+  optionalChanged(key: string, event: Event): void { this.store.setOptionalIncluded(key, (event.target as HTMLInputElement).checked); }
   yield(r: Recipe): string { return yieldText(r, this.store.scale(r.id)); }
   focusPicker(): void { document.getElementById('bag-search')?.focus(); }
   toggle(r: Recipe): void { this.store.toggleShopping(r.id); }

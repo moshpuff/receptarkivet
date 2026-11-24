@@ -17,7 +17,8 @@ export interface CombinedShoppingRow {
 export function mergeShoppingIngredients(
   recipes: readonly Recipe[],
   scaleFor: (id: string) => Scale,
-  bought: Readonly<Record<string, boolean>>
+  bought: Readonly<Record<string, boolean>>,
+  includeIngredient: (item: Ingredient, key: string) => boolean = () => true
 ): CombinedShoppingRow[] {
   type Aggregate = {name:string; unit:string; qty:number | null; fixedItem:Ingredient | null; scale:Scale; ingredientKeys:string[]};
   const map = new Map<string, Aggregate>();
@@ -25,6 +26,7 @@ export function mergeShoppingIngredients(
     const scale = scaleFor(recipe.id);
     recipe.groups.forEach((group, gi) => group.items.forEach((item, ii) => {
       const ingredientKey = `${recipe.id}/${gi}/${ii}`;
+      if (!includeIngredient(item, ingredientKey)) return;
       const canMerge = item.qty !== null && Number.isFinite(item.qty) && !item.fixed.trim();
       const normalized = normalizeSearch(item.name.trim()).replace(/\s+/g,' ');
       const unit = item.unit.trim();

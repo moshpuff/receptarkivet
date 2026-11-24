@@ -2,9 +2,13 @@
 
 Receptarkivet är migrerat från en fristående HTML-receptbok till ett Angular-projekt med **257 recept**. Recept, ingredienser, instruktioner, källor, näringsvärden och inköpsråd finns i `src/data/recipes.json`. Den äldre HTML-versionen med 100 recept ligger kvar i `original-Receptarkivet-100.html` som säkerhetskopia. Av de ursprungliga 100 recepten har kladdkaka och fisk med äggsås medvetet vidareutvecklats.
 
+## Kvalitet och inköpslista (24 november 2026)
+
+Recepttesterna kontrollerar nu att expertkatalog, granskningsregister och granskningskö matchar recepten. Ingredienser som uttryckligen benämns valfria i sina anteckningar är nu avmarkerade från början i inköpslistan och kan väljas till per recept. Detta är skilt från att bocka av råvaran som handlad. Befintliga favoriter och ID:n bevaras. Restaurangvarianter i fritexttips saknar ännu stöd som kompletta, valbara ingrediensalternativ.
+
 ## Redaktionell princip: alla recept kan förbättras
 
-Alla **239 recept** är levande recept – även de ursprungliga 100 får uppdateras när bättre research, kockkunskap, provlagning eller användarfeedback visar på förbättringar. Det gäller ingredienser, mängder, metod, tid, smak, tillbehör och instruktioner. Ingen historisk identitetskontroll hindrar innehållsändringar.
+Alla **257 recept** är levande recept – även de ursprungliga 100 får uppdateras när bättre research, kockkunskap, provlagning eller användarfeedback visar på förbättringar. Det gäller ingredienser, mängder, metod, tid, smak, tillbehör och instruktioner. Ingen historisk identitetskontroll hindrar innehållsändringar.
 
 Vi bevarar stabila recept-ID:n för appens favoriter och receptkopplingar, och behåller den äldre HTML-filen som historisk säkerhetskopia (inte som ett låst kvalitetsfacit). GitHubs automatiska tester kontrollerar i stället att receptdata är komplett och att appen fortfarande fungerar. Förbättringar ska dokumenteras och genomgå research och kvalitetskontroll enligt [redaktionell standard](docs/expert/REDAKTIONELL_STANDARD.md); schemalagd expertgranskning föreslår ändringar och publicerar inte utan godkännande.
 
@@ -109,7 +113,7 @@ Spaniens flagga har tillkommit för baskisk cheesecake. Inga äldre recept eller
 
 ## Receptarkivet Expert – systematisk receptkvalitet
 
-Receptarkivet har en separat, **schemalagd ChatGPT-expertgranskning** (normalt en gång per vecka) med målet **fantastisk smak, rätt konsistens, enkla hemmametoder och kristallklara instruktioner**. Den omfattar djup research, kritisk kvalitetskontroll, praktisk matlagning, säkra metoder och granskning av svenska råvaror. Publicerade recept ändras **aldrig** utan användarens godkännande.
+Receptarkivet har en separat, **schemalagd ChatGPT-expertgranskning** (för närvarande måndag, onsdag och fredag kl. 14 svensk tid) med målet **fantastisk smak, rätt konsistens, enkla hemmametoder och kristallklara instruktioner**. Den omfattar djup research, kritisk kvalitetskontroll, praktisk matlagning, säkra metoder och granskning av svenska råvaror. Publicerade recept ändras **aldrig** utan användarens godkännande.
 
 Läs [redaktionell standard och fullständigt arbetssätt](docs/expert/REDAKTIONELL_STANDARD.md). Därifrån används också [kulinarisk kunskapsbank](docs/expert/KUNSKAPSBANK.md), [granskningsregister](docs/expert/GRANSKNINGSREGISTER.json) och [kompakt receptkatalog](docs/expert/KATALOG.json). Inga tidigare recept har ändrats för att införa systemet.
 

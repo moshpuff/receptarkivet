@@ -54,6 +54,7 @@ export class RecipeStore {
   // Separat avbockning för inköp och matlagning: att handla en vara ska inte
   // markera ingrediensen som förberedd i köket.
   private readonly boughtState = signal<Record<string, boolean>>(readStored('shopchecks', {} as Record<string, boolean>, isChecks));
+  private readonly optionalState = signal<Record<string, boolean>>(readStored('optional', {} as Record<string, boolean>, isChecks));
   private readonly cookStepsState = signal<Record<string, number>>(readStored('cooksteps', {} as Record<string, number>, isStepProgress));
   private readonly cookedState = signal<Record<string, string>>(readStored('cooked', {} as Record<string, string>, isCookedDates));
   private readonly notesState = signal<Record<string, string>>(readStored('notes', {} as Record<string, string>, isNotes));
@@ -64,6 +65,7 @@ export class RecipeStore {
   readonly checked = this.checkedState.asReadonly();
   readonly scales = this.scalesState.asReadonly();
   readonly bought = this.boughtState.asReadonly();
+  readonly optionalChoices = this.optionalState.asReadonly();
   readonly cooked = this.cookedState.asReadonly();
 
   isFavorite(id: string): boolean { return this.favoritesState().includes(id); }
@@ -71,6 +73,19 @@ export class RecipeStore {
   isChecked(key: string): boolean { return !!this.checkedState()[key]; }
   scale(id: string): Scale { return this.scalesState()[id] ?? 1; }
   isBought(key: string): boolean { return !!this.boughtState()[key]; }
+  isOptionalIncluded(key: string): boolean { return !!this.optionalState()[key]; }
+  setOptionalIncluded(key: string, included: boolean): void {
+    this.optionalState.update(old => ({...old, [key]: included}));
+    saveStored('optional', this.optionalState());
+    if (!included && this.boughtState()[key]) {
+      this.boughtState.update(old => {
+        const next = {...old};
+        delete next[key];
+        return next;
+      });
+      saveStored('shopchecks', this.boughtState());
+    }
+  }
   cookStep(id: string): number { return this.cookStepsState()[id] ?? 0; }
   cookedOn(id: string): string { return this.cookedState()[id] ?? ''; }
   note(id: string): string { return this.notesState()[id] ?? ''; }
@@ -88,6 +103,8 @@ export class RecipeStore {
       // En ny handling ska inte ärva avbockningar från förra inköpsrundan.
       this.boughtState.update(old => Object.fromEntries(Object.entries(old).filter(([key]) => !key.startsWith(id + '/'))));
       saveStored('shopchecks', this.boughtState());
+      this.optionalState.update(old => Object.fromEntries(Object.entries(old).filter(([key]) => !key.startsWith(id + '/'))));
+      saveStored('optional', this.optionalState());
     }
   }
   resetPrepared(id: string): void {

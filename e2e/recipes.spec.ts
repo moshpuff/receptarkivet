@@ -259,11 +259,11 @@ test('visar riktiga SVG-flaggor på recept, filter och detaljsida', async ({page
   await page.goto('/');
   const cardFlag = page.locator('app-recipe-card .origin-flag').first();
   await expect(cardFlag).toBeVisible();
-  await expect(cardFlag).toHaveAttribute('src', /flags\\/[a-z]{2}\\.svg$/);
+  await expect(cardFlag).toHaveAttribute('src', /flags\/[a-z]{2}\.svg$/);
   await expect.poll(() => cardFlag.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await page.getByRole('combobox', {name:'Filtrera efter land'}).selectOption('US');
   const filterFlag = page.locator('.country-filter-choice .origin-flag');
-  await expect(filterFlag).toHaveAttribute('src', /flags\\/us\\.svg$/);
+  await expect(filterFlag).toHaveAttribute('src', /flags\/us\.svg$/);
   await expect.poll(() => filterFlag.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await page.locator('app-recipe-card .card-link').first().click();
   const detailFlag = page.locator('app-detail h1 .origin-flag');
@@ -315,4 +315,16 @@ test('gemensam inköpslista summerar mängder och synkar avbockningar', async ({
   }
   await page.reload();
   await expect(page.locator('.bag-combined-item',{hasText:'Smör'}).first().locator('input')).toBeChecked();
+});
+
+test('valfria ingredienser kan läggas till utan att förväxlas med handlade varor', async ({page}) => {
+  await page.goto('/#/inkopslista');
+  await page.getByRole('searchbox', {name: 'Sök bland recepten'}).fill('Burrata med sotad persika');
+  await page.locator('.bag-choice input').check();
+  await expect(page.locator('.bag-combined-item', {hasText: 'Surdegsbröd'})).toHaveCount(0);
+  await page.getByRole('checkbox', {name: 'Ta med valfri ingrediens: Surdegsbröd'}).check();
+  await expect(page.locator('.bag-combined-item', {hasText: 'Surdegsbröd'})).toHaveCount(1);
+  await page.reload();
+  await expect(page.getByRole('checkbox', {name: 'Ta med valfri ingrediens: Surdegsbröd'})).toBeChecked();
+  await expect(page.locator('.bag-combined-item', {hasText: 'Surdegsbröd'}).locator('input')).not.toBeChecked();
 });
