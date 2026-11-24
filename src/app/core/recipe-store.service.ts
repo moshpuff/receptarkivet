@@ -77,6 +77,14 @@ export class RecipeStore {
   setOptionalIncluded(key: string, included: boolean): void {
     this.optionalState.update(old => ({...old, [key]: included}));
     saveStored('optional', this.optionalState());
+    if (!included && this.boughtState()[key]) {
+      this.boughtState.update(old => {
+        const next = {...old};
+        delete next[key];
+        return next;
+      });
+      saveStored('shopchecks', this.boughtState());
+    }
   }
   cookStep(id: string): number { return this.cookStepsState()[id] ?? 0; }
   cookedOn(id: string): string { return this.cookedState()[id] ?? ''; }
