@@ -8,7 +8,7 @@ Receptarkivets löfte: **så gott som möjligt, så enkelt som möjligt hemma, m
 
 - Endast den redan befintliga schemalagda **ChatGPT-uppgiften**, för närvarande måndag, onsdag och fredag kl. 14 Europe/Stockholm. Schemat ändras inte av detta dokument. Ingen ny GitHub Action, extern AI-tjänst, API-nyckel eller prenumeration. Respektera ChatGPT-planens användningsgränser.
 - Varje körning granskar **hellre ett recept exceptionellt väl än tre ytligt**; vanligtvis 1–3. Begränsa aldrig källsökning till ett godtyckligt antal om fler källor faktiskt kan avgöra en svår fråga.
-- **Publicera eller ändra inte recept, kod eller GitHub-filer automatiskt** från den schemalagda granskningen. Föreslå ändringar och invänta uttryckligt godkännande. Även uppdatering av kunskapsbank/register sker efter godkännande.
+- **Uppdaterat mandat 2026-11-24:** Schemalagd granskning får automatiskt genomföra små, entydiga, högkonfidens- och lågriskrättelser av recept samt spårbara register-/kunskapsbanksuppdateringar, efter kontroll av aktuell filversion och relevanta tester. Smakförändringar som kräver provlagning, större proportionsförändringar och osäkra beslut kräver fortfarande godkännande. Se automationens säkerhetsgrindar.
 - Gör ingen upprepningsresearch utan ny anledning. Läs katalog och register först, därefter enbart de utvalda recepten och de mest relevanta källorna. Om GitHub eller webbkällor inte är tillgängliga: redovisa begränsningen; hitta inte på.
 - Arkivets initiala recept kan vara välresearchade utan att vara **oberoende expertgranskade**. Att ett recept saknar registerpost betyder ”ej granskad i detta system”, inte ”dåligt recept”.
 
@@ -19,7 +19,7 @@ Receptarkivets löfte: **så gott som möjligt, så enkelt som möjligt hemma, m
 - Ändra för faktisk förväntad förbättring av smak, konsistens, enkelhet, tydlighet eller säkerhet. Dokumentera före/efter, källstöd, avvägningar, eventuella nackdelar och provlagningsbehov. Bevara fungerande delar av receptet när det är motiverat.
 - **Behåll ett recepts stabila `id`** när samma rätt förbättras så att sparade favoriter, ingredienslistor och `pairings` fungerar. Om ID behöver bytas krävs separat migrering av hänvisningar och användardata; namn och innehåll får ändras utan ID-byte.
 - Tekniska tester skyddar struktur, innehållsfältskompletthet, giltiga referenser och byggbar app – **inte historisk text- eller ingredienslikhet**. Testframgång är inte bevis för att smaken är bättre.
-- Reglerna för den schemalagda expertkörningen är oförändrade: den föreslår och analyserar, men gör inga automatiska repoändringar utan uttryckligt godkännande. Vanliga uttryckliga ändringsuppdrag får implementeras direkt enligt test- och kvalitetsgrindarna.
+- Den schemalagda experten får genomföra enbart tydligt säkra och noggrant validerade förbättringar automatiskt. Högre risker ska endast föreslås tills de godkänts och vid behov provlagats.
 
 ## 2. Filer och beständighet
 
@@ -50,7 +50,7 @@ Det är **perspektiv i samma granskning**, inte sex separata AI-körningar.
 
 Välj recept utifrån dokumenterade behov, inte namnordning eller nyhetshype:
 
-- **P0 – Säkerhet:** misstänkt risk för skadlig temperatur, felaktig förvaring eller annan allvarlig instruktion. Markeras omedelbart som brådskande i veckorapporten, men recept ändras inte utan godkännande.
+- **P0 – Säkerhet:** misstänkt risk för skadlig temperatur, felaktig förvaring eller annan allvarlig instruktion. Markeras omedelbart som brådskande i veckorapporten, och rättas direkt endast när korrekt lösning är entydig och ändringen kan valideras; annars flaggas akut för användaren.
 - **P1 – Funktionellt fel:** motsägelse mellan mängd och steg, orimliga tider, trasig metod eller tydligt felaktig copycat-uppgift.
 - **P2 – Stor kvalitetsvinst:** välgrundad möjlighet till märkbart bättre smak/textur eller mycket enklare instruktioner, osäker nyckelteknik, större kunskapslucka.
 - **P3 – Redigering/finlir:** tydligare ordval och mindre viktiga alternativ.
@@ -106,12 +106,16 @@ För ändringar som kräver provlagning: föreslå ett litet kontrollerat test (
 7. **Ny överförbar kunskap:** endast verkligt underbyggd princip + relevanta andra recept.
 8. **Nästa granskning:** föreslå ett nytt recept utifrån kön.
 
-Leverera en **kort, läsbar sammanfattning** även om underliggande research är mycket djup. Ge referenser och evidens, inte ett okontrollerbart dokumentberg. En separat uppföljningspost för kunskapsbank/register kan föreslås men **sparas inte automatiskt**.
+Leverera en **kort, läsbar sammanfattning** även om underliggande research är mycket djup. Ge referenser och evidens, inte ett okontrollerbart dokumentberg. Källbelagda och spårbara granskningsposter får sparas automatiskt när skrivåtkomst och integritetskontroller finns.
 
 ## 9. Godkännande, versionering och dataskydd
 
-- Veckogranskningen är **läsande och rådgivande**, inte skrivande.
-- Vid uttryckligt användargodkännande kan vi förbättra **vilket som helst** av recepten i `src/data/recipes.json` (ingredienser, proportioner, metod och text), köra befintliga tester och samtidigt anteckna beslut, källor, version/datum och lärdomar i register/kunskapsbank. Behåll receptets stabila ID; själva receptinnehållet är inte låst.
+- Veckogranskningen får skriva **endast** tydligt säkra, spårbara och kontrollerade låg-riskändringar samt granskningsdokumentation. Oklara smakval och provlagningskrävande förbättringar förblir rådgivande.
+- Vid uttryckligt användargodkännande kan vi även göra mer omfattande förbättringar av **vilket som helst** av recepten i `src/data/recipes.json` (ingredienser, proportioner, metod och text), köra befintliga tester och samtidigt anteckna beslut, källor, version/datum och lärdomar i register/kunskapsbank. Behåll receptets stabila ID; själva receptinnehållet är inte låst.
 - Avslag dokumenteras med skäl efter godkännande, så samma idé inte återkommer utan nytt stöd.
 - Ingen hemlig, betald eller upphovsrättsligt skyddad fulltextdatabas. Lagra korta originalskrivna slutsatser, länkar och metadata, inte kopior av hela källrecept.
 - Även med detta system kan AI ha fel och inte provsmaka; kvaliteten behöver på sikt prövas i riktiga kök.
+
+## 10. Bilder och uppläggning
+
+Se [BILDSTANDARD.md](BILDSTANDARD.md) för godkänd **Nordic Restaurant Editorial**: ren nordisk restaurangpresentation, mer utzoomade bilder, synlig tallrik med luft, lite mörkare miljö men välbelyst mat, varierade kameravinklar, recepttrohet och praktisk återskapbar uppläggning. Vid behov föreslås korta instruktioner **Uppläggning & servering**. Bildgenerering i schemalagda körningar är ännu **inte tekniskt verifierad** och får inte påstås fungerande eller genomförd utan faktiskt tillgängligt verktyg och verifierad filpublicering utan extra kostnader.
