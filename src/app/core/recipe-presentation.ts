@@ -45,10 +45,10 @@ const equipmentRules: ReadonlyArray<readonly [string, string, UiIconName, RegExp
   ['knife', 'Kniv', 't-kitchen', /(?<!\p{L})(kniv|kniven|skärbräda)(?!\p{L})/iu],
   ['scale', 'Köksvåg', 't-scale', /(?<!\p{L})(köksvåg|våg|väg upp|väg ingredienserna)(?!\p{L})/iu],
   ['temp', 'Termometer', 't-thermometer', /(?<!\p{L})(termometer|kärntemperaturmätare)(?!\p{L})/iu],
-  ['grill', 'Grill', 't-grill', /(?<!\p{L})(grill|grillen|grillgaller|grilla|grillas)(?!\p{L})/iu],
+  ['grill', 'Grill', 't-grill', /(?<!\p{L})(grill|grillen|grillgaller)(?!\p{L})/iu],
 ];
 export function equipmentForRecipe(recipe: Recipe): EquipmentItem[] {
-  // Framtida explicita redaktörslistor tar över heuristiken helt.
+  // Explicita redaktörslistor tar över heuristiken helt.
   if (recipe.equipment) {
     return recipe.equipment.map(label => {
       const rule = equipmentRules.find(([, name]) => name.toLocaleLowerCase('sv') === label.toLocaleLowerCase('sv'));
