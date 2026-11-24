@@ -18,8 +18,7 @@ Samtliga ikoner i Receptarkivets gränssnitt levereras nu av **Tabler Icons (out
 
 `search`, `heart`, `basket`, `chef`, `clock`, `users`, `printer`, `left`, `right`, `check`, `plus`, `refresh`, `done`, `down`, `external`, `close`, `copy`, `cook`, `bookmark`, `filter`.
 
-## Licens
-
+Därutöver finns små Tabler-kategorisymboler för råvaror och köksutrustning, med interna namn som börjar med `i-` respektive `t-`. Dessa används av `recipe-presentation.ts` och beskrivs i [Ingredienser och utrustning](INGREDIENSER_OCH_UTRUSTNING.md). Alla har stroke 2.\n\n## Licens\n
 SVG-vägarna är hämtade från [tabler/tabler-icons](https://github.com/tabler/tabler-icons), MIT-licens. [Licenstext](https://github.com/tabler/tabler-icons/blob/main/LICENSE).
 
 ## Status
