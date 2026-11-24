@@ -359,3 +359,95 @@ footer{background:#ECEAE4;color:var(--color-secondary)}
   body{background:#fff;color:#000}
   .recipe-card,.ingredients-panel{box-shadow:none}
 }
+
+/* Nordic Restaurant Editorial – round two: quiet hierarchy, crisp legibility and mobile details. */
+:root{--content-reading:72ch}
+.hero-with-dinner{gap:clamp(22px,3.2vw,48px);align-items:start}
+.hero-with-dinner .hero-intro{max-width:690px}
+.hero-with-dinner .hero-intro>p{max-width:52ch;color:var(--muted);line-height:1.7}
+.hero h1 em{font-style:normal}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-actions .btn{min-height:44px}
+.dinner-helper{border-radius:var(--radius-lg);padding:clamp(18px,2.5vw,26px)}
+.dinner-options button{background:var(--paper);min-height:44px}
+.dinner-options button.active{background:#E3E8E0;border-color:#A8B8A8;color:var(--color-charcoal)}
+.dinner-result{border-bottom-color:var(--border)}
+.toolbar{gap:12px}
+.searchbox input{min-height:52px;border-radius:var(--radius-md)}
+.pill{min-height:42px;color:var(--color-secondary);font-weight:650}
+.pill.active{color:#fff}
+.filters{gap:6px}
+.section-title{margin:23px 0 17px}
+.cards{gap:clamp(15px,2vw,24px)}
+.recipe-card{display:flex;flex-direction:column}
+.card-link{height:100%;display:flex;flex-direction:column}
+.card-body{display:flex;flex:1;flex-direction:column}
+.card-category{font-size:11px;letter-spacing:.1em}
+.card-title{line-height:1.22;overflow-wrap:anywhere}
+.card-desc{min-height:0;line-height:1.55}
+.card-bottom{margin-top:auto;padding-top:14px;gap:15px;flex-wrap:wrap}
+.card-bottom span:last-child{margin-left:0}
+.card-badge{background:rgba(250,249,246,.94);color:var(--ink)}
+.fav{width:44px;height:44px;right:8px;top:8px;background:rgba(250,249,246,.96);color:var(--ink)}
+.fav.on{color:#984537}
+.detail-head{padding-top:clamp(22px,3vw,42px)}
+.detail-header{gap:clamp(20px,3vw,42px)}
+.detail-header h1{font-size:clamp(37px,4.6vw,66px);line-height:1.1}
+.detail-header p{max-width:var(--content-reading);line-height:1.75}
+.detail-meta{gap:8px;margin-top:22px}
+.meta{background:transparent;color:var(--color-secondary);border-color:var(--border)}
+.detail-actions{gap:10px}
+.detail-actions .btn{min-height:46px}
+.recipe-layout{gap:clamp(24px,3.6vw,52px)}
+.ingredients-panel{border-radius:var(--radius-lg)}
+.ingredient{font-size:14px;min-height:44px;align-items:center;gap:12px}
+.ingredient input{width:20px;height:20px;margin:0;accent-color:var(--color-accent-dark)}
+.ing-name{line-height:1.5;min-width:0;overflow-wrap:anywhere}
+.ing-amount{max-width:43%;font-size:13px}
+.ingredient-note{display:block;line-height:1.5}
+.servings button{min-height:40px}
+.steps{max-width:780px}
+.step{grid-template-columns:36px minmax(0,1fr);gap:17px;padding:18px 0 23px}
+.step-index{width:36px;height:36px}
+.step h3{font-size:17px;line-height:1.45}
+.step p{font-size:15px;line-height:1.82;max-width:var(--content-reading)}
+.tips,.nutrition-details,.source-box{max-width:780px}
+.source-box{border:1px solid var(--border);background:#EEEEE8}
+:where(.navlink,.btn,.pill,.fav,.servings button,.dinner-options button){-webkit-tap-highlight-color:transparent}
+@media(max-width:950px){
+  .recipe-layout{grid-template-columns:minmax(260px,.9fr) minmax(0,1.1fr)}
+}
+@media(max-width:690px){
+  .wrap{width:calc(100% - 32px)}
+  .hero-with-dinner{padding-top:26px}
+  .hero-with-dinner h1{font-size:clamp(38px,9vw,54px);letter-spacing:-1.7px}
+  .hero-actions{gap:8px}
+  .hero-actions .btn{flex:1 1 auto}
+  .filters{scrollbar-width:thin}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card-art.has-photo{height:auto}
+  .card-title{font-size:18px;letter-spacing:-.25px}
+  .card-category{font-size:10px}
+  .card-body{padding:12px 12px 14px}
+  .card-desc{font-size:12px}
+  .card-bottom{font-size:11px;margin-top:auto;gap:7px;padding-top:10px}
+  .card-bottom app-ui-icon{display:none}
+  .fav{width:42px;height:42px}
+  .detail-header h1{font-size:clamp(36px,8vw,49px);letter-spacing:-1.2px}
+  .detail-visual.has-photo{aspect-ratio:3/2}
+  .detail-actions .btn{flex:1 1 calc(50% - 8px)}
+  .recipe-layout{grid-template-columns:1fr;gap:30px}
+  .ingredient{font-size:14px}
+  .step p{font-size:15px;line-height:1.75}
+}
+@media(max-width:390px){
+  .cards{grid-template-columns:1fr}
+  .card-title{font-size:22px}
+  .card-body{padding:16px}
+  .card-bottom app-ui-icon{display:inline-flex}
+  .detail-actions .btn{flex:1 1 100%}
+}
+@media print{
+  .cards{display:block}
+  .step p{font-size:12px}
+}
