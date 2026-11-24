@@ -36,6 +36,18 @@
         </button>
         <button class="btn secondary" (click)="print()"><app-ui-icon name="printer" [size]="17" /> Skriv ut</button>
       </div>
+      @if (equipmentForRecipe(r); as equipment) {
+        @if (equipment.length) {
+          <section class="equipment-strip" aria-label="Utrustning som nämns i receptet">
+            <h2>Utrustning</h2>
+            <ul class="equipment-list">
+              @for (tool of equipment; track tool.id) {
+                <li><app-ui-icon [name]="tool.icon" [size]="19" /><span>{{ tool.label }}</span></li>
+              }
+            </ul>
+          </section>
+        }
+      }
       @if (store.cookedOn(r.id)) {
         <div class="cooked-inline"><app-ui-icon name="done" [size]="16" /> Senast lagat {{ cookedDate(r.id) }}
           @if (store.note(r.id)) { <span>· Du har en sparad anteckning</span> }
@@ -63,6 +75,7 @@
               <label class="ingredient" [class.checked]="store.isChecked(ingredientKey(r,gi,ii))">
                 <input type="checkbox" [checked]="store.isChecked(ingredientKey(r,gi,ii))"
                   (change)="checkIngredient(ingredientKey(r,gi,ii), $event)"/>
+                <span class="ingredient-symbol" aria-hidden="true"><app-ui-icon [name]="ingredientIcon(item.name)" [size]="18" /></span>
                 <span class="ing-name">{{ item.name }}</span>
                 <span class="ing-amount">
                   {{ amount(item, currentScale()) }}
