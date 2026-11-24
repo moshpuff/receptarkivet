@@ -4,14 +4,9 @@
       <a class="back" routerLink="/"><app-ui-icon name="left" [size]="16" /> Till alla recept</a>
       <div class="detail-header">
         <div>
-          <div class="eyebrow">{{ r.category }} / {{ r.badge }}</div>
+          <div class="eyebrow">{{ r.category }}</div>
           <h1><app-country-flag [code]="r.countryCode" [name]="r.countryName" [description]="r.countryNote" [large]="true" />{{ r.name }}</h1>
           <p>{{ r.intro }}</p>
-          <div class="origin-detail">
-            <span class="origin-caption" [title]="r.countryNote"><app-country-flag [code]="r.countryCode"
-              [name]="r.countryName" [description]="r.countryNote" /> {{ r.countryName }} · {{ r.countryNote }}</span>
-            @for (tag of r.tags; track tag) { <span class="detail-tag">{{ tag }}</span> }
-          </div>
         </div>
         <div [class]="'detail-visual ' + r.tone" [class.has-photo]="hasRecipeImage(r.id) && !photoFailed">
           @if (hasRecipeImage(r.id) && !photoFailed) {
@@ -32,9 +27,9 @@
         @if (r.temp) { <span class="meta"><app-ui-icon name="cook" [size]="16" /> {{ r.temp }}</span> }
       </div>
       <div class="detail-actions">
-        <a class="btn" [routerLink]="['/laga', r.id]"><app-ui-icon name="chef" [size]="17" /> {{ store.cookStep(r.id) > 0 && store.cookStep(r.id) < r.steps.length ? 'Fortsätt laga · steg för steg →' : 'Laga steg för steg →' }}</a>
+        <a class="btn" [routerLink]="['/laga', r.id]"><app-ui-icon name="chef" [size]="17" /> {{ store.cookStep(r.id) > 0 && store.cookStep(r.id) < r.steps.length ? 'Fortsätt laga' : 'Börja laga' }}</a>
         <button class="btn secondary" [class.selected]="store.inShoppingList(r.id)" (click)="toggleBag(r.id)">
-          <app-ui-icon [name]="store.inShoppingList(r.id) ? 'check' : 'basket'" [size]="17" /> {{ store.inShoppingList(r.id) ? 'Tillagd i inköpslistan' : 'Lägg till i inköpslistan' }}
+          <app-ui-icon [name]="store.inShoppingList(r.id) ? 'check' : 'basket'" [size]="17" /> {{ store.inShoppingList(r.id) ? 'Tillagd' : 'Inköpslista' }}
         </button>
         <button class="btn secondary" (click)="store.toggleFavorite(r.id)">
           <app-ui-icon name="heart" [size]="17" /> {{ store.isFavorite(r.id) ? 'Sparat' : 'Spara recept' }}
@@ -78,7 +73,6 @@
           </div>
         }
         <div class="ingredient-foot">
-          Bocka av ingredienser medan du lagar.
           @if (currentScale() !== 1) { Mängderna är proportionellt omräknade. Delade ägg kan behöva vispas upp och vägas. }
         </div>
         @if (r.shoppingTips.length) {
@@ -133,15 +127,15 @@
             </div>
           </details>
         }
-        <section class="source-box">
-          <strong>Om receptet</strong><p>{{ r.origin }}</p>
+        <details class="source-box recipe-about">
+          <summary><strong>Om receptet & källor</strong></summary><p>{{ r.origin }}</p>
           <div class="source-links">
             @for (source of r.sources; track $index) {
               <a [href]="source[1]" target="_blank" rel="noopener noreferrer">{{ source[0] }} ↗</a>
             }
           </div>
           <div class="note-chip">Originalkällorna används som referenser. Anpassade versioner är inte automatiskt smaktestade eller verifierade som bäst i ett blindtest.</div>
-        </section>
+        </details>
       </div>
     </div>
   </article>
