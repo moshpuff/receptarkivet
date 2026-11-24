@@ -117,7 +117,7 @@
 
 ## 5. Uppföljande expertgranskning
 
-**P1 att provlaga:**
+**Hög provlagningsprioritet (ej bekräftade P1-fel):**
 1. `laxcannelloni-bechamel-tomat`: fiskens genomlagning och pastans mjukhet.
 2. `flaskkotlett-shiitake-gronpepparsas`: kroketternas verkliga ugnskrisp och hållfasthet.
 3. `cevapi-ajvar-vitlokssas`: tydligt brynt men genomlagad färs, saftighet.
