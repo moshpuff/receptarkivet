@@ -7,7 +7,7 @@ Appens primära gränssnittsikoner använder nu utvalda **Tabler Icons (outline)
 ## Principer
 - En ikonkomponent för hela Angular-appen: `src/app/components/ui-icon.component.ts`.
 - Primära Tabler-ikoner: sök, hjärta, korg, kockmössa, klocka, personer, skrivare, vänster-/högerpil, bock, plus, nedåtpil, stäng, filter.
-- Storlek anpassas till användningsområde, normalt 16–20 px; linjetjocklek 1,75 för Tabler.
+- Storlek anpassas till användningsområde, normalt 16–20 px; linjetjocklek 2 för Tabler och Lucide.
 - Ikoner kompletterar kort text och ska inte göra det viktigare receptinnehållet svårare att läsa.
 - Dekorativa SVG:er är `aria-hidden`; knappar och länkar behåller synlig text eller tillgänglig `aria-label`.
 - Ingen ikonfont, extern CDN, API-nyckel, ny GitHub Action eller ytterligare npm-dependency har införts.
