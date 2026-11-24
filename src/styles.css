@@ -451,3 +451,22 @@ footer{background:#ECEAE4;color:var(--color-secondary)}
   .cards{display:block}
   .step p{font-size:12px}
 }
+
+/* Quiet editorial UI: fewer visible labels, no empty metadata regions. */
+.hero-with-dinner .hero-intro>p{font-size:16px;max-width:30ch}
+.card-body{gap:0}
+.card-title{margin:0 0 12px}
+.card-bottom{margin-top:auto;border-top:1px solid var(--border)}
+.recipe-about{padding:0;overflow:hidden;background:transparent}
+.recipe-about>summary{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:14px 19px;cursor:pointer;list-style:none;color:var(--ink)}
+.recipe-about>summary::-webkit-details-marker{display:none}
+.recipe-about>summary::after{content:"+";font-size:23px;font-weight:400;line-height:1;color:var(--muted)}
+.recipe-about[open]>summary::after{content:"−"}
+.recipe-about>p,.recipe-about>.source-links,.recipe-about>.note-chip{margin-inline:19px}
+.recipe-about>.note-chip{margin-bottom:18px}
+.recipe-about>summary:focus-visible{outline:3px solid var(--color-focus);outline-offset:-3px}
+@media(max-width:690px){
+ .hero-with-dinner .hero-intro>p{font-size:14px}
+ .card-title{margin-bottom:9px}
+ .card-bottom{padding-top:9px}
+}
