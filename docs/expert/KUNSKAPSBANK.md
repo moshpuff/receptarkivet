@@ -31,4 +31,4 @@ Här sparas **korta, källbelagda slutsatser** som kan återanvändas vid framti
 - **Beslut:** Föreslagen / godkänd / avfärdad, med kort skäl.
 - **Tillagd/uppdaterad:** Datum och vid behov GitHub-commit.
 
-**Policy:** Inga långa kopierade recept eller betalväggsinnehåll. Bara egen analys med källhänvisningar. Kunskapsbanken uppdateras efter uttryckligt godkännande, inte av en schemalagd ChatGPT-körning.
+**Policy:** Inga långa kopierade recept eller betalväggsinnehåll. Bara egen analys med källhänvisningar. Sedan 2026-11-24 får den schemalagda experten uppdatera kunskapsbanken med källbelagda, spårbara observationer och tydligt märkta hypoteser, med bibehållen historik och kontrollerat skrivflöde. Hypoteser får aldrig presenteras som provlagade eller verifierade.
