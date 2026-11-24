@@ -1,46 +1,16 @@
 import { Component, Input } from '@angular/core';
-import {
-  LucideDynamicIcon, LucideSearch, LucideHeart, LucideShoppingBasket,
-  LucideChefHat, LucideClock3, LucideUsers, LucidePrinter,
-  LucideArrowLeft, LucideArrowRight, LucideCheck, LucidePlus,
-  LucideRotateCcw, LucideCircleCheck, LucideChevronDown,
-  LucideArrowUpRight, LucideX, LucideCopy, LucideCookingPot,
-  LucideBookmark, LucideSlidersHorizontal
-} from '@lucide/angular';
 
-// Bara valda Lucide-ikoner inkluderas i bygget. Undviker en tung ikonfont
-// och säkerställer samma symboler på Windows, Android och iPhone.
-const icons = {
-  search: LucideSearch,
-  heart: LucideHeart,
-  basket: LucideShoppingBasket,
-  chef: LucideChefHat,
-  clock: LucideClock3,
-  users: LucideUsers,
-  printer: LucidePrinter,
-  left: LucideArrowLeft,
-  right: LucideArrowRight,
-  check: LucideCheck,
-  plus: LucidePlus,
-  refresh: LucideRotateCcw,
-  done: LucideCircleCheck,
-  down: LucideChevronDown,
-  external: LucideArrowUpRight,
-  close: LucideX,
-  copy: LucideCopy,
-  cook: LucideCookingPot,
-  bookmark: LucideBookmark,
-  filter: LucideSlidersHorizontal,
-} as const;
-
-export type UiIconName = keyof typeof icons;
+// Alla gränssnittsikoner är Tabler Icons (outline). Stroke är konsekvent 2.
+export type UiIconName =
+  | 'search' | 'heart' | 'basket' | 'chef' | 'clock' | 'users'
+  | 'printer' | 'left' | 'right' | 'check' | 'plus'
+  | 'refresh' | 'done' | 'down' | 'external' | 'close'
+  | 'copy' | 'cook' | 'bookmark' | 'filter';
 
 @Component({
   selector: 'app-ui-icon',
   standalone: true,
-  imports: [LucideDynamicIcon],
-  // Tabler outlines for core actions; existing Lucide icons remain for secondary actions.
-  // SVG paths are from tabler/tabler-icons (MIT), see docs/ICON_SYSTEM.md.
+  // Tabler outline SVG paths, MIT license. See docs/ICON_SYSTEM.md.
   template: `
     @switch (name) {
       @case ('search') {
@@ -138,7 +108,51 @@ export type UiIconName = keyof typeof icons;
           <path d="M19 18l1 0" />
         </svg>
       }
-      @default { <svg [lucideIcon]="icon" [size]="size" [strokeWidth]="2" aria-hidden="true"></svg> }
+      @case ('refresh') {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
+          <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
+        </svg>
+      }
+      @case ('done') {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+          <path d="M9 12l2 2l4 -4" />
+        </svg>
+      }
+      @case ('external') {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 7l-10 10" />
+          <path d="M8 7l9 0l0 9" />
+        </svg>
+      }
+      @case ('copy') {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" />
+          <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+        </svg>
+      }
+      @case ('cook') {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 7h.01" />
+          <path d="M15 7h.01" />
+          <path d="M9 7h.01" />
+          <path d="M5 5a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2l0 -14" />
+          <path d="M9 15h6" />
+          <path d="M5 11h14" />
+        </svg>
+      }
+      @case ('bookmark') {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4" />
+        </svg>
+      }
+      @default {
+        <svg class="tabler-icon" [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+          <path d="M21 21l-6 -6" />
+        </svg>
+      }
     }
   `,
   styles: [':host{display:inline-flex;align-items:center;justify-content:center;flex:none;vertical-align:-.13em;line-height:0}']
@@ -146,5 +160,4 @@ export type UiIconName = keyof typeof icons;
 export class UiIconComponent {
   @Input({required: true}) name!: UiIconName;
   @Input() size = 18;
-  get icon() { return icons[this.name] ?? icons.search; }
 }
