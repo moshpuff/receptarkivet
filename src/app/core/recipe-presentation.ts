@@ -1,23 +1,23 @@
-import { Recipe } from './recipe.model';
-import { UiIconName } from '../components/ui-icon.component';
+import type { Recipe } from './recipe.model';
+import type { UiIconName } from '../components/ui-icon.component';
 
 /** Konsekventa, neutrala Tabler-symboler. Matcha mest specifika råvara först. */
 const ingredientRules: ReadonlyArray<readonly [RegExp, UiIconName]> = [
-  [/\b(ägg|äggula|äggvita)\b/i, 'i-egg'],
-  [/\b(mjölk|grädde|crème fra[iî]che|creme fraiche|gräddfil|yoghurt|filmjölk|kefir)\b/i, 'i-milk'],
-  [/\b(ost|parmesan|mozzarella|feta|cheddar|halloumi|ricotta|chèvre|mascarpone)\b/i, 'i-cheese'],
-  [/\b(lax|torsk|kolja|sej|räkor|räka|tonfisk|sill|ansjovis|fisk|skaldjur)\b/i, 'i-fish'],
-  [/\b(nötfärs|fläskfärs|blandfärs|köttfärs|högrev|fläsk|bacon|kyckling|karré|oxfilé|biff|kött|korv|skinka|lamm|ankbröst)\b/i, 'i-meat'],
-  [/\b(svamp|champinjon|kantarell|shiitake|portabello)\b/i, 'i-mushroom'],
-  [/\b(citron|lime|apelsin|grapefrukt)\b/i, 'i-lemon'],
-  [/\b(äpple|päron|banan|jordgubb|hallon|blåbär|frukt|bär)\b/i, 'i-apple'],
-  [/\b(morot|palsternacka|rotfrukt|potatis|sötpotatis|rödbeta|lök|vitlök|tomat|paprika|gurka|zucchini|aubergine|broccoli|blomkål|kål)\b/i, 'i-carrot'],
-  [/\b(persilja|dill|basilika|timjan|rosmarin|koriander|gräslök|spenat|sallad|ruccola|örter)\b/i, 'i-leaf'],
-  [/\b(vetemjöl|rågmjöl|dinkel|havregryn|grahamsmjöl|mjöl|jäst|ströbröd|panko|pasta|ris|bulgur|couscous|quinoa|nudlar)\b/i, 'i-wheat'],
-  [/\b(bröd|fralla|baguette|brioche|tortilla|pita)\b/i, 'i-bread'],
-  [/\b(salt|flingsalt)\b/i, 'i-salt'],
-  [/\b(peppar|paprikapulver|chiliflakes|spiskummin|kanel|kardemumma|krydda|chili|vanilj)\b/i, 'i-pepper'],
-  [/\b(olja|vinäger|soja|buljong|vin|vatten|saft)\b/i, 'i-bottle'],
+  [/(?<!\p{L})(ägg|äggula|äggvita)(?!\p{L})/iu, 'i-egg'],
+  [/(?<!\p{L})(mjölk|grädde|crème fra[iî]che|creme fraiche|gräddfil|yoghurt|filmjölk|kefir)(?!\p{L})/iu, 'i-milk'],
+  [/(?<!\p{L})(ost|parmesan|mozzarella|feta|cheddar|halloumi|ricotta|chèvre|mascarpone)(?!\p{L})/iu, 'i-cheese'],
+  [/(?<!\p{L})(lax|torsk|kolja|sej|räkor|räka|tonfisk|sill|ansjovis|fisk|skaldjur)(?!\p{L})/iu, 'i-fish'],
+  [/(?<!\p{L})(nötfärs|fläskfärs|blandfärs|köttfärs|högrev|fläsk|bacon|kyckling|karré|oxfilé|biff|kött|korv|skinka|lamm|ankbröst)(?!\p{L})/iu, 'i-meat'],
+  [/(?<!\p{L})(svamp|champinjon|kantarell|shiitake|portabello)(?!\p{L})/iu, 'i-mushroom'],
+  [/(?<!\p{L})(citron|lime|apelsin|grapefrukt)(?!\p{L})/iu, 'i-lemon'],
+  [/(?<!\p{L})(äpple|päron|banan|jordgubb|hallon|blåbär|frukt|bär)(?!\p{L})/iu, 'i-apple'],
+  [/(?<!\p{L})(morot|palsternacka|rotfrukt|potatis|sötpotatis|rödbeta|lök|vitlök|tomat|paprika|gurka|zucchini|aubergine|broccoli|blomkål|kål)(?!\p{L})/iu, 'i-carrot'],
+  [/(?<!\p{L})(persilja|dill|basilika|timjan|rosmarin|koriander|gräslök|spenat|sallad|ruccola|örter)(?!\p{L})/iu, 'i-leaf'],
+  [/(?<!\p{L})(vetemjöl|rågmjöl|dinkel|havregryn|grahamsmjöl|mjöl|jäst|ströbröd|panko|pasta|ris|bulgur|couscous|quinoa|nudlar)(?!\p{L})/iu, 'i-wheat'],
+  [/(?<!\p{L})(bröd|fralla|baguette|brioche|tortilla|pita)(?!\p{L})/iu, 'i-bread'],
+  [/(?<!\p{L})(salt|flingsalt)(?!\p{L})/iu, 'i-salt'],
+  [/(?<!\p{L})(peppar|paprikapulver|chiliflakes|spiskummin|kanel|kardemumma|krydda|chili|vanilj)(?!\p{L})/iu, 'i-pepper'],
+  [/(?<!\p{L})(olja|vinäger|soja|buljong|vin|vatten|saft)(?!\p{L})/iu, 'i-bottle'],
 ];
 export function ingredientIcon(name: string): UiIconName {
   return ingredientRules.find(([pattern]) => pattern.test(name))?.[1] ?? 'i-package';
@@ -35,17 +35,17 @@ export interface EquipmentItem {
  * granskade namn och får då företräde.
  */
 const equipmentRules: ReadonlyArray<readonly [string, string, UiIconName, RegExp]> = [
-  ['oven', 'Ugn', 't-cooker', /\b(ugn|ugnen|ugnsform|ugnsfast)\b/i],
-  ['pan', 'Stekpanna', 't-kitchen', /\b(stekpanna|stekpannan|gjutjärnspanna|nonstickpanna)\b/i],
-  ['pot', 'Kastrull', 't-cooker', /\b(kastrull|kastrullen|såskastrull)\b/i],
-  ['mix', 'Bunke', 't-bowl', /\b(bunke|bunken|skål att blanda|blandningsskål)\b/i],
-  ['whisk', 'Visp', 't-whisk', /\b(vispa|visp|ballongvisp)\b/i],
-  ['mixer', 'Mixer', 't-blender', /\b(stavmixer|blender|matberedare|mixerstav|köksmaskin)\b/i],
-  ['sheet', 'Bakplåt', 't-kitchen', /\b(bakplåt|bakplåtspapper|plåt|plåten)\b/i],
-  ['knife', 'Kniv', 't-kitchen', /\b(kniv|kniven|skärbräda)\b/i],
-  ['scale', 'Köksvåg', 't-scale', /\b(köksvåg|våg|väg upp|väg ingredienserna)\b/i],
-  ['temp', 'Termometer', 't-thermometer', /\b(termometer|kärntemperaturmätare)\b/i],
-  ['grill', 'Grill', 't-grill', /\b(grill|grillen|grillgaller)\b/i],
+  ['oven', 'Ugn', 't-cooker', /(?<!\p{L})(ugn|ugnen|ugnsform|ugnsfast)(?!\p{L})/iu],
+  ['pan', 'Stekpanna', 't-kitchen', /(?<!\p{L})(stekpanna|stekpannan|gjutjärnspanna|nonstickpanna)(?!\p{L})/iu],
+  ['pot', 'Kastrull', 't-cooker', /(?<!\p{L})(kastrull|kastrullen|såskastrull)(?!\p{L})/iu],
+  ['mix', 'Bunke', 't-bowl', /(?<!\p{L})(bunke|bunken|skål att blanda|blandningsskål)(?!\p{L})/iu],
+  ['whisk', 'Visp', 't-whisk', /(?<!\p{L})(vispa|visp|ballongvisp)(?!\p{L})/iu],
+  ['mixer', 'Mixer', 't-blender', /(?<!\p{L})(stavmixer|blender|matberedare|mixerstav|köksmaskin)(?!\p{L})/iu],
+  ['sheet', 'Bakplåt', 't-kitchen', /(?<!\p{L})(bakplåt|bakplåtspapper|plåt|plåten)(?!\p{L})/iu],
+  ['knife', 'Kniv', 't-kitchen', /(?<!\p{L})(kniv|kniven|skärbräda)(?!\p{L})/iu],
+  ['scale', 'Köksvåg', 't-scale', /(?<!\p{L})(köksvåg|våg|väg upp|väg ingredienserna)(?!\p{L})/iu],
+  ['temp', 'Termometer', 't-thermometer', /(?<!\p{L})(termometer|kärntemperaturmätare)(?!\p{L})/iu],
+  ['grill', 'Grill', 't-grill', /(?<!\p{L})(grill|grillen|grillgaller)(?!\p{L})/iu],
 ];
 export function equipmentForRecipe(recipe: Recipe): EquipmentItem[] {
   // Framtida explicita redaktörslistor tar över heuristiken helt.
