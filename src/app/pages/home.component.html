@@ -1,9 +1,9 @@
 <section class="wrap">
   <div class="hero hero-with-dinner">
     <div class="hero-intro">
-      <div class="eyebrow">Din personliga receptsamling · {{ recipes.length }} recept</div>
-      <h1>Goda recept.<br><em>På ett ställe.</em></h1>
-      <p>Hitta något gott, planera inköpen och laga med tydliga steg. Allt samlat, utan krångel.</p>
+      <div class="eyebrow">Din digitala kokbok · {{ recipes.length }} recept</div>
+      <h1>Riktigt god mat.<br><em>Hemma.</em></h1>
+      <p>Genomtänkta recept, tydliga steg och inspiration till en vacker servering. Från första ingrediens till sista detalj.</p>
       <div class="hero-actions">
         <button type="button" class="btn secondary" (click)="scrollToRecipes()"><app-ui-icon name="search" [size]="17" /> Utforska recepten</button>
         <a class="btn secondary" routerLink="/inkopslista"><app-ui-icon name="basket" [size]="17" /> Planera & handla <app-ui-icon name="right" [size]="16" /></a>
@@ -60,7 +60,7 @@
   <div class="toolbar">
     <label class="searchbox">
       <span class="glass" aria-hidden="true"><app-ui-icon name="search" [size]="19" /></span>
-      <input id="search" type="search" placeholder="Sök bland recept och ingredienser..." [value]="filters.query()" (input)="onSearch($event)" aria-label="Sök recept">
+      <input id="search" type="search" placeholder="Sök bland recept och ingredienser..." [value]="filters.query()" (input)="onSearch($event)" aria-label="Sök recept och ingredienser">
     </label>
     <div class="filters" role="group" aria-label="Filtrera på kategori">
       @for (cat of categories; track cat) {
@@ -119,7 +119,7 @@
       <button type="button" class="applied-filter-clear" (click)="filters.reset()">Rensa alla</button>
     </div>
   }
-  <p class="filter-hint">Flaggan visar receptets främsta mattradition. Vissa rätter har flera ursprung eller är lokala tolkningar.</p>
+  
   <div class="section-title" id="receptlista">
     <h2>{{ filters.favoritesOnly() ? 'Dina sparade recept' : filters.category() === 'Alla' ? 'Alla recept' : filters.category() }}</h2>
     <span>{{ filtered().length }} av {{ recipes.length }} recept</span>
