@@ -26,6 +26,13 @@ for (const [index, recipe] of recipes.entries()) {
   assert.ok(Array.isArray(recipe.tips) && Array.isArray(recipe.tags)
     && Array.isArray(recipe.shoppingTips),
     `Felaktiga listfält: ${recipe.id}`);
+  if (recipe.equipment !== undefined) {
+    assert.ok(Array.isArray(recipe.equipment), `${recipe.id}: equipment måste vara en lista`);
+    assert.ok(recipe.equipment.every(value => typeof value === 'string' && value.trim().length > 0),
+      `${recipe.id}: utrustning får inte innehålla tomma namn`);
+    assert.equal(new Set(recipe.equipment.map(value => value.trim().toLocaleLowerCase('sv-SE'))).size,
+      recipe.equipment.length, `${recipe.id}: dubbletter i utrustningslistan`);
+  }
   for (const step of recipe.steps) {
     assert.ok(typeof step.title === 'string' && step.title.trim().length > 0
       && typeof step.body === 'string' && step.body.trim().length > 0,
