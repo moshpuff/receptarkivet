@@ -470,3 +470,15 @@ footer{background:#ECEAE4;color:var(--color-secondary)}
  .card-title{margin-bottom:9px}
  .card-bottom{padding-top:9px}
 }
+
+/* Small Tabler ingredient icons and understated equipment list. */
+.ingredient-symbol{display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px;width:22px;height:22px;color:var(--color-accent-dark);opacity:.8}
+.ingredient-symbol app-ui-icon{width:18px;height:18px}
+.ingredient.checked .ingredient-symbol{opacity:.4}
+.equipment-strip{margin:18px 0 10px;padding:0}
+.equipment-strip h2{font:650 12px/1.4 var(--font-body);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 10px}
+.equipment-list{display:flex;flex-wrap:wrap;gap:8px 19px;list-style:none;padding:0;margin:0}
+.equipment-list li{display:inline-flex;align-items:center;gap:7px;min-height:32px;color:var(--color-secondary);font-size:13px;white-space:nowrap}
+.equipment-list app-ui-icon{color:var(--color-accent-dark)}
+@media(max-width:690px){.equipment-strip{margin:14px 0 8px}.equipment-list{gap:5px 14px}.equipment-list li{font-size:12px}.ingredient-symbol{flex-basis:20px;width:20px}}
+@media print{.equipment-strip h2{color:#222}.equipment-list li{color:#222}.ingredient-symbol{color:#222}}
