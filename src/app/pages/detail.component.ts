@@ -1,4 +1,5 @@
 import { hasRecipeImage, recipeImageSrc } from '../core/recipe-images';
+import { ingredientIcon, equipmentForRecipe } from '../core/recipe-presentation';
 import { UiIconComponent } from '../components/ui-icon.component';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -17,6 +18,8 @@ import { Ingredient, Recipe, Scale } from '../core/recipe.model';
 export class DetailComponent {
   private readonly route = inject(ActivatedRoute);
   readonly store = inject(RecipeStore);
+  readonly ingredientIcon = ingredientIcon;
+  readonly equipmentForRecipe = equipmentForRecipe;
   readonly hasRecipeImage = hasRecipeImage;
   readonly recipeImageSrc = recipeImageSrc;
   photoFailed = false;
