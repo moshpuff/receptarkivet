@@ -280,3 +280,82 @@ app-ui-icon{flex-shrink:0}
 /* Undvik att långa ingrediensnamn eller sökord skapar horisontell overflow. */
 .applied-filter-chip{max-width:100%;overflow-wrap:anywhere;text-align:left}
 .bag-combined-item strong{max-width:45%;white-space:normal;text-align:right;overflow-wrap:anywhere}
+
+
+/* Receptarkivet Nordic Restaurant Editorial · visual foundation v1
+   Approved palette: Charcoal #202220, Warm Ivory #F4F2ED,
+   Stone #D8D5CD, Sage Grey #A6AFA0.
+   Keep data, routing, cooking mode and ingredient interactions untouched. */
+:root{
+  --color-charcoal:#202220;
+  --color-ivory:#F4F2ED;
+  --color-stone:#D8D5CD;
+  --color-sage:#A6AFA0;
+  --color-surface:#FAF9F6;
+  --color-secondary:#525950;
+  --color-accent-dark:#34483A;
+  --color-focus:#315C46;
+  --ink:var(--color-charcoal);
+  --muted:var(--color-secondary);
+  --border:var(--color-stone);
+  --cream:var(--color-ivory);
+  --paper:var(--color-surface);
+  --accent:var(--color-accent-dark);
+  --accent2:var(--color-accent-dark);
+  --green:var(--color-accent-dark);
+  --sage:#E8EBE5;
+  --shadow:0 14px 38px rgba(32,34,32,.065);
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-6:24px;
+  --space-8:32px;
+}
+html{color-scheme:light}
+body{background:var(--color-ivory);color:var(--color-charcoal)}
+header{background:rgba(244,242,237,.96)}
+footer{background:#ECEAE4;color:var(--color-secondary)}
+:where(.brand-mark,.btn,.pill.active){background:var(--color-charcoal);color:var(--color-ivory)}
+.brand-mark{transform:none;border-radius:var(--radius-md)}
+:where(.hero h1 em,.eyebrow,.card-category,.ing-group h3,.step-index,.dinner-eyebrow){color:var(--color-accent-dark)}
+:where(.navlink:hover,.navlink[aria-current=page],.pill:hover:not(.active)){background:#E9E9E2;color:var(--ink)}
+:where(.recipe-card,.ingredients-panel,.bag-panel,.dinner-helper,.saved-empty){background:var(--paper);border-color:var(--border);box-shadow:none}
+.recipe-card{border-radius:var(--radius-lg)}
+.recipe-card:hover{box-shadow:var(--shadow)}
+.card-body{padding:18px 20px 20px}
+.card-title{font-size:clamp(21px,2.2vw,25px)}
+.card-desc{color:var(--muted)}
+.card-bottom{color:var(--muted)}
+.card-art.has-photo{height:auto;aspect-ratio:4/3;background:var(--color-charcoal)}
+.recipe-card-photo{object-fit:cover}
+.detail-visual.has-photo{background:var(--color-charcoal)}
+.searchbox input{background:var(--paper);border-color:var(--border)}
+.searchbox input:focus{border-color:var(--color-accent-dark)}
+:where(.btn,.dinner-go){background:var(--color-charcoal);border-color:var(--color-charcoal);color:#fff}
+.btn:hover{background:#343934}
+.btn.secondary:hover{background:#E8E9E3}
+:where(.meta,.source-box,.note-chip,.servings,.bag-combined,.dinner-options button,.applied-filter-chip){border-color:var(--border);background:#EEEEE8;color:var(--ink)}
+.source-box a,.dinner-start,.dinner-again,.applied-filter-clear{color:var(--color-accent-dark)}
+.ingredient{border-bottom-color:#E6E5DE}
+.step p{color:var(--color-secondary)}
+.step-index{border-color:#AAB5AA}
+.dinner-helper{box-shadow:none}
+.dinner-result-emoji{background:#ECEEE8}
+.ai-photo-label{background:rgba(32,34,32,.80);color:white}
+:where(button,a,input,select,textarea):focus-visible{outline:3px solid var(--color-focus);outline-offset:3px}
+@media(max-width:690px){
+  .card-art.has-photo{height:auto;aspect-ratio:4/3}
+  .card-body{padding:16px 17px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .recipe-card,.recipe-card-photo{transition:none}
+  .recipe-card:hover,.recipe-card:hover .recipe-card-photo{transform:none}
+}
+@media print{
+  body{background:#fff;color:#000}
+  .recipe-card,.ingredients-panel{box-shadow:none}
+}
