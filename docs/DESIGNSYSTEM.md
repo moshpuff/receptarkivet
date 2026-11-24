@@ -35,8 +35,16 @@ Minimalistisk, lättskannad och tillgänglig receptapp där informationen är ty
 Bildskapandet utgår från receptets faktiska innehåll och `docs/expert/BILDSTANDARD.md`. Låt rena appytor kontrastera mot mörkare restaurangfotografi. Kameravinkel, tallrik, material och komposition varierar; hela tallriken ska normalt synas med luft runt. Visuell konsekvens betyder gemensam kvalitet, inte identiska bilder.
 
 ## Införande
-**Genomfört:** grundläggande design tokens, ljus palett, receptkorts-/bildytor, knappar, avdelare, fokuskontroller och browser theme color. Det är en första kodändring, inte en fullständig designmässig ombyggnad.
+**Genomfört (24 november):** design tokens och ljus palett, browser theme color, renare startsidestext, förenklade receptkort utan överflödiga taggar, mer proportionerlig bildyta, större favorityta, typografisk hierarki, förbättrad ingrediensläsning, tillagningssteg och responsiv kortgrid (två kolumner på vanliga mobilbredder, en på mycket smala skärmar). Navigation, datamodell och receptinnehåll är oförändrade.
 
-**Kvar att verifiera/förbättra:** verkliga desktop- och mobilskärmbilder, kontrast i alla tillstånd, texters avklippning, responsiva bildutsnitt, samtliga sidors detaljer, mörkt läge (inte infört), köksläge och användartester. Inga receptdata ändras av denna designstandard. Behåll funktionaliteten i köksläge, sök, favoriter och inköpslista.
+**Kvar att verifiera/förbättra:** produktionens Angular-kompilering och testresultat, verkliga desktop-/mobilskärmbilder, kontrast i alla tillstånd, texters avklippning, bildutsnitt på riktiga foton, köksläge och inköpslista i webbläsare, samt användartester. Mörkt läge är ännu inte infört – ljust är den beslutade basen. Inga receptdata ändras av denna designstandard. Behåll funktionaliteten i köksläge, sök, favoriter och inköpslista.
 
 **Testning:** kör `npm test` och `npm run test:e2e` i en utvecklingsmiljö med beroenden installerade innan en release bedöms som fullt kvalitetssäkrad.
+
+## Kvalitetskontroll 2026-11-24
+
+- Berörda filer har hämtats tillbaka från GitHub och deras nya innehåll verifierats.
+- CSS-klammerbalans har kontrollerats; ingen syntax-/bygggaranti följer av detta.
+- GitHub-status för senaste CSS-commit gav inga statuskontroller och den tillgängliga workflow-sökningen visade inga PR-körningar. **Inga gröna automatiska testresultat har därför verifierats i denna arbetsomgång.**
+- Innan publicering betraktas som klar: kör `npm test`, `npm run test:e2e` och manuell skärmkontroll i minst 360 px, 390 px, 768 px och 1280 px breda vyer. Kontrollera startsida, filter, favoriter, bilder/fallback, recept, skalning, inköpslista, köksläge, tangentbordsnavigering och utskrift.
+- Om en regression hittas: prioritera funktionsbevarande justering före estetisk polering. Receptdata ska inte ändras av UI-arbetet.
